@@ -49,6 +49,7 @@
 		9232C49090E74E8AB5A13111 /* Storekit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A767DE63CC244D59466C658 /* Storekit.framework */; };
 		D600DA0AF88C4DE7ACA466ED /* CDVSplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF620902FBE4B459091E60C /* CDVSplashScreen.m */; };
 		FA62CC5A678F4588A96469AC /* CDVAccelerometer.m in Sources */ = {isa = PBXBuildFile; fileRef = F42DA8C20D914EB78BD3432A /* CDVAccelerometer.m */; };
+		BA24EE7831B64C5C84D15380 /* CDVStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 38978034B2C04715BAC56A61 /* CDVStatusBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +145,8 @@
 		F210BF1374AA4D48952EF0EB /* CDVConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDVConnection.h; path = "org.apache.cordova.network-information/CDVConnection.h"; sourceTree = "<group>"; };
 		F42DA8C20D914EB78BD3432A /* CDVAccelerometer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDVAccelerometer.m; path = "org.apache.cordova.device-motion/CDVAccelerometer.m"; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = KlinikKurt/config.xml; sourceTree = "<group>"; };
+		38978034B2C04715BAC56A61 /* CDVStatusBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVStatusBar.m"; path = "cordova-plugin-statusbar/CDVStatusBar.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		F796EDD0BC054D7AB3E4E038 /* CDVStatusBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVStatusBar.h"; path = "cordova-plugin-statusbar/CDVStatusBar.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,6 +284,8 @@
 				25902D26021F4F6C8AFEBC1E /* CDVSplashScreen.h */,
 				53399E57F002471D91D3B0EC /* WebViewColor.m */,
 				A71A10D7F7C04807BFDA5CD4 /* WebViewColor.h */,
+				38978034B2C04715BAC56A61 /* CDVStatusBar.m */,
+				F796EDD0BC054D7AB3E4E038 /* CDVStatusBar.h */,
 			);
 			name = Plugins;
 			path = KlinikKurt/Plugins;
@@ -473,6 +478,7 @@
 				6EFECFAA231D445EA98C3093 /* CDVReachability.m in Sources */,
 				D600DA0AF88C4DE7ACA466ED /* CDVSplashScreen.m in Sources */,
 				00A229A44D984B1890FE385E /* WebViewColor.m in Sources */,
+				BA24EE7831B64C5C84D15380 /* CDVStatusBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -36,6 +36,9 @@
         },
         "nl.x-services.plugins.ioswebviewcolor": {
             "PACKAGE_NAME": "com.MSR.KlinikKurtApp"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.klinikkurtapp.msr"
         }
     },
     "dependent_plugins": {}

@@ -34,6 +34,10 @@
     <feature name="WebViewColor">
         <param name="ios-package" value="WebViewColor" />
     </feature>
+    <feature name="StatusBar">
+        <param name="ios-package" value="CDVStatusBar" />
+        <param name="onload" value="true" />
+    </feature>
     <name>KlinikKurt</name>
     <description>
         Hello World sample application that responds to the deviceready event.
@@ -109,6 +113,7 @@
     <preference name="PageLength" value="0" />
     <preference name="PaginationBreakingMode" value="page" />
     <preference name="PaginationMode" value="unpaginated" />
+    <preference name="StatusBarStyle" value="lightcontent" />
     <preference name="permissions" value="none" />
     <preference name="orientation" value="portrait" />
     <preference name="target-device" value="handset" />
@@ -117,6 +122,7 @@
     <preference name="prerendered-icon" value="true" />
     <preference name="stay-in-webview" value="false" />
     <preference name="ios-statusbarstyle" value="black-opaque" />
+    <preference name="StatusBarOverlaysWebView" value="true" />
     <preference name="detect-data-types" value="true" />
     <preference name="exit-on-suspend" value="false" />
     <preference name="show-splash-screen-spinner" value="true" />
