@@ -150,6 +150,12 @@ textarea {
     font-size: 11px;
     letter-spacing: 1px;
 }
+
+/*Back buttons*/
+.ui-header-fixed .ui-btn-left {
+  margin-top: 2%;
+}
+
 button {
     clear: both;
     width: 100px;
@@ -161,6 +167,7 @@ button {
     color: #333;
     font-size: 12px;
     font-weight: bold;
+
 }
 #slideriframe {
     position: absolute;
@@ -735,12 +742,16 @@ button {
     margin-bottom: -60px;
 }
 
+/*Titles in headers*/
 .ui-header .ui-title,
 .ui-footer .ui-title {
+    margin-top: 2%;
     margin-left: 0;
     margin-right: 0;
     text-overflow: visble;
 }
+
+
 #kkreqmsg {
     margin-bottom: -40px;
 }
@@ -1302,7 +1313,7 @@ a[data-rel='backbtn'] .ui-btn-inner {
 }
 
 #omalltitles {
-    padding-top: -20px;
+
 }
 
 #omkkframe,

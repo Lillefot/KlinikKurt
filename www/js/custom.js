@@ -74,10 +74,10 @@ function onBodyLoad() {
 
     if (ver[0] >= 7) {
         window.plugins.webviewcolor.change('#FFFFFF');
-        $(".ui-header .ui-title").css("padding-top", "10px");
-        $(".ui-header .ui-btn-left").css("margin-top", "10px");
-        $("#omalltitles").css("padding-top", "10px");
-        $("#omallbackbtn").css("margin-top", "10px");
+        //$(".ui-header .ui-title").css("padding-top", "10px");
+        //$(".ui-header .ui-btn-left").css("margin-top", "10px");
+        //$("#omalltitles").css("padding-top", "10px");
+        //$("#omallbackbtn").css("margin-top", "10px");
     }
 }
 
