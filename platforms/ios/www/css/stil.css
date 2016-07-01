@@ -103,12 +103,7 @@ h3 {
     width: 80px;
     letter-spacing: 2px;
 }
-h4 {
-    width: 100% !important;
-    margin-left: 0px !important;
-    font-weight: bold;
-    font-size: 1.2em;
-}
+
 #page {
     width: 100%;
     overflow: hidden;
@@ -149,6 +144,23 @@ textarea {
     color: #454545;
     font-size: 11px;
     letter-spacing: 1px;
+}
+
+/*Header*/
+.ui-header {
+    height: 8%;
+}
+
+/*Titles in headers*/
+.ui-header .ui-title,
+.ui-footer .ui-title {
+    margin-top: 2%;
+    margin-left: 0px;
+    width: 100%;
+}
+
+h4 {
+    /*width: 100%;*/
 }
 
 /*Back buttons*/
@@ -742,14 +754,7 @@ button {
     margin-bottom: -60px;
 }
 
-/*Titles in headers*/
-.ui-header .ui-title,
-.ui-footer .ui-title {
-    margin-top: 2%;
-    margin-left: 0;
-    margin-right: 0;
-    text-overflow: visble;
-}
+
 
 
 #kkreqmsg {
@@ -1305,9 +1310,7 @@ a[data-rel='backbtn'] .ui-btn-inner {
     position: relative;
     left: -35%;
 }
-.ui-header {
-    height: 7%;
-}
+
 .ui-footer {
     height: 60px;
 }
