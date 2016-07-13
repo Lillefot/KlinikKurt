@@ -24,18 +24,6 @@
 </head>
 <body onload="onBodyLoad();">
 
-<!-- Beginning of Login -->
-<div data-role="page" id="login">
-
-  <div data-role="content" data-theme="f" id="logincont"
-  style="height: auto; width: auto; overflow: auto; -webkit-overflow-scrolling:touch;">
-    <iframe id="loginout" src="http://www.sitedev.beachtime.se/cas/cas2.php" width='320' height="460"
-    scrolling='yes' frameBorder='0' id='theiFrame'></iframe>
-  </div>
-
-</div>
-<!-- End of Login -->
-
 <!-- Beginning of Home -->
 <div id="hem" data-role="page" data-theme="f" ontouchmove="touchMove(event);">
   <div id="splash"
@@ -54,7 +42,7 @@
       </div>
     </div>
     <!-- F&Ouml;RLADDA FORMUL&Auml;RELEMENT -->
-    <div id="hiddenformelements" style="height:1px;overflow:hidden;opacity:0;">
+  <!--  <div id="hiddenformelements" style="height:1px;overflow:hidden;opacity:0;">
       <form id="hidden">
         <select name="q1" id="q1" data-theme="d">
           <option value="null"> -- V&auml;lj alternativ --</option>
@@ -88,7 +76,7 @@
           </fieldset>
         </div>
       </form>
-    </div>
+    </div> -->
   </div>
 </div>
 <!-- End of Home -->
@@ -1456,6 +1444,19 @@
   </div>
 </div>
 <!-- End of AboutAll pages -->
+
+<!-- Beginning of Login -->
+<div data-role="page" id="login">
+
+  <div data-role="content" data-theme="f" id="logincont"
+  style="height: auto; width: auto; overflow: auto; -webkit-overflow-scrolling:touch;">
+    <iframe id="loginout" src="http://www.sitedev.beachtime.se/cas/cas2.php" width='320' height="460"
+    scrolling='yes' frameBorder='0' id='theiFrame'></iframe>
+  </div>
+
+</div>
+<!-- End of Login -->
+
 
 </body>
 </html>
