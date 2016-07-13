@@ -23,6 +23,19 @@
 
 </head>
 <body onload="onBodyLoad();">
+
+<!-- Beginning of Login -->
+<div data-role="page" id="login">
+
+  <div data-role="content" data-theme="f" id="logincont"
+  style="height: auto; width: auto; overflow: auto; -webkit-overflow-scrolling:touch;">
+    <iframe id="loginout" src="http://www.sitedev.beachtime.se/cas/cas2.php" width='320' height="460"
+    scrolling='yes' frameBorder='0' id='theiFrame'></iframe>
+  </div>
+
+</div>
+<!-- End of Login -->
+
 <!-- Beginning of Home -->
 <div id="hem" data-role="page" data-theme="f" ontouchmove="touchMove(event);">
   <div id="splash"
@@ -115,718 +128,6 @@
   </div>
 </div>
 <!-- End of Home -->
-
-<!-- Beginning of AboutAll pages-->
-<div data-role="page" id="omall" data-dom-cache="true" style="width:100%;">
-  <div data-role="header" data-theme="b" data-position="fixed" class="animated fadeIn" id="omalltitles">
-    <a href="#" data-role="button" class="hemKnapp" data-theme="b" data-icon="arrow-l">Start</a>
-    <h4>
-      <div id="omkkt" class="animated fadeIn">Info om KlinikKurt</div>
-      <div id="omappt" style=display:none class="animated fadeIn">Info om appen</div>
-      <div id="ommsrt" style=display:none class="animated fadeIn">Info om MSR</div>
-    </h4>
-  </div>
-  <div data-role="content" data-theme="f"
-  style="text-align:left;width:90%;overflow-x:hidden;position:absolute:top:0;left:0;padding-left:5%;padding-right:5%;"
-  id="omallcont">
-    <div id="omallframe">
-      <div id="ommsrdiv" class="animatedFast fadeIn" style="display:none;width:100%;">
-        Medicinska Studier&aring;det (MSR) ansvarar f&ouml;r den studiebevakande
-        verksamheten p&aring; l&auml;karprogrammet.<br><br>MSR representerar l&auml;karstudenter
-        i bland annat Programkommittén, Medicinska sektionen, Grundutbildningskommittén samt
-        olika arbetsgrupper.<br><br>Studier&aring;det arbetar aktivt f&ouml;r att utveckla
-        och f&ouml;rb&auml;ttra utbildningen. Ett viktigt verktyg i detta arbete &auml;r
-        kursv&auml;rderingar, inklusive KlinikKurt samt V&aring;rdcentralKurt.<br/><br/>Har
-        du synpunkter p&aring;, eller fr&aring;gor om, din utbildning &auml;r du varmt v&auml;lkommen
-        att h&ouml;ra av dig till din kursrepresentant.<br/><br/>F&ouml;r mer information om
-        MSR, bes&ouml;k <a href="#" id=msrsdr>studier&aring;det.se</a>. Du kan &auml;ven
-        kontakta oss via mail: <a href="mailto:ordf@msr.studorg.uu.se" id=msrordf>ordf@msr.studorg.uu.se</a>
-        eller <a href="mailto:vordf@msr.studorg.uu.se" target="_blank">vordf@msr.studorg.uu.se</a>
-      </div>
-      <!-- TODO: Ändra till rätt datum och temrin -->
-      <div id="omkkdiv" class="animatedFast fadeIn" style="width:100%;">
-        KlinikKurt och V&aring;rdcentralKurt &auml;r kursv&auml;rderingar f&ouml;r de
-        kliniska placeringarna p&aring; l&auml;karprogrammet i Uppsala.<br/><br/>Genom att
-        utv&auml;rdera dina placeringar bidrar du till att f&ouml;rb&auml;ttra den kliniska
-        undervisningen samt den kliniska handledningen. Dessutom har du m&ouml;jlighet att
-        delta i KlinikKurt/V&aring;rdcentralKurt-lotteriet d&auml;r h&ouml;gsta
-        vinsten &auml;r en tur med intensivv&aring;rdshelikoptern. <br/><br/>KlinikKurt samt
-        V&aring;rdcentralKurt st&auml;nger den 5:e juni f&ouml;r VT16. <br/><br/>F&ouml;r
-        mer information, bes&ouml;k <a href="#" id=kkkk target="_blank" rel="external">klinikkurt.se</a>
-        eller <a href="#" id=kksdr>studier&aring;det.se</a>
-      </div>
-      <div id="omappdiv" class="animatedFast fadeIn" style="display:none;width:100%;">
-        Den h&auml;r appen &auml;r utvecklad av <a href="#" id=apptw>Appanaget</a> f&ouml;r
-        l&auml;karprogrammet i Uppsala. Den fortl&ouml;pande utvecklingen sk&ouml;ts av l&auml;karprogrammets
-        IT-bevakare<br><br>Stort tack till Ahsan Shahzad p&aring; MedFarm DoIT som bist&aring;tt
-        med hj&auml;lp och anpassningar f&ouml;r att underl&auml;tta utvecklandet och
-        kompatibiliteten med Kurt-systemet.<br><br>Om du har uppt&auml;ckt en bugg, har en
-        idé som kan f&ouml;rb&auml;ttra appen eller bara sm&aring;prata, h&ouml;r av dig
-        till <a href="mailto:it-bevakare@msr.studorg.uu.se" target="_blank">it-bevakare@msr.studorg.uu.se</a>
-      </div>
-    </div>
-  </div>
-  <div data-role="footer" data-position="fixed" ontouchmove="touchMove(event);" data-theme="c"
-  style="position:fixed:bottom:0;left:0;width:100%;">
-    <div data-role="navbar" data-theme="c" class="animated fadeIn">
-      <ul>
-        <li><a id="tabF" class="ui-btn ui-btn-icon-top ui-icon-tabF">Om MSR</a></li>
-        <li><a id="tabG" class="ui-btn ui-btn-icon-top ui-icon-tabG greentab">Om KlinikKurt</a></li>
-        <li><a id="tabH" class="ui-btn ui-btn-icon-top ui-icon-tabH">Om appen</a></li>
-      </ul>
-    </div>
-
-    <script>
-      function tabFHandler() {
-        $("li > .greentab").removeClass('greentab');
-        $("#tabF").addClass('greentab');
-        $("#omkkdiv").hide();
-        $("#omappdiv").hide();
-        $.mobile.silentScroll(0)
-        $("#ommsrdiv").show();
-        $("#omkkt").hide();
-        $("#omappt").hide();
-        $("#ommsrt").show();
-      }
-
-      function tabGHandler() {
-        $("li > .greentab").removeClass('greentab');
-        $("#tabG").addClass('greentab');
-        $("#omappdiv").hide();
-        $("#ommsrdiv").hide();
-        $.mobile.silentScroll(0)
-        $("#omkkdiv").show();
-        $("#omappt").hide();
-        $("#ommsrt").hide();
-        $("#omkkt").show();
-      }
-
-      function tabHHandler() {
-        $("li > .greentab").removeClass('greentab');
-        $("#tabH").addClass('greentab');
-        $("#omkkdiv").hide();
-        $("#ommsrdiv").hide();
-        $.mobile.silentScroll(0)
-        $("#omappdiv").show();
-        $("#omkkt").hide();
-        $("#ommsrt").hide();
-        $("#omappt").show();
-      }
-
-      function extLink(link) {
-        navigator.notification.confirm(link + ' kommer att \366ppnas i din webbl\344sare, \344r du s\344ker p\345 att du vill forts\344tta?', // message
-        openLink, // callback to invoke with index of button pressed
-        'L\344mna appen?', // title
-        'Ja,Nej' // buttonLabels
-      );
-      function openLink(button) {
-        if (button === 1) {
-          window.open(link, '_system');
-        }
-      }
-
-      }
-
-
-      $("#tabF").on('tap', tabFHandler);
-      $("#tabG").on('tap', tabGHandler);
-      $("#tabH").on('tap', tabHHandler);
-      $("#kksdr").on('tap', function() {
-        extLink('http://www.studieradet.se');
-      });
-      $("#msrsdr").on('tap', function() {
-        extLink('http://www.studieradet.se');
-      });
-      $("#kkkk").on('tap', function() {
-        extLink('http://www.klinikkurt.se');
-      });
-      $("#apptw").on('tap', function() {
-        extLink('http://www.appanaget.se');
-      });
-      $("#appanaget").on('tap', function() {
-        $("#appanaget").addClass('bounce').delay(1600).queue(function() {
-          extLink('http://www.appanaget.se');
-        });
-      });
-      $("#msrordf").on('tap', function() {
-        extLink('mailto:ordf@msr.studorg.uu.se');
-      });
-
-    </script>
-  </div>
-</div>
-<!-- End of AboutAll pages -->
-
-<!-- Beginning of VadFyllt pages -->
-<div data-role="page" id="vadfylltjag">
-  <div data-role="header" data-theme="e" data-position="fixed">
-    <a href="#" data-role="button" class="hemKnapp" data-theme="e" data-icon="arrow-l">Start</a>
-    <h4 id="vfjtitle" class="animatedFast fadeIn">Jag</h4>
-    <h4 id="vfttitle" class="animatedFast fadeIn">Min
-      termin</h4>
-  </div>
-  <div data-role="content" data-theme="f"
-  style="text-align:left;padding-top:50px;width:100%;overflow-x:hidden;" id="jagcont"
-  ontouchmove="touchMove(event);">
-    <div id="vfjcont" class="animatedFast fadeIn" style="width:100%;overflow-x:hidden;">
-      <h2>Se vad du har fyllt i </h2>
-      <br/><h5 style="margin-bottom:15px;margin-top:-25px;">(g&auml;ller enbart
-        KlinikKurt):</h5>
-        Ange ditt UpUnet-id nedan s&aring; kommer du automatiskt att f&aring; dessa uppgifter
-        skickade till din studentmail (f&ouml;ruts&auml;tter att du har fyllt i utv&auml;rderingar
-        och angivit UpUnet-id).
-        Observera att denna databas inte uppdateras i realtid.<br/><br/><br/>
-
-        <form id="mailk" style="float: left; width: 100%;" target="result">CAS-id:<br/>
-          <label class="ui-hidden-accessible" for="mailkcasid">CAS-id:</label>
-          <input type="text" name="casid" maxlength="8" id="mailkcasid"/>
-          <input type="submit" data-theme="e" value="Best&auml;ll!" name="submit"
-          id="submitmailk" style="margin-bottom:0px;">
-        </form>
-    </div>
-    <div id="vftcont" class="animatedFast fadeIn" style="display:none;" style="width:100%;">
-        <h2>Se din termins svarsfrekvens</h2>
-        <h5 style="margin-bottom:15px;margin-top:-5px;">(g&auml;ller
-          enbart KlinikKurt):</h5>
-          Ange termin och CAS-id.<br>Svar kommer direkt till din studentmail.<br><br>
-
-        <form id="svark" style="float: left;width: 100%; margin-bottom: 0px;margin-top:-8px;"
-        data-theme="e" target="result">
-        Termin:
-          <div id="vftradios">
-            <center>
-              <fieldset data-role="controlgroup" data-type="horizontal" data-theme="e"
-              data-mini="false">
-              <input type="radio" name="termin" id="ift5" value="T5" data-theme="e"/>
-              <label for="ift5">5</label>
-
-              <input type="radio" name="termin" id="ift6" value="T6" data-theme="e"/>
-              <label for="ift6">6</label>
-
-              <input type="radio" name="termin" id="ift7" value="T7" data-theme="e"/>
-              <label for="ift7">7</label>
-
-              <input type="radio" name="termin" id="ift8" value="T8" data-theme="e"/>
-              <label for="ift8">8</label>
-
-              <input type="radio" name="termin" id="ift9" value="T9" data-theme="e"/>
-              <label for="ift9">9</label>
-
-              <input type="radio" name="termin" id="ift10" value="T10"
-              data-theme="e"/>
-              <label for="ift10">10</label>
-              </fieldset>
-            </center>
-          </div>
-          <div style="position:relative;bottom:-5px">
-            CAS-id:<br/>
-            <input type="text" name="casid" maxlength="8" data-theme="e" id="svarkcasid"/>
-          </div>
-          <br>
-
-          <div style="position:relative;top:-22px;">
-            <input type="submit" data-theme="e" value="Best&auml;ll!" name="submit"
-            id="submitsvark" style="margin-bottom:0px;">
-          </div>
-        </form>
-    </div>
-    <div id=vfjbtn
-    style=width:50%;height:80px;background-color:#000;position:fixed;bottom:0;left:0;z-index:10;opacity:0;></div>
-    <div id=vftbtn
-    style=width:50%;height:80px;background-color:#000;position:fixed;bottom:0;right:0;z-index:10;opacity:0;></div>
-
-    <div style=width:100%;height:80px;background-color:#000;position:fixed;bottom:0;right:0;z-index:9;opacity:0;></div>
-  </div>
-  <div data-role="footer" data-position="fixed"
-  style=position:fixed;bottom:0; data-theme="c">
-    <div data-role="navbar" class="animated fadeIn">
-      <ul>
-        <li id="tabD1"><a href="#vadfyllttermin" id="tabD"
-          class="ui-btn-active ui-btn ui-btn-icon-top ui-icon-tabD">Jag</a>
-        </li>
-        <li><a href="#vadfyllttermin" id="tabE" class="ui-btn ui-btn-icon-top ui-icon-tabE">Min
-          termin</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-<!-- End of VadFyllt pages -->
-
-<!-- Beginning of VCK -->
-<div data-role="page" id="vcpage">
-  <div data-role="header" data-theme="d" data-position="fixed" data-tap-toggle="false">
-    <a href="#" data-role="button" class="hemKnapp" data-theme="d" data-icon="arrow-l">Start</a>
-    <h4>VC-Kurt VT16</h4>
-  </div>
-  <div data-role="content" id="vccont" style="padding-top:20px; width: 100%; display:block;"
-  class="animated fadeIn">
-
-  <h2>Termin &amp; v&aring;rdcentral!</h2>
-
-  <div class="questioncontainer" id="vcterm" style="padding-left:3%;">
-    1.&#9;Termin<br/>
-
-    <div data-role="fieldcontain" data-theme="d" id="vctermradio">
-      <fieldset data-role="controlgroup" style="margin-left:20px;" data-type="horizontal"
-      data-theme="d">
-        <input type="radio" name="qT" id="vcq1v1" value="1" data-theme="d"/>
-        <label for="vcq1v1">1</label>
-
-        <input type="radio" name="qT" id="vcq1v2" value="2" data-theme="d"/>
-        <label for="vcq1v2">2</label>
-
-        <input type="radio" name="qT" id="vcq1v3" value="3" data-theme="d"/>
-        <label for="vcq1v3">3</label>
-
-        <input type="radio" name="qT" id="vcq1v4" value="4" data-theme="d"/>
-        <label for="vcq1v4">4</label>
-
-        <input type="radio" name="qT" id="vcq1v5" value="5" data-theme="d"/>
-        <label for="vcq1v5">11</label>
-      </fieldset>
-    </div>
-    <br/>
-  </div>
-    <!-- TODO: Ändra till rätt VC-Kurt -->
-    <form id="vckurtform" name="vckurtform" method="POST" target="result">
-      <input type="hidden" name="id" value="8317"/><input type="hidden" name="noframe" value=""/>
-
-      <div class="questioncontainer">
-        2.&#9;V&aring;rdcentral
-        <select name="q1" id="vcq2" data-theme="d">
-          <option value="null"> -- V&auml;lj alternativ --</option>
-          <option id="vcq2v1" value="1">Aleris Barncentrum och v&aring;rdcentral</option>
-          <option id="vcq2v2" value="2">Aleris v&aring;rdcentral Nyby</option>
-          <option id="vcq2v3" value="3">Alunda v&aring;rdcentral</option>
-          <option id="vcq2v4" value="4">Aros l&auml;karmottagning</option>
-          <option id="vcq2v5" value="5">B&aring;lsta Doktorn</option>
-          <option id="vcq2v6" value="6">B&aring;lstadoktorn</option>
-          <option id="vcq2v7" value="7">Capio v&aring;rdcentral Enk&ouml;ping</option>
-          <option id="vcq2v8" value="8">Capio v&aring;rdcentral Liljeforstorg</option>
-          <option id="vcq2v9" value="9">Capio v&aring;rdcentral S&auml;vja</option>
-          <option id="vcq2v10" value="10">Dr Wahlunds l&auml;karmottagning</option>
-          <option id="vcq2v11" value="11">Ekeby h&auml;lsocenter</option>
-          <option id="vcq2v12" value="12">Ekeby h&auml;lsocentral</option>
-          <option id="vcq2v13" value="13">Enk&ouml;pings husl&auml;karcentrum</option>
-          <option id="vcq2v14" value="14">Enk&ouml;pings husl&auml;karcentrum</option>
-          <option id="vcq2v15" value="15">Enk&ouml;pingsh&auml;lsan</option>
-          <option id="vcq2v16" value="16">Eriksbergs v&aring;rdcentral</option>
-          <option id="vcq2v17" value="17">Familjedoktorn</option>
-          <option id="vcq2v18" value="18">Familjel&auml;karna B&aring;lsta</option>
-          <option id="vcq2v19" value="19">Fj&auml;rdhundra v&aring;rdcentral</option>
-          <option id="vcq2v20" value="20">Flogsta v&aring;rdcentral</option>
-          <option id="vcq2v21" value="21">F&aring;lhagens v&aring;rdcentral</option>
-          <option id="vcq2v22" value="22">Gimo v&aring;rdcentral</option>
-          <option id="vcq2v23" value="23">Gottsunda v&aring;rdcentral</option>
-          <option id="vcq2v24" value="24">Heby v&aring;rdcentral</option>
-          <option id="vcq2v25" value="25">Husl&auml;kargruppen Luthagsg&aring;rden</option>
-          <option id="vcq2v26" value="26">H&auml;lsohuset i Enk&ouml;ping</option>
-          <option id="vcq2v27" value="27">Knivsta l&auml;kargrupp</option>
-          <option id="vcq2v28" value="28">Knivsta v&aring;rdcentral</option>
-          <option id="vcq2v29" value="29">Kungsg&auml;rdets v&aring;rdcentral</option>
-          <option id="vcq2v30" value="30">K&aring;boh&auml;lsan</option>
-          <option id="vcq2v31" value="31">Rasbo v&aring;rdcentral</option>
-          <option id="vcq2v32" value="32">Samariterhemmets v&aring;rdcentral</option>
-          <option id="vcq2v33" value="33">Skutsk&auml;rs v&aring;rdcentral</option>
-          <option id="vcq2v34" value="34">Storvreta v&aring;rdcentral</option>
-          <option id="vcq2v35" value="35">Svartb&auml;ckens v&aring;rdcentral</option>
-          <option id="vcq2v36" value="36">S&ouml;dertulls h&auml;lsocentral, G&auml;vle</option>
-          <option id="vcq2v37" value="37">Tierps v&aring;rdcentral</option>
-          <option id="vcq2v38" value="38">Ture &Aring;landers l&auml;karpraktik</option>
-          <option id="vcq2v39" value="39">V&aring;rdcentralen Centrum</option>
-          <option id="vcq2v40" value="40">&Aring;rsta v&aring;rdcentral</option>
-          <option id="vcq2v41" value="41">&Ouml;regrunds v&aring;rdcentral</option>
-          <option id="vcq2v42" value="42">&Ouml;rsundsbro v&aring;rdcentral</option>
-          <option id="vcq2v43" value="43">&Ouml;sterbybruks v&aring;rdcentral</option>
-          <option id="vcq2v44" value="44">&Ouml;sterv&aring;la v&aring;rdcentral</option>
-          <option id="vcq2v45" value="45">&Ouml;sthammars v&aring;rdcentral</option>
-          <option id="vcq2v46" value="46">&Ouml;vriga v&aring;rdcentraler</option>
-        </select><br/></div>
-
-        <h2>Skattning av v&aring;rdcentralsplacering</h2>
-
-        <div class="questioncontainer">
-          3.&#9;Hur var introduktionen och bem&ouml;tandet p&aring; placeringen?
-          <div data-role="fieldcontain">
-            <fieldset data-role="controlgroup" data-type="horizontal" id="vcq3" class="opt"
-            style="position:relative;top:-10px;">
-            <div class="popupcontainer">
-              <div class="popupright">Mycket bra</div>
-              <div class="popupleft">D&aring;lig/Obefintlig</div>
-            </div>
-            <legend>&nbsp;</legend>
-            <input type="radio" name="q2" id="vcq3v1" value="1" data-theme="d"/>
-            <label for="vcq3v1"> &nbsp;</label>
-
-            <input type="radio" name="q2" id="vcq3v2" value="2" data-theme="d"/>
-            <label for="vcq3v2">&nbsp;</label>
-
-            <input type="radio" name="q2" id="vcq3v3" value="3" data-theme="d"/>
-            <label for="vcq3v3">&nbsp;</label>
-
-            <input type="radio" name="q2" id="vcq3v4" value="4" data-theme="d"/>
-            <label for="vcq3v4">&nbsp;</label>
-
-            <input type="radio" name="q2" id="vcq3v5" value="5" data-theme="d"/>
-            <label for="vcq3v5">&nbsp;</label>
-
-            <input type="radio" name="q2" id="vcq3v6" value="6" data-theme="d"/>
-            <label for="vcq3v6">&nbsp;</label>
-          </fieldset>
-        </div>
-      </div>
-      <div class="questioncontainer">
-        4.&#9;I vilken utstr&auml;ckning visste du sj&auml;lv vad du f&ouml;rv&auml;ntades l&auml;ra dig
-        under din v&aring;rdcentralsplacering (b&aring;de teoretiska och praktiska kunskaper)?
-        <div data-role="fieldcontain" style="position:relative;top:-25px;">
-          <fieldset data-role="controlgroup" data-type="horizontal" id="vcq4" class="opt">
-            <div class="popupcontainer">
-              <div class="popupright">Visste precis</div>
-              <div class="popupleft">Hade ingen aning</div>
-            </div>
-            <legend>&nbsp;</legend>
-            <input type="radio" name="q3" id="vcq4v1" value="1" data-theme="d"/>
-            <label for="vcq4v1"> &nbsp;</label>
-
-            <input type="radio" name="q3" id="vcq4v2" value="2" data-theme="d"/>
-            <label for="vcq4v2">&nbsp;</label>
-
-            <input type="radio" name="q3" id="vcq4v3" value="3" data-theme="d"/>
-            <label for="vcq4v3">&nbsp;</label>
-
-            <input type="radio" name="q3" id="vcq4v4" value="4" data-theme="d"/>
-            <label for="vcq4v4">&nbsp;</label>
-
-            <input type="radio" name="q3" id="vcq4v5" value="5" data-theme="d"/>
-            <label for="vcq4v5">&nbsp;</label>
-
-            <input type="radio" name="q3" id="vcq4v6" value="6" data-theme="d"/>
-            <label for="vcq4v6">&nbsp;</label>
-          </fieldset>
-        </div>
-      </div>
-
-      <div class="questioncontainer">
-        5.&#9;I vilken utstr&auml;ckning upplevde du att din/a handledare visste vad du skulle l&auml;ra
-        dig under din v&aring;rdcentralsplacering (b&aring;de teoretiska och praktiska kunskaper)?
-        <div data-role="fieldcontain" style="position:relative;top:-25px;">
-          <fieldset data-role="controlgroup" data-type="horizontal" id="vcq5" class="opt">
-            <div class="popupcontainer">
-              <div class="popupright">Visste precis</div>
-              <div class="popupleft">Hade ingen aning</div>
-            </div>
-            <legend>&nbsp;</legend>
-            <input type="radio" name="q4" id="vcq5v1" value="1" data-theme="d"/>
-            <label for="vcq5v1"> &nbsp;</label>
-
-            <input type="radio" name="q4" id="vcq5v2" value="2" data-theme="d"/>
-            <label for="vcq5v2">&nbsp;</label>
-
-            <input type="radio" name="q4" id="vcq5v3" value="3" data-theme="d"/>
-            <label for="vcq5v3">&nbsp;</label>
-
-            <input type="radio" name="q4" id="vcq5v4" value="4" data-theme="d"/>
-            <label for="vcq5v4">&nbsp;</label>
-
-            <input type="radio" name="q4" id="vcq5v5" value="5" data-theme="d"/>
-            <label for="vcq5v5">&nbsp;</label>
-
-            <input type="radio" name="q4" id="vcq5v6" value="6" data-theme="d"/>
-            <label for="vcq5v6">&nbsp;</label>
-          </fieldset>
-        </div>
-      </div>
-
-
-      <div class="questioncontainer">
-        6.&#9;I vilken utstr&auml;ckning var din v&aring;rdcentralsplacering genomt&auml;nkt och
-        planerad (arbetsuppgifter p&aring; dagarna, tider, dagarnas uppl&auml;gg, etc.)?
-        <div data-role="fieldcontain" style="position:relative;top:-25px;">
-          <fieldset data-role="controlgroup" data-type="horizontal" id="vcq6" class="opt">
-            <div class="popupcontainer">
-              <div class="popupright">I allra h&ouml;gsta grad</div>
-              <div class="popupleft">Inte alls</div>
-            </div>
-            <legend>&nbsp;</legend>
-            <input type="radio" name="q5" id="vcq6v1" value="1" data-theme="d"/>
-            <label for="vcq6v1"> &nbsp;</label>
-
-            <input type="radio" name="q5" id="vcq6v2" value="2" data-theme="d"/>
-            <label for="vcq6v2">&nbsp;</label>
-
-            <input type="radio" name="q5" id="vcq6v3" value="3" data-theme="d"/>
-            <label for="vcq6v3">&nbsp;</label>
-
-            <input type="radio" name="q5" id="vcq6v4" value="4" data-theme="d"/>
-            <label for="vcq6v4">&nbsp;</label>
-
-            <input type="radio" name="q5" id="vcq6v5" value="5" data-theme="d"/>
-            <label for="vcq6v5">&nbsp;</label>
-
-            <input type="radio" name="q5" id="vcq6v6" value="6" data-theme="d"/>
-            <label for="vcq6v6">&nbsp;</label>
-          </fieldset>
-        </div>
-      </div>
-
-      <div class="questioncontainer">
-        7.&#9;Intresserade sig din/a handledare f&ouml;r dig och utv&auml;rderade dina kunskaper och f&auml;rdigheter?
-        <div data-role="fieldcontain" style="position:relative;top:-25px;">
-          <fieldset data-role="controlgroup" data-type="horizontal" id="vcq7" class="opt">
-            <div class="popupcontainer">
-              <div class="popupright">I allra h&ouml;gsta grad</div>
-              <div class="popupleft">Inte alls</div>
-            </div>
-            <legend>&nbsp;</legend>
-            <input type="radio" name="q6" id="vcq7v1" value="1" data-theme="d"/>
-            <label for="vcq7v1"> &nbsp;</label>
-
-            <input type="radio" name="q6" id="vcq7v2" value="2" data-theme="d"/>
-            <label for="vcq7v2">&nbsp;</label>
-
-            <input type="radio" name="q6" id="vcq7v3" value="3" data-theme="d"/>
-            <label for="vcq7v3">&nbsp;</label>
-
-            <input type="radio" name="q6" id="vcq7v4" value="4" data-theme="d"/>
-            <label for="vcq7v4">&nbsp;</label>
-
-            <input type="radio" name="q6" id="vcq7v5" value="5" data-theme="d"/>
-            <label for="vcq7v5">&nbsp;</label>
-
-            <input type="radio" name="q6" id="vcq7v6" value="6" data-theme="d"/>
-            <label for="vcq7v6">&nbsp;</label>
-          </fieldset>
-        </div>
-      </div>
-
-      <div class="questioncontainer">
-        8.&#9;Stimulerade v&aring;rdcentralsplaceringen till fortsatt l&auml;rande inom det aktuella
-        kunskapsomr&aring;det?
-        <div data-role="fieldcontain" style="position:relative;top:-25px;">
-          <fieldset data-role="controlgroup" data-type="horizontal" id="vcq8" class="opt">
-            <div class="popupcontainer">
-              <div class="popupright">Ja, verkligen</div>
-              <div class="popupleft">Nej, inte alls</div>
-            </div>
-            <legend>&nbsp;</legend>
-            <input type="radio" name="q7" id="vcq8v1" value="1" data-theme="d"/>
-            <label for="vcq8v1"> &nbsp;</label>
-
-            <input type="radio" name="q7" id="vcq8v2" value="2" data-theme="d"/>
-            <label for="vcq8v2">&nbsp;</label>
-
-            <input type="radio" name="q7" id="vcq8v3" value="3" data-theme="d"/>
-            <label for="vcq8v3">&nbsp;</label>
-
-            <input type="radio" name="q7" id="vcq8v4" value="4" data-theme="d"/>
-            <label for="vcq8v4">&nbsp;</label>
-
-            <input type="radio" name="q7" id="vcq8v5" value="5" data-theme="d"/>
-            <label for="vcq8v5">&nbsp;</label>
-
-            <input type="radio" name="q7" id="vcq8v6" value="6" data-theme="d"/>
-            <label for="vcq8v6">&nbsp;</label>
-          </fieldset>
-        </div>
-      </div>
-
-      <div class="questioncontainer" id="vcfr10">
-        <b>Eftersom du &auml;r p&aring; v&aring;rdcentral i samband med allm&auml;nmedicinkursen under
-          T11:</b><br>
-          9.&#9;I vilken grad fick du sj&auml;lv aktivt handl&auml;gga patienter (t.ex.
-          resonera/diskutera/f&ouml;resl&aring; diagnoser/utredningar/behandlingar)?
-          <div style="position:relative;top:-25px;">
-            <div data-role="fieldcontain">
-              <fieldset data-role="controlgroup" data-type="horizontal">
-                <div class="popupcontainer">
-                  <div class="popupright">I allra h&ouml;gsta grad</div>
-                  <div class="popupleft">Inte alls</div>
-                </div>
-                <legend>&nbsp;</legend>
-                <input type="radio" name="q8" id="vcq10v1" value="1" data-theme="d"/>
-                <label for="vcq10v1"> &nbsp;</label>
-
-                <input type="radio" name="q8" id="vcq10v2" value="2" data-theme="d"/>
-                <label for="vcq10v2">&nbsp;</label>
-
-                <input type="radio" name="q8" id="vcq10v3" value="3" data-theme="d"/>
-                <label for="vcq10v3">&nbsp;</label>
-
-                <input type="radio" name="q8" id="vcq10v4" value="4" data-theme="d"/>
-                <label for="vcq10v4">&nbsp;</label>
-
-                <input type="radio" name="q8" id="vcq10v5" value="5" data-theme="d"/>
-                <label for="vcq10v5">&nbsp;</label>
-
-                <input type="radio" name="q8" id="vcq10v6" value="6" data-theme="d"/>
-                <label for="vcq10v6">&nbsp;</label>
-              </fieldset>
-            </div>
-          </div>
-        </div>
-
-        <div class="questioncontainer">
-          10.&#9;Hur har undervisningen/handledningen i praktiska moment varit?<br>
-          Mycket bra = Min handledare har visat och f&ouml;rklarat och jag har f&aring;tt prova sj&auml;lv<br>
-          Mycket d&aring;lig = Jag har inte f&aring;tt handledning alls/inte f&aring;tt f&ouml;rs&ouml;ka
-          <div style="position:relative;top:-25px;">
-            <div data-role="fieldcontain">
-              <fieldset data-role="controlgroup" data-type="horizontal" id="vcq11" class="opt">
-                <div class="popupcontainer">
-                  <div class="popupright">Mycket bra</div>
-                  <div class="popupleft">Mycket d&aring;lig</div>
-                </div>
-                <legend>&nbsp;</legend>
-                <input type="radio" name="q9" id="vcq11v1" value="1" data-theme="d"/>
-                <label for="vcq11v1"> &nbsp;</label>
-
-                <input type="radio" name="q9" id="vcq11v2" value="2" data-theme="d"/>
-                <label for="vcq11v2">&nbsp;</label>
-
-                <input type="radio" name="q9" id="vcq11v3" value="3" data-theme="d"/>
-                <label for="vcq11v3">&nbsp;</label>
-
-                <input type="radio" name="q9" id="vcq11v4" value="4" data-theme="d"/>
-                <label for="vcq11v4">&nbsp;</label>
-
-                <input type="radio" name="q9" id="vcq11v5" value="5" data-theme="d"/>
-                <label for="vcq11v5">&nbsp;</label>
-
-                <input type="radio" name="q9" id="vcq11v6" value="6" data-theme="d"/>
-                <label for="vcq11v6">&nbsp;</label>
-              </fieldset>
-            </div>
-          </div>
-        </div>
-
-        <div class="questioncontainer">
-          11.&#9;Hur ofta fick du &aring;terkoppling p&aring; det du gjorde p&aring; din v&aring;rdcentralsplacering
-          (t.ex. praktiska moment)?
-          <div style="position:relative;top:-25px;">
-            <div data-role="fieldcontain">
-              <fieldset data-role="controlgroup" data-type="horizontal" id="vcq12" class="opt">
-                <div class="popupcontainer">
-                  <div class="popupright">Alltid</div>
-                  <div class="popupleft">Aldrig</div>
-                </div>
-                <legend>&nbsp;</legend>
-                <input type="radio" name="q10" id="vcq12v1" value="1" data-theme="d"/>
-                <label for="vcq12v1"> &nbsp;</label>
-
-                <input type="radio" name="q10" id="vcq12v2" value="2" data-theme="d"/>
-                <label for="vcq12v2">&nbsp;</label>
-
-                <input type="radio" name="q10" id="vcq12v3" value="3" data-theme="d"/>
-                <label for="vcq12v3">&nbsp;</label>
-
-                <input type="radio" name="q10" id="vcq12v4" value="4" data-theme="d"/>
-                <label for="vcq12v4">&nbsp;</label>
-
-                <input type="radio" name="q10" id="vcq12v5" value="5" data-theme="d"/>
-                <label for="vcq12v5">&nbsp;</label>
-
-                <input type="radio" name="q10" id="vcq12v6" value="6" data-theme="d"/>
-                <label for="vcq12v6">&nbsp;</label>
-              </fieldset>
-            </div>
-          </div>
-        </div>
-
-        <div class="questioncontainer">
-          12.&#9;Engagerade/intresserade sig &auml;ven andra personalkategorier &auml;n l&auml;kare i/f&ouml;r
-          din utbildning?
-          <div style="position:relative;top:-25px;">
-            <div data-role="fieldcontain">
-              <fieldset data-role="controlgroup" data-type="horizontal" id="vcq13" class="opt">
-                <div class="popupcontainer">
-                  <div class="popupright">Ja, absolut</div>
-                  <div class="popupleft">Nej, inte alls</div>
-                </div>
-                <legend>&nbsp;</legend>
-                <input type="radio" name="q11" id="vcq13v1" value="1" data-theme="d"/>
-                <label for="vcq13v1"> &nbsp;</label>
-
-                <input type="radio" name="q11" id="vcq13v2" value="2" data-theme="d"/>
-                <label for="vcq13v2">&nbsp;</label>
-
-                <input type="radio" name="q11" id="vcq13v3" value="3" data-theme="d"/>
-                <label for="vcq13v3">&nbsp;</label>
-
-                <input type="radio" name="q11" id="vcq13v4" value="4" data-theme="d"/>
-                <label for="vcq13v4">&nbsp;</label>
-
-                <input type="radio" name="q11" id="vcq13v5" value="5" data-theme="d"/>
-                <label for="vcq13v5">&nbsp;</label>
-
-                <input type="radio" name="q11" id="vcq13v6" value="6" data-theme="d"/>
-                <label for="vcq13v6">&nbsp;</label>
-              </fieldset>
-            </div>
-          </div>
-        </div>
-
-        <div class="questioncontainer">
-          13.&#9;Kommentarer
-          <textarea name="q12" id="vcq14" cols="60" rows="3"></textarea>
-        </div>
-        <br>
-
-        <div class="questioncontainer" id="vcsex">
-          14.Jag &auml;r: (ej obligatorisk)
-          <br/><br/>
-
-          <div data-role="fieldcontain">
-            <fieldset class="kvinman" data-role="controlgroup" data-type="horizontal">
-              <input type="radio" name="q13" id="vcq15v1" value="1" data-theme="d"/>
-              <label for="vcq15v1">Kvinna</label>
-
-              <input type="radio" name="q13" id="vcq15v2" value="2" data-theme="d"/>
-              <label for="vcq15v2">&nbsp;Man&nbsp;</label>
-            </fieldset>
-          </div>
-        </div>
-
-        <p>Tack f&ouml;r dina svar!</p>
-
-        <h2>Lotteri</h2>
-
-        <div class="questioncontainer" style="margin-bottom:-40px;">
-          Fyll i ditt UpUnet-S anv&auml;ndarnamn om du vill delta i lotteriet.
-          <input type=text name="q14" id="vcq16" cols="8" rows="1" width="80%" data-theme="d"/>
-        </div>
-        <br>
-
-        <input type="hidden" name="q15" id="vcq17" value="iOS (2.5.1)">
-
-        <input type="hidden" name="vc-kurt-username" id="vc-kurt-username" value="Username" />
-
-        <a style="opacity:0"
-        data-role="button"
-        data-rel="dialog"
-        data-transition="slideup"
-        data-theme="d">Av oklar anledning
-        f&ouml;rskjuts den f&ouml;rsta knappen i formul&auml;ret. S&aring;ledes g&ouml;mmer jag den f&ouml;rsta
-        knappen.</a>
-
-        <div id="vcreqmsg">Oj d&aring;! Du kan tyv&auml;rr inte skicka in en kurtning utan att ange termin och v&aring;rdcentral.
-        </div>
-        <a href="#" id="VCopendialog" data-role="button" data-theme="d">Skicka in</a>
-
-      </form>
-  </div>
-    <script>
-    if ( typeof jQuery == 'undefined') {
-      navigator.notification.alert("N\345gonting har g\345tt snett. Om felet uppstod n\344r du skickade in en utv\344rdering s\345 kommer du att beh\366va skicka in den igen. Om felet kvarst\345r s\345 f\345r du hemskt g\344rna rapportera in det.", null, "Attans!", "OK");
-      location.replace('index.html');
-    }
-
-
-
-
-    </script>
-</div>
-<!-- End of VCK -->
 
 <!-- Beginning of KK -->
 <div data-role="page" id="kkpage">
@@ -1480,19 +781,717 @@
 </div>
 <!-- End of KK -->
 
-
-<!-- Beginning of Login -->
-<div data-role="page" id="login">
-  
-  <div data-role="content" data-theme="f" id="logincont"
-  style="height: auto; width: auto; overflow: auto; -webkit-overflow-scrolling:touch;">
-    <iframe id="loginout" src="http://www.sitedev.beachtime.se/cas/cas2.php" width='320' height="460"
-    scrolling='no' frameBorder='0' id='theiFrame'></iframe>
+<!-- Beginning of VCK -->
+<div data-role="page" id="vcpage">
+  <div data-role="header" data-theme="d" data-position="fixed" data-tap-toggle="false">
+    <a href="#" data-role="button" class="hemKnapp" data-theme="d" data-icon="arrow-l">Start</a>
+    <h4>VC-Kurt VT16</h4>
   </div>
+  <div data-role="content" id="vccont" style="padding-top:20px; width: 100%; display:block;"
+  class="animated fadeIn">
 
+  <h2>Termin &amp; v&aring;rdcentral!</h2>
+
+  <div class="questioncontainer" id="vcterm" style="padding-left:3%;">
+    1.&#9;Termin<br/>
+
+    <div data-role="fieldcontain" data-theme="d" id="vctermradio">
+      <fieldset data-role="controlgroup" style="margin-left:20px;" data-type="horizontal"
+      data-theme="d">
+        <input type="radio" name="qT" id="vcq1v1" value="1" data-theme="d"/>
+        <label for="vcq1v1">1</label>
+
+        <input type="radio" name="qT" id="vcq1v2" value="2" data-theme="d"/>
+        <label for="vcq1v2">2</label>
+
+        <input type="radio" name="qT" id="vcq1v3" value="3" data-theme="d"/>
+        <label for="vcq1v3">3</label>
+
+        <input type="radio" name="qT" id="vcq1v4" value="4" data-theme="d"/>
+        <label for="vcq1v4">4</label>
+
+        <input type="radio" name="qT" id="vcq1v5" value="5" data-theme="d"/>
+        <label for="vcq1v5">11</label>
+      </fieldset>
+    </div>
+    <br/>
+  </div>
+    <!-- TODO: Ändra till rätt VC-Kurt -->
+    <form id="vckurtform" name="vckurtform" method="POST" target="result">
+      <input type="hidden" name="id" value="8317"/><input type="hidden" name="noframe" value=""/>
+
+      <div class="questioncontainer">
+        2.&#9;V&aring;rdcentral
+        <select name="q1" id="vcq2" data-theme="d">
+          <option value="null"> -- V&auml;lj alternativ --</option>
+          <option id="vcq2v1" value="1">Aleris Barncentrum och v&aring;rdcentral</option>
+          <option id="vcq2v2" value="2">Aleris v&aring;rdcentral Nyby</option>
+          <option id="vcq2v3" value="3">Alunda v&aring;rdcentral</option>
+          <option id="vcq2v4" value="4">Aros l&auml;karmottagning</option>
+          <option id="vcq2v5" value="5">B&aring;lsta Doktorn</option>
+          <option id="vcq2v6" value="6">B&aring;lstadoktorn</option>
+          <option id="vcq2v7" value="7">Capio v&aring;rdcentral Enk&ouml;ping</option>
+          <option id="vcq2v8" value="8">Capio v&aring;rdcentral Liljeforstorg</option>
+          <option id="vcq2v9" value="9">Capio v&aring;rdcentral S&auml;vja</option>
+          <option id="vcq2v10" value="10">Dr Wahlunds l&auml;karmottagning</option>
+          <option id="vcq2v11" value="11">Ekeby h&auml;lsocenter</option>
+          <option id="vcq2v12" value="12">Ekeby h&auml;lsocentral</option>
+          <option id="vcq2v13" value="13">Enk&ouml;pings husl&auml;karcentrum</option>
+          <option id="vcq2v14" value="14">Enk&ouml;pings husl&auml;karcentrum</option>
+          <option id="vcq2v15" value="15">Enk&ouml;pingsh&auml;lsan</option>
+          <option id="vcq2v16" value="16">Eriksbergs v&aring;rdcentral</option>
+          <option id="vcq2v17" value="17">Familjedoktorn</option>
+          <option id="vcq2v18" value="18">Familjel&auml;karna B&aring;lsta</option>
+          <option id="vcq2v19" value="19">Fj&auml;rdhundra v&aring;rdcentral</option>
+          <option id="vcq2v20" value="20">Flogsta v&aring;rdcentral</option>
+          <option id="vcq2v21" value="21">F&aring;lhagens v&aring;rdcentral</option>
+          <option id="vcq2v22" value="22">Gimo v&aring;rdcentral</option>
+          <option id="vcq2v23" value="23">Gottsunda v&aring;rdcentral</option>
+          <option id="vcq2v24" value="24">Heby v&aring;rdcentral</option>
+          <option id="vcq2v25" value="25">Husl&auml;kargruppen Luthagsg&aring;rden</option>
+          <option id="vcq2v26" value="26">H&auml;lsohuset i Enk&ouml;ping</option>
+          <option id="vcq2v27" value="27">Knivsta l&auml;kargrupp</option>
+          <option id="vcq2v28" value="28">Knivsta v&aring;rdcentral</option>
+          <option id="vcq2v29" value="29">Kungsg&auml;rdets v&aring;rdcentral</option>
+          <option id="vcq2v30" value="30">K&aring;boh&auml;lsan</option>
+          <option id="vcq2v31" value="31">Rasbo v&aring;rdcentral</option>
+          <option id="vcq2v32" value="32">Samariterhemmets v&aring;rdcentral</option>
+          <option id="vcq2v33" value="33">Skutsk&auml;rs v&aring;rdcentral</option>
+          <option id="vcq2v34" value="34">Storvreta v&aring;rdcentral</option>
+          <option id="vcq2v35" value="35">Svartb&auml;ckens v&aring;rdcentral</option>
+          <option id="vcq2v36" value="36">S&ouml;dertulls h&auml;lsocentral, G&auml;vle</option>
+          <option id="vcq2v37" value="37">Tierps v&aring;rdcentral</option>
+          <option id="vcq2v38" value="38">Ture &Aring;landers l&auml;karpraktik</option>
+          <option id="vcq2v39" value="39">V&aring;rdcentralen Centrum</option>
+          <option id="vcq2v40" value="40">&Aring;rsta v&aring;rdcentral</option>
+          <option id="vcq2v41" value="41">&Ouml;regrunds v&aring;rdcentral</option>
+          <option id="vcq2v42" value="42">&Ouml;rsundsbro v&aring;rdcentral</option>
+          <option id="vcq2v43" value="43">&Ouml;sterbybruks v&aring;rdcentral</option>
+          <option id="vcq2v44" value="44">&Ouml;sterv&aring;la v&aring;rdcentral</option>
+          <option id="vcq2v45" value="45">&Ouml;sthammars v&aring;rdcentral</option>
+          <option id="vcq2v46" value="46">&Ouml;vriga v&aring;rdcentraler</option>
+        </select><br/></div>
+
+        <h2>Skattning av v&aring;rdcentralsplacering</h2>
+
+        <div class="questioncontainer">
+          3.&#9;Hur var introduktionen och bem&ouml;tandet p&aring; placeringen?
+          <div data-role="fieldcontain">
+            <fieldset data-role="controlgroup" data-type="horizontal" id="vcq3" class="opt"
+            style="position:relative;top:-10px;">
+            <div class="popupcontainer">
+              <div class="popupright">Mycket bra</div>
+              <div class="popupleft">D&aring;lig/Obefintlig</div>
+            </div>
+            <legend>&nbsp;</legend>
+            <input type="radio" name="q2" id="vcq3v1" value="1" data-theme="d"/>
+            <label for="vcq3v1"> &nbsp;</label>
+
+            <input type="radio" name="q2" id="vcq3v2" value="2" data-theme="d"/>
+            <label for="vcq3v2">&nbsp;</label>
+
+            <input type="radio" name="q2" id="vcq3v3" value="3" data-theme="d"/>
+            <label for="vcq3v3">&nbsp;</label>
+
+            <input type="radio" name="q2" id="vcq3v4" value="4" data-theme="d"/>
+            <label for="vcq3v4">&nbsp;</label>
+
+            <input type="radio" name="q2" id="vcq3v5" value="5" data-theme="d"/>
+            <label for="vcq3v5">&nbsp;</label>
+
+            <input type="radio" name="q2" id="vcq3v6" value="6" data-theme="d"/>
+            <label for="vcq3v6">&nbsp;</label>
+          </fieldset>
+        </div>
+      </div>
+      <div class="questioncontainer">
+        4.&#9;I vilken utstr&auml;ckning visste du sj&auml;lv vad du f&ouml;rv&auml;ntades l&auml;ra dig
+        under din v&aring;rdcentralsplacering (b&aring;de teoretiska och praktiska kunskaper)?
+        <div data-role="fieldcontain" style="position:relative;top:-25px;">
+          <fieldset data-role="controlgroup" data-type="horizontal" id="vcq4" class="opt">
+            <div class="popupcontainer">
+              <div class="popupright">Visste precis</div>
+              <div class="popupleft">Hade ingen aning</div>
+            </div>
+            <legend>&nbsp;</legend>
+            <input type="radio" name="q3" id="vcq4v1" value="1" data-theme="d"/>
+            <label for="vcq4v1"> &nbsp;</label>
+
+            <input type="radio" name="q3" id="vcq4v2" value="2" data-theme="d"/>
+            <label for="vcq4v2">&nbsp;</label>
+
+            <input type="radio" name="q3" id="vcq4v3" value="3" data-theme="d"/>
+            <label for="vcq4v3">&nbsp;</label>
+
+            <input type="radio" name="q3" id="vcq4v4" value="4" data-theme="d"/>
+            <label for="vcq4v4">&nbsp;</label>
+
+            <input type="radio" name="q3" id="vcq4v5" value="5" data-theme="d"/>
+            <label for="vcq4v5">&nbsp;</label>
+
+            <input type="radio" name="q3" id="vcq4v6" value="6" data-theme="d"/>
+            <label for="vcq4v6">&nbsp;</label>
+          </fieldset>
+        </div>
+      </div>
+
+      <div class="questioncontainer">
+        5.&#9;I vilken utstr&auml;ckning upplevde du att din/a handledare visste vad du skulle l&auml;ra
+        dig under din v&aring;rdcentralsplacering (b&aring;de teoretiska och praktiska kunskaper)?
+        <div data-role="fieldcontain" style="position:relative;top:-25px;">
+          <fieldset data-role="controlgroup" data-type="horizontal" id="vcq5" class="opt">
+            <div class="popupcontainer">
+              <div class="popupright">Visste precis</div>
+              <div class="popupleft">Hade ingen aning</div>
+            </div>
+            <legend>&nbsp;</legend>
+            <input type="radio" name="q4" id="vcq5v1" value="1" data-theme="d"/>
+            <label for="vcq5v1"> &nbsp;</label>
+
+            <input type="radio" name="q4" id="vcq5v2" value="2" data-theme="d"/>
+            <label for="vcq5v2">&nbsp;</label>
+
+            <input type="radio" name="q4" id="vcq5v3" value="3" data-theme="d"/>
+            <label for="vcq5v3">&nbsp;</label>
+
+            <input type="radio" name="q4" id="vcq5v4" value="4" data-theme="d"/>
+            <label for="vcq5v4">&nbsp;</label>
+
+            <input type="radio" name="q4" id="vcq5v5" value="5" data-theme="d"/>
+            <label for="vcq5v5">&nbsp;</label>
+
+            <input type="radio" name="q4" id="vcq5v6" value="6" data-theme="d"/>
+            <label for="vcq5v6">&nbsp;</label>
+          </fieldset>
+        </div>
+      </div>
+
+
+      <div class="questioncontainer">
+        6.&#9;I vilken utstr&auml;ckning var din v&aring;rdcentralsplacering genomt&auml;nkt och
+        planerad (arbetsuppgifter p&aring; dagarna, tider, dagarnas uppl&auml;gg, etc.)?
+        <div data-role="fieldcontain" style="position:relative;top:-25px;">
+          <fieldset data-role="controlgroup" data-type="horizontal" id="vcq6" class="opt">
+            <div class="popupcontainer">
+              <div class="popupright">I allra h&ouml;gsta grad</div>
+              <div class="popupleft">Inte alls</div>
+            </div>
+            <legend>&nbsp;</legend>
+            <input type="radio" name="q5" id="vcq6v1" value="1" data-theme="d"/>
+            <label for="vcq6v1"> &nbsp;</label>
+
+            <input type="radio" name="q5" id="vcq6v2" value="2" data-theme="d"/>
+            <label for="vcq6v2">&nbsp;</label>
+
+            <input type="radio" name="q5" id="vcq6v3" value="3" data-theme="d"/>
+            <label for="vcq6v3">&nbsp;</label>
+
+            <input type="radio" name="q5" id="vcq6v4" value="4" data-theme="d"/>
+            <label for="vcq6v4">&nbsp;</label>
+
+            <input type="radio" name="q5" id="vcq6v5" value="5" data-theme="d"/>
+            <label for="vcq6v5">&nbsp;</label>
+
+            <input type="radio" name="q5" id="vcq6v6" value="6" data-theme="d"/>
+            <label for="vcq6v6">&nbsp;</label>
+          </fieldset>
+        </div>
+      </div>
+
+      <div class="questioncontainer">
+        7.&#9;Intresserade sig din/a handledare f&ouml;r dig och utv&auml;rderade dina kunskaper och f&auml;rdigheter?
+        <div data-role="fieldcontain" style="position:relative;top:-25px;">
+          <fieldset data-role="controlgroup" data-type="horizontal" id="vcq7" class="opt">
+            <div class="popupcontainer">
+              <div class="popupright">I allra h&ouml;gsta grad</div>
+              <div class="popupleft">Inte alls</div>
+            </div>
+            <legend>&nbsp;</legend>
+            <input type="radio" name="q6" id="vcq7v1" value="1" data-theme="d"/>
+            <label for="vcq7v1"> &nbsp;</label>
+
+            <input type="radio" name="q6" id="vcq7v2" value="2" data-theme="d"/>
+            <label for="vcq7v2">&nbsp;</label>
+
+            <input type="radio" name="q6" id="vcq7v3" value="3" data-theme="d"/>
+            <label for="vcq7v3">&nbsp;</label>
+
+            <input type="radio" name="q6" id="vcq7v4" value="4" data-theme="d"/>
+            <label for="vcq7v4">&nbsp;</label>
+
+            <input type="radio" name="q6" id="vcq7v5" value="5" data-theme="d"/>
+            <label for="vcq7v5">&nbsp;</label>
+
+            <input type="radio" name="q6" id="vcq7v6" value="6" data-theme="d"/>
+            <label for="vcq7v6">&nbsp;</label>
+          </fieldset>
+        </div>
+      </div>
+
+      <div class="questioncontainer">
+        8.&#9;Stimulerade v&aring;rdcentralsplaceringen till fortsatt l&auml;rande inom det aktuella
+        kunskapsomr&aring;det?
+        <div data-role="fieldcontain" style="position:relative;top:-25px;">
+          <fieldset data-role="controlgroup" data-type="horizontal" id="vcq8" class="opt">
+            <div class="popupcontainer">
+              <div class="popupright">Ja, verkligen</div>
+              <div class="popupleft">Nej, inte alls</div>
+            </div>
+            <legend>&nbsp;</legend>
+            <input type="radio" name="q7" id="vcq8v1" value="1" data-theme="d"/>
+            <label for="vcq8v1"> &nbsp;</label>
+
+            <input type="radio" name="q7" id="vcq8v2" value="2" data-theme="d"/>
+            <label for="vcq8v2">&nbsp;</label>
+
+            <input type="radio" name="q7" id="vcq8v3" value="3" data-theme="d"/>
+            <label for="vcq8v3">&nbsp;</label>
+
+            <input type="radio" name="q7" id="vcq8v4" value="4" data-theme="d"/>
+            <label for="vcq8v4">&nbsp;</label>
+
+            <input type="radio" name="q7" id="vcq8v5" value="5" data-theme="d"/>
+            <label for="vcq8v5">&nbsp;</label>
+
+            <input type="radio" name="q7" id="vcq8v6" value="6" data-theme="d"/>
+            <label for="vcq8v6">&nbsp;</label>
+          </fieldset>
+        </div>
+      </div>
+
+      <div class="questioncontainer" id="vcfr10">
+        <b>Eftersom du &auml;r p&aring; v&aring;rdcentral i samband med allm&auml;nmedicinkursen under
+          T11:</b><br>
+          9.&#9;I vilken grad fick du sj&auml;lv aktivt handl&auml;gga patienter (t.ex.
+          resonera/diskutera/f&ouml;resl&aring; diagnoser/utredningar/behandlingar)?
+          <div style="position:relative;top:-25px;">
+            <div data-role="fieldcontain">
+              <fieldset data-role="controlgroup" data-type="horizontal">
+                <div class="popupcontainer">
+                  <div class="popupright">I allra h&ouml;gsta grad</div>
+                  <div class="popupleft">Inte alls</div>
+                </div>
+                <legend>&nbsp;</legend>
+                <input type="radio" name="q8" id="vcq10v1" value="1" data-theme="d"/>
+                <label for="vcq10v1"> &nbsp;</label>
+
+                <input type="radio" name="q8" id="vcq10v2" value="2" data-theme="d"/>
+                <label for="vcq10v2">&nbsp;</label>
+
+                <input type="radio" name="q8" id="vcq10v3" value="3" data-theme="d"/>
+                <label for="vcq10v3">&nbsp;</label>
+
+                <input type="radio" name="q8" id="vcq10v4" value="4" data-theme="d"/>
+                <label for="vcq10v4">&nbsp;</label>
+
+                <input type="radio" name="q8" id="vcq10v5" value="5" data-theme="d"/>
+                <label for="vcq10v5">&nbsp;</label>
+
+                <input type="radio" name="q8" id="vcq10v6" value="6" data-theme="d"/>
+                <label for="vcq10v6">&nbsp;</label>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+
+        <div class="questioncontainer">
+          10.&#9;Hur har undervisningen/handledningen i praktiska moment varit?<br>
+          Mycket bra = Min handledare har visat och f&ouml;rklarat och jag har f&aring;tt prova sj&auml;lv<br>
+          Mycket d&aring;lig = Jag har inte f&aring;tt handledning alls/inte f&aring;tt f&ouml;rs&ouml;ka
+          <div style="position:relative;top:-25px;">
+            <div data-role="fieldcontain">
+              <fieldset data-role="controlgroup" data-type="horizontal" id="vcq11" class="opt">
+                <div class="popupcontainer">
+                  <div class="popupright">Mycket bra</div>
+                  <div class="popupleft">Mycket d&aring;lig</div>
+                </div>
+                <legend>&nbsp;</legend>
+                <input type="radio" name="q9" id="vcq11v1" value="1" data-theme="d"/>
+                <label for="vcq11v1"> &nbsp;</label>
+
+                <input type="radio" name="q9" id="vcq11v2" value="2" data-theme="d"/>
+                <label for="vcq11v2">&nbsp;</label>
+
+                <input type="radio" name="q9" id="vcq11v3" value="3" data-theme="d"/>
+                <label for="vcq11v3">&nbsp;</label>
+
+                <input type="radio" name="q9" id="vcq11v4" value="4" data-theme="d"/>
+                <label for="vcq11v4">&nbsp;</label>
+
+                <input type="radio" name="q9" id="vcq11v5" value="5" data-theme="d"/>
+                <label for="vcq11v5">&nbsp;</label>
+
+                <input type="radio" name="q9" id="vcq11v6" value="6" data-theme="d"/>
+                <label for="vcq11v6">&nbsp;</label>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+
+        <div class="questioncontainer">
+          11.&#9;Hur ofta fick du &aring;terkoppling p&aring; det du gjorde p&aring; din v&aring;rdcentralsplacering
+          (t.ex. praktiska moment)?
+          <div style="position:relative;top:-25px;">
+            <div data-role="fieldcontain">
+              <fieldset data-role="controlgroup" data-type="horizontal" id="vcq12" class="opt">
+                <div class="popupcontainer">
+                  <div class="popupright">Alltid</div>
+                  <div class="popupleft">Aldrig</div>
+                </div>
+                <legend>&nbsp;</legend>
+                <input type="radio" name="q10" id="vcq12v1" value="1" data-theme="d"/>
+                <label for="vcq12v1"> &nbsp;</label>
+
+                <input type="radio" name="q10" id="vcq12v2" value="2" data-theme="d"/>
+                <label for="vcq12v2">&nbsp;</label>
+
+                <input type="radio" name="q10" id="vcq12v3" value="3" data-theme="d"/>
+                <label for="vcq12v3">&nbsp;</label>
+
+                <input type="radio" name="q10" id="vcq12v4" value="4" data-theme="d"/>
+                <label for="vcq12v4">&nbsp;</label>
+
+                <input type="radio" name="q10" id="vcq12v5" value="5" data-theme="d"/>
+                <label for="vcq12v5">&nbsp;</label>
+
+                <input type="radio" name="q10" id="vcq12v6" value="6" data-theme="d"/>
+                <label for="vcq12v6">&nbsp;</label>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+
+        <div class="questioncontainer">
+          12.&#9;Engagerade/intresserade sig &auml;ven andra personalkategorier &auml;n l&auml;kare i/f&ouml;r
+          din utbildning?
+          <div style="position:relative;top:-25px;">
+            <div data-role="fieldcontain">
+              <fieldset data-role="controlgroup" data-type="horizontal" id="vcq13" class="opt">
+                <div class="popupcontainer">
+                  <div class="popupright">Ja, absolut</div>
+                  <div class="popupleft">Nej, inte alls</div>
+                </div>
+                <legend>&nbsp;</legend>
+                <input type="radio" name="q11" id="vcq13v1" value="1" data-theme="d"/>
+                <label for="vcq13v1"> &nbsp;</label>
+
+                <input type="radio" name="q11" id="vcq13v2" value="2" data-theme="d"/>
+                <label for="vcq13v2">&nbsp;</label>
+
+                <input type="radio" name="q11" id="vcq13v3" value="3" data-theme="d"/>
+                <label for="vcq13v3">&nbsp;</label>
+
+                <input type="radio" name="q11" id="vcq13v4" value="4" data-theme="d"/>
+                <label for="vcq13v4">&nbsp;</label>
+
+                <input type="radio" name="q11" id="vcq13v5" value="5" data-theme="d"/>
+                <label for="vcq13v5">&nbsp;</label>
+
+                <input type="radio" name="q11" id="vcq13v6" value="6" data-theme="d"/>
+                <label for="vcq13v6">&nbsp;</label>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+
+        <div class="questioncontainer">
+          13.&#9;Kommentarer
+          <textarea name="q12" id="vcq14" cols="60" rows="3"></textarea>
+        </div>
+        <br>
+
+        <div class="questioncontainer" id="vcsex">
+          14.Jag &auml;r: (ej obligatorisk)
+          <br/><br/>
+
+          <div data-role="fieldcontain">
+            <fieldset class="kvinman" data-role="controlgroup" data-type="horizontal">
+              <input type="radio" name="q13" id="vcq15v1" value="1" data-theme="d"/>
+              <label for="vcq15v1">Kvinna</label>
+
+              <input type="radio" name="q13" id="vcq15v2" value="2" data-theme="d"/>
+              <label for="vcq15v2">&nbsp;Man&nbsp;</label>
+            </fieldset>
+          </div>
+        </div>
+
+        <p>Tack f&ouml;r dina svar!</p>
+
+        <h2>Lotteri</h2>
+
+        <div class="questioncontainer" style="margin-bottom:-40px;">
+          Fyll i ditt UpUnet-S anv&auml;ndarnamn om du vill delta i lotteriet.
+          <input type=text name="q14" id="vcq16" cols="8" rows="1" width="80%" data-theme="d"/>
+        </div>
+        <br>
+
+        <input type="hidden" name="q15" id="vcq17" value="iOS (2.5.1)">
+
+        <input type="hidden" name="vc-kurt-username" id="vc-kurt-username" value="Username" />
+
+        <a style="opacity:0"
+        data-role="button"
+        data-rel="dialog"
+        data-transition="slideup"
+        data-theme="d">Av oklar anledning
+        f&ouml;rskjuts den f&ouml;rsta knappen i formul&auml;ret. S&aring;ledes g&ouml;mmer jag den f&ouml;rsta
+        knappen.</a>
+
+        <div id="vcreqmsg">Oj d&aring;! Du kan tyv&auml;rr inte skicka in en kurtning utan att ange termin och v&aring;rdcentral.
+        </div>
+        <a href="#" id="VCopendialog" data-role="button" data-theme="d">Skicka in</a>
+
+      </form>
+  </div>
+    <script>
+    if ( typeof jQuery == 'undefined') {
+      navigator.notification.alert("N\345gonting har g\345tt snett. Om felet uppstod n\344r du skickade in en utv\344rdering s\345 kommer du att beh\366va skicka in den igen. Om felet kvarst\345r s\345 f\345r du hemskt g\344rna rapportera in det.", null, "Attans!", "OK");
+      location.replace('index.html');
+    }
+
+
+
+
+    </script>
 </div>
-<!-- End of Login -->
+<!-- End of VCK -->
 
+<!-- Beginning of VadFyllt pages -->
+<div data-role="page" id="vadfylltjag">
+  <div data-role="header" data-theme="e" data-position="fixed">
+    <a href="#" data-role="button" class="hemKnapp" data-theme="e" data-icon="arrow-l">Start</a>
+    <h4 id="vfjtitle" class="animatedFast fadeIn">Jag</h4>
+    <h4 id="vfttitle" class="animatedFast fadeIn">Min
+      termin</h4>
+  </div>
+  <div data-role="content" data-theme="f"
+  style="text-align:left;padding-top:50px;width:100%;overflow-x:hidden;" id="jagcont"
+  ontouchmove="touchMove(event);">
+    <div id="vfjcont" class="animatedFast fadeIn" style="width:100%;overflow-x:hidden;">
+      <h2>Se vad du har fyllt i </h2>
+      <br/><h5 style="margin-bottom:15px;margin-top:-25px;">(g&auml;ller enbart
+        KlinikKurt):</h5>
+        Ange ditt UpUnet-id nedan s&aring; kommer du automatiskt att f&aring; dessa uppgifter
+        skickade till din studentmail (f&ouml;ruts&auml;tter att du har fyllt i utv&auml;rderingar
+        och angivit UpUnet-id).
+        Observera att denna databas inte uppdateras i realtid.<br/><br/><br/>
+
+        <form id="mailk" style="float: left; width: 100%;" target="result">CAS-id:<br/>
+          <label class="ui-hidden-accessible" for="mailkcasid">CAS-id:</label>
+          <input type="text" name="casid" maxlength="8" id="mailkcasid"/>
+          <input type="submit" data-theme="e" value="Best&auml;ll!" name="submit"
+          id="submitmailk" style="margin-bottom:0px;">
+        </form>
+    </div>
+    <div id="vftcont" class="animatedFast fadeIn" style="display:none;" style="width:100%;">
+        <h2>Se din termins svarsfrekvens</h2>
+        <h5 style="margin-bottom:15px;margin-top:-5px;">(g&auml;ller
+          enbart KlinikKurt):</h5>
+          Ange termin och CAS-id.<br>Svar kommer direkt till din studentmail.<br><br>
+
+        <form id="svark" style="float: left;width: 100%; margin-bottom: 0px;margin-top:-8px;"
+        data-theme="e" target="result">
+        Termin:
+          <div id="vftradios">
+            <center>
+              <fieldset data-role="controlgroup" data-type="horizontal" data-theme="e"
+              data-mini="false">
+              <input type="radio" name="termin" id="ift5" value="T5" data-theme="e"/>
+              <label for="ift5">5</label>
+
+              <input type="radio" name="termin" id="ift6" value="T6" data-theme="e"/>
+              <label for="ift6">6</label>
+
+              <input type="radio" name="termin" id="ift7" value="T7" data-theme="e"/>
+              <label for="ift7">7</label>
+
+              <input type="radio" name="termin" id="ift8" value="T8" data-theme="e"/>
+              <label for="ift8">8</label>
+
+              <input type="radio" name="termin" id="ift9" value="T9" data-theme="e"/>
+              <label for="ift9">9</label>
+
+              <input type="radio" name="termin" id="ift10" value="T10"
+              data-theme="e"/>
+              <label for="ift10">10</label>
+              </fieldset>
+            </center>
+          </div>
+          <div style="position:relative;bottom:-5px">
+            CAS-id:<br/>
+            <input type="text" name="casid" maxlength="8" data-theme="e" id="svarkcasid"/>
+          </div>
+          <br>
+
+          <div style="position:relative;top:-22px;">
+            <input type="submit" data-theme="e" value="Best&auml;ll!" name="submit"
+            id="submitsvark" style="margin-bottom:0px;">
+          </div>
+        </form>
+    </div>
+    <div id=vfjbtn
+    style=width:50%;height:80px;background-color:#000;position:fixed;bottom:0;left:0;z-index:10;opacity:0;></div>
+    <div id=vftbtn
+    style=width:50%;height:80px;background-color:#000;position:fixed;bottom:0;right:0;z-index:10;opacity:0;></div>
+
+    <div style=width:100%;height:80px;background-color:#000;position:fixed;bottom:0;right:0;z-index:9;opacity:0;></div>
+  </div>
+  <div data-role="footer" data-position="fixed"
+  style=position:fixed;bottom:0; data-theme="c">
+    <div data-role="navbar" class="animated fadeIn">
+      <ul>
+        <li id="tabD1"><a href="#vadfyllttermin" id="tabD"
+          class="ui-btn-active ui-btn ui-btn-icon-top ui-icon-tabD">Jag</a>
+        </li>
+        <li><a href="#vadfyllttermin" id="tabE" class="ui-btn ui-btn-icon-top ui-icon-tabE">Min
+          termin</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- End of VadFyllt pages -->
+
+<!-- Beginning of AboutAll pages-->
+<div data-role="page" id="omall" data-dom-cache="true" style="width:100%;">
+  <div data-role="header" data-theme="b" data-position="fixed" class="animated fadeIn" id="omalltitles">
+    <a href="#" data-role="button" class="hemKnapp" data-theme="b" data-icon="arrow-l">Start</a>
+    <h4>
+      <div id="omkkt" class="animated fadeIn">Info om KlinikKurt</div>
+      <div id="omappt" style=display:none class="animated fadeIn">Info om appen</div>
+      <div id="ommsrt" style=display:none class="animated fadeIn">Info om MSR</div>
+    </h4>
+  </div>
+  <div data-role="content" data-theme="f"
+  style="text-align:left;width:90%;overflow-x:hidden;position:absolute:top:0;left:0;padding-left:5%;padding-right:5%;"
+  id="omallcont">
+    <div id="omallframe">
+      <div id="ommsrdiv" class="animatedFast fadeIn" style="display:none;width:100%;">
+        Medicinska Studier&aring;det (MSR) ansvarar f&ouml;r den studiebevakande
+        verksamheten p&aring; l&auml;karprogrammet.<br><br>MSR representerar l&auml;karstudenter
+        i bland annat Programkommittén, Medicinska sektionen, Grundutbildningskommittén samt
+        olika arbetsgrupper.<br><br>Studier&aring;det arbetar aktivt f&ouml;r att utveckla
+        och f&ouml;rb&auml;ttra utbildningen. Ett viktigt verktyg i detta arbete &auml;r
+        kursv&auml;rderingar, inklusive KlinikKurt samt V&aring;rdcentralKurt.<br/><br/>Har
+        du synpunkter p&aring;, eller fr&aring;gor om, din utbildning &auml;r du varmt v&auml;lkommen
+        att h&ouml;ra av dig till din kursrepresentant.<br/><br/>F&ouml;r mer information om
+        MSR, bes&ouml;k <a href="#" id=msrsdr>studier&aring;det.se</a>. Du kan &auml;ven
+        kontakta oss via mail: <a href="mailto:ordf@msr.studorg.uu.se" id=msrordf>ordf@msr.studorg.uu.se</a>
+        eller <a href="mailto:vordf@msr.studorg.uu.se" target="_blank">vordf@msr.studorg.uu.se</a>
+      </div>
+      <!-- TODO: Ändra till rätt datum och temrin -->
+      <div id="omkkdiv" class="animatedFast fadeIn" style="width:100%;">
+        KlinikKurt och V&aring;rdcentralKurt &auml;r kursv&auml;rderingar f&ouml;r de
+        kliniska placeringarna p&aring; l&auml;karprogrammet i Uppsala.<br/><br/>Genom att
+        utv&auml;rdera dina placeringar bidrar du till att f&ouml;rb&auml;ttra den kliniska
+        undervisningen samt den kliniska handledningen. Dessutom har du m&ouml;jlighet att
+        delta i KlinikKurt/V&aring;rdcentralKurt-lotteriet d&auml;r h&ouml;gsta
+        vinsten &auml;r en tur med intensivv&aring;rdshelikoptern. <br/><br/>KlinikKurt samt
+        V&aring;rdcentralKurt st&auml;nger den 5:e juni f&ouml;r VT16. <br/><br/>F&ouml;r
+        mer information, bes&ouml;k <a href="#" id=kkkk target="_blank" rel="external">klinikkurt.se</a>
+        eller <a href="#" id=kksdr>studier&aring;det.se</a>
+      </div>
+      <div id="omappdiv" class="animatedFast fadeIn" style="display:none;width:100%;">
+        Den h&auml;r appen &auml;r utvecklad av <a href="#" id=apptw>Appanaget</a> f&ouml;r
+        l&auml;karprogrammet i Uppsala. Den fortl&ouml;pande utvecklingen sk&ouml;ts av l&auml;karprogrammets
+        IT-bevakare<br><br>Stort tack till Ahsan Shahzad p&aring; MedFarm DoIT som bist&aring;tt
+        med hj&auml;lp och anpassningar f&ouml;r att underl&auml;tta utvecklandet och
+        kompatibiliteten med Kurt-systemet.<br><br>Om du har uppt&auml;ckt en bugg, har en
+        idé som kan f&ouml;rb&auml;ttra appen eller bara sm&aring;prata, h&ouml;r av dig
+        till <a href="mailto:it-bevakare@msr.studorg.uu.se" target="_blank">it-bevakare@msr.studorg.uu.se</a>
+      </div>
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed" ontouchmove="touchMove(event);" data-theme="c"
+  style="position:fixed:bottom:0;left:0;width:100%;">
+    <div data-role="navbar" data-theme="c" class="animated fadeIn">
+      <ul>
+        <li><a id="tabF" class="ui-btn ui-btn-icon-top ui-icon-tabF">Om MSR</a></li>
+        <li><a id="tabG" class="ui-btn ui-btn-icon-top ui-icon-tabG greentab">Om KlinikKurt</a></li>
+        <li><a id="tabH" class="ui-btn ui-btn-icon-top ui-icon-tabH">Om appen</a></li>
+      </ul>
+    </div>
+
+    <script>
+      function tabFHandler() {
+        $("li > .greentab").removeClass('greentab');
+        $("#tabF").addClass('greentab');
+        $("#omkkdiv").hide();
+        $("#omappdiv").hide();
+        $.mobile.silentScroll(0)
+        $("#ommsrdiv").show();
+        $("#omkkt").hide();
+        $("#omappt").hide();
+        $("#ommsrt").show();
+      }
+
+      function tabGHandler() {
+        $("li > .greentab").removeClass('greentab');
+        $("#tabG").addClass('greentab');
+        $("#omappdiv").hide();
+        $("#ommsrdiv").hide();
+        $.mobile.silentScroll(0)
+        $("#omkkdiv").show();
+        $("#omappt").hide();
+        $("#ommsrt").hide();
+        $("#omkkt").show();
+      }
+
+      function tabHHandler() {
+        $("li > .greentab").removeClass('greentab');
+        $("#tabH").addClass('greentab');
+        $("#omkkdiv").hide();
+        $("#ommsrdiv").hide();
+        $.mobile.silentScroll(0)
+        $("#omappdiv").show();
+        $("#omkkt").hide();
+        $("#ommsrt").hide();
+        $("#omappt").show();
+      }
+
+      function extLink(link) {
+        navigator.notification.confirm(link + ' kommer att \366ppnas i din webbl\344sare, \344r du s\344ker p\345 att du vill forts\344tta?', // message
+        openLink, // callback to invoke with index of button pressed
+        'L\344mna appen?', // title
+        'Ja,Nej' // buttonLabels
+      );
+      function openLink(button) {
+        if (button === 1) {
+          window.open(link, '_system');
+        }
+      }
+
+      }
+
+
+      $("#tabF").on('tap', tabFHandler);
+      $("#tabG").on('tap', tabGHandler);
+      $("#tabH").on('tap', tabHHandler);
+      $("#kksdr").on('tap', function() {
+        extLink('http://www.studieradet.se');
+      });
+      $("#msrsdr").on('tap', function() {
+        extLink('http://www.studieradet.se');
+      });
+      $("#kkkk").on('tap', function() {
+        extLink('http://www.klinikkurt.se');
+      });
+      $("#apptw").on('tap', function() {
+        extLink('http://www.appanaget.se');
+      });
+      $("#appanaget").on('tap', function() {
+        $("#appanaget").addClass('bounce').delay(1600).queue(function() {
+          extLink('http://www.appanaget.se');
+        });
+      });
+      $("#msrordf").on('tap', function() {
+        extLink('mailto:ordf@msr.studorg.uu.se');
+      });
+
+    </script>
+  </div>
+</div>
+<!-- End of AboutAll pages -->
 
 </body>
 </html>
