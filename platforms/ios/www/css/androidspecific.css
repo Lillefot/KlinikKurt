@@ -1,24 +1,3 @@
-#klinkurtnew, #omnew, #ifylltnew, #vckurtnew {
-    background-size:auto 70%;
-    background-repeat:no-repeat;
-    background-position: 30% 80%;
-}
-#klinkurtnew {
-    background-image: url(../img/fkk.png);
-}
-#omnew {
-    background-image: url(../img/info.png);
-    height:27% !important;
-    bottom:-2%;
-}
-#ifylltnew {
-    background-image: url(../img/vfi.png);
-}
-#vckurtnew {
-    background-image: url(../img/fvck.png);
-    height:27% !important;
-    bottom:49%;
-}
 .bigbtnsmltxt, .bigbtnbigtxt{
 	display:none;
 }

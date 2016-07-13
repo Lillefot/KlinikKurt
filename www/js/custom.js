@@ -72,6 +72,7 @@ function onBodyLoad() {
     //document.addEventListener("deviceready", initPushwoosh, false);
     $.mobile.page.prototype.options.domCache = false;
 
+    //Moves headers dues to sta
     if (ver[0] >= 7) {
         window.plugins.webviewcolor.change('#FFFFFF');
         //$(".ui-header .ui-title").css("padding-top", "10px");
@@ -130,10 +131,10 @@ function onDeviceReady() {
     var user = window.localStorage.getItem("user");
 
 
-    $("#klinkurtnew").hide();
-    $("#vckurtnew").hide();
-    $("#ifylltnew").hide();
-    $("#omnew").hide();
+    $("#toKlinikkurt").hide();
+    $("#toVcKurt").hide();
+    $("#toIfyllt").hide();
+    $("#toOmAll").hide();
     $("#newcontcover").hide();
     $("#newcont").height(function() {
         $(window).height();
@@ -161,10 +162,10 @@ function onDeviceReady() {
     setTimeout(function() {
         cordova.exec(null, null, "SplashScreen", "hide", []);
         setTimeout(function() {
-            $("#omnew").addClass(introClass).show().delay(300).queue(function() {
-                $("#ifylltnew").addClass(introClass).show().delay(300).queue(function() {
-                    $("#vckurtnew").addClass(introClass).show().delay(300).queue(function() {
-                        $("#klinkurtnew").addClass(introClass).show().delay(300).queue(function() {
+            $("#toOmAll").addClass(introClass).show().delay(300).queue(function() {
+                $("#toIfyllt").addClass(introClass).show().delay(300).queue(function() {
+                    $("#toVcKurt").addClass(introClass).show().delay(300).queue(function() {
+                        $("#toKlinikkurt").addClass(introClass).show().delay(300).queue(function() {
                             //                            $("#newcontcover").show().delay(1600).queue(function() {
                             $("#splash").hide();
                             $("#newcont").addClass("hemcontbg");
@@ -440,9 +441,9 @@ $(document).delegate("#hem", "pageinit", function(event, ui) {
 
 
 
-    $("#omnew").on('tap', omnewTapHandler);
+    $("#toOmAll").on('tap', toOmAllTapHandler);
 
-    function omnewTapHandler(event) {
+    function toOmAllTapHandler(event) {
         $.mobile.loading('show');
         $("#splash").hide();
         setTimeout(function() {
@@ -461,9 +462,9 @@ $(document).delegate("#hem", "pageinit", function(event, ui) {
     }
 
 
-    $("#ifylltnew").on('tap', ifylltnewTapHandler);
+    $("#toIfyllt").on('tap', toIfylltTapHandler);
 
-    function ifylltnewTapHandler(event) {
+    function toIfylltTapHandler(event) {
         $.mobile.loading('show');
         $("#splash").hide();
         setTimeout(function() {
@@ -483,9 +484,9 @@ $(document).delegate("#hem", "pageinit", function(event, ui) {
     }
 
 
-    $("#vckurtnew").on('tap', vckurtnewTapHandler);
+    $("#toVcKurt").on('tap', toVcKurtTapHandler);
 
-    function vckurtnewTapHandler(event) {
+    function toVcKurtTapHandler(event) {
         $.mobile.loading('show');
         $("#splash").hide();
         setTimeout(function() {
@@ -506,9 +507,9 @@ $(document).delegate("#hem", "pageinit", function(event, ui) {
         return false;
     }
 
-    $("#klinkurtnew").on('tap', klinkurtnewTapHandler);
+    $("#toKlinikkurt").on('tap', toKlinikkurtTapHandler);
 
-    function klinkurtnewTapHandler(event) {
+    function toKlinikkurtTapHandler(event) {
         $.mobile.loading('show');
         $("#splash").hide();
         setTimeout(function() {
@@ -769,7 +770,7 @@ $(document).delegate("#kkpage", "pageshow", function(event) {
 
 
 $(document).delegate("#kkpage", "pageinit", function(event) {
-    function klinkurtnewTapHandler(event2) {
+    function toKlinikkurtTapHandler(event2) {
         $.mobile.loading('show');
         $("#splash").hide();
         setTimeout(function() {
@@ -844,7 +845,7 @@ $(document).delegate("#kkpage", "pageinit", function(event) {
                         onConfirm(1);
                         }
                         else {
-                        klinkurtnewTapHandler();
+                        toKlinikkurtTapHandler();
                         }
                         }
 
