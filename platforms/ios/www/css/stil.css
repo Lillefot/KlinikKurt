@@ -160,10 +160,10 @@ textarea {
 }
 
 h4 {
-    /*width: 100%;*/
+
 }
 
-/*Back buttons*/
+/*Back buttons in header*/
 .ui-header-fixed .ui-btn-left {
   margin-top: 2%;
 }
