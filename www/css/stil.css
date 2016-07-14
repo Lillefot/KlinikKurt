@@ -64,6 +64,7 @@ p {
 h1,
 h2,
 h3 {
+    /*font-family: 'JosefinSlabSemiBold', Arial, sans-serif;*/
 
     //font-family: Arial, sans-serif;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -187,7 +188,6 @@ textarea {
 /*Titles in headers*/
 .ui-header .ui-title,
 .ui-footer .ui-title {
-    /*margin-top: 2.8%;*/
     position: absolute;
     margin-left: 0px;
     padding-bottom: 0.5em;
@@ -200,6 +200,96 @@ textarea {
   bottom: 0;
   position: absolute;
   top: auto;
+}
+
+/* === KlinikKurt Page === */
+#kkpage{
+    /*Högre div löser problemet där det inte går att scrolla ner efter att man valt ort*/
+    /*height: 105%;
+    width: 100%;
+    overflow: scroll !important;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    position:relative;*/
+}
+
+/*#kkcont > *,
+#vccont > *, {
+    -webkit-transform: translateZ(0px);
+    -webkit-transform: translate3d(0, 0, 0);
+}*/
+
+#kkcont,
+#vccont {
+    width: auto;
+    padding: 0 0 0 0;
+    /*margin: 0 !important;
+    overflow-x: hidden !important;
+    overflow-y: scroll !important;*/
+}
+
+#kktermin {
+    width: 95%;
+    position: relative;
+    margin: auto;
+}
+
+#kktermin .ui-controlgroup-horizontal .ui-radio {
+    width: 16.67%;
+}
+
+#placercont {
+
+}
+
+/* === Forms and questions ===*/
+
+.questioncontainer {
+    font-family: helvetica;
+    text-align: center;
+    font-weight: 500;
+}
+
+.ui-field-contain {
+  width: auto;
+  margin: auto;
+}
+
+.ui-controlgroup-horizontal {
+    position: relative;
+    margin: auto;
+    /*left: -5px;
+    width: 330px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;*/
+}
+
+
+.ui-field-contain .ui-controlgroup-controls {
+    width: 100%;
+    /*
+    display: inline-block;
+    /*JESPER De tre raderna nedan samt #vcterm och #vctermradio, någon slags quickfix för att alla formulärknappar hoppat ett gäng pixlar högerut */
+
+    /*position: relative !important;
+    left: -30px !important;
+    top: -15px;*/
+}
+
+
+/*#vckurtform .ui-controlgroup-horizontal .ui-radio,
+#klinikkurt .ui-controlgroup-horizontal .ui-radio {
+    width: 15%;
+    border-right: #FFF solid 2px;
+    border-left: #FFF solid 2px;
+}*/
+
+label.ui-btn.ui-corner-all.ui-btn-f.ui-btn-active.ui-radio-on,
+label.ui-btn.ui-corner-all.ui-btn-f.ui-radio-off {
+  text-align: center;
 }
 
 button {
@@ -506,11 +596,7 @@ button {
     clear: none;
     text-shadow: none;
 }
-.questioncontainer {
-    font-family: helvetica;
-    text-align: left;
-    font-weight: 500;
-}
+
 .fewq,
 .moreq {
     clear: none;
@@ -629,16 +715,7 @@ button {
     height: 100%;
     overflow: hidden;
 }
-#kkpage{
-    width: 100%;
-    /*Högre div löser problemet där det inte går att scrolla ner efter att man valt ort*/
-    height: 105%;
-    overflow: scroll !important;
-    margin-left: 0px;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
-    position:relative;
-}
+
 
 #kkbody,
 #vcpage,
@@ -753,24 +830,7 @@ transition: opacity .5s;
     height: 1px;
     width: 100%;
 }
-#kkcont,
-#vccont {
-    overflow-x: hidden !important;
-    //height:480px !important;
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 0 0 0 0;
-    overflow-y: scroll !important;
-    //-webkit-overflow-scrolling: touch !important;
-    //overflow:auto;
-    //display:-webkit-box;
-    //-webkit-box-flex:1;
-    //-webkit-box-orient:vertical;
-    //-webkit-overflow-scrolling: touch;
-    //background-color:red;
-    //position:absolute;
-    //bottom:0;
-}
+
 #omkkcont,
 #ommsrcont {
     overflow-x: hidden;
@@ -790,23 +850,14 @@ transition: opacity .5s;
     background: none !important;
     background-color: none !important;
 }
-#kkcont > *,
-#vccont > *,
-.questioncontainer {
-    -webkit-transform: translateZ(0px);
-    -webkit-transform: translate3d(0, 0, 0);
-}
+
 #klinikkurt,
 #vckurtform {
     width: 95%;
     margin-left: 3%;
     overflow-x: visible !important;
 }
-#kktermin {
-    width: 95%;
-    position: relative;
-    left: 5%;
-}
+
 .noise {
     position: relative;
     z-index: 5;
@@ -914,9 +965,7 @@ transition: opacity .5s;
 .kkfr4h0 {
     margin-bottom: -140px;
 }
-.placercont {
-    overflow: visible !important;
-}
+
 #ribbon {
     width: 53px;
     height: 178px;
@@ -970,15 +1019,7 @@ transition: opacity .5s;
 }
 /* iOS inspired */
 
-.ui-controlgroup-horizontal {
-    position: relative;
-    left: -5px;
-    width: 330px;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 0;
-    padding-right: 0;
-}
+
 .ui-footer {
     //background: url(../img/tabbarbg.png);
     //background-size: 100% 100%;
@@ -1152,15 +1193,7 @@ a[data-rel='backbtn'] .ui-btn-inner {
         background-size: auto 30px;
     }
 }
-.ui-field-contain .ui-controlgroup-controls {
-    width: 100% !important;
-    display: inline-block;
-    /*JESPER De tre raderna nedan samt #vcterm och #vctermradio, någon slags quickfix för att alla formulärknappar hoppat ett gäng pixlar högerut */
 
-    position: relative !important;
-    left: -30px !important;
-    top: -15px;
-}
 #vcterm {
     display: block;
     margin-left: 20px;
@@ -1183,15 +1216,8 @@ a[data-rel='backbtn'] .ui-btn-inner {
 #svark .ui-controlgroup-horizontal .ui-radio {
     width: 15%;
 }
-#kktermin .ui-controlgroup-horizontal .ui-radio {
-    width: 16%;
-}
-#vckurtform .ui-controlgroup-horizontal .ui-radio,
-#klinikkurt .ui-controlgroup-horizontal .ui-radio {
-    width: 15%;
-    border-right: #FFF solid 2px;
-    border-left: #FFF solid 2px;
-}
+
+
 #vckurtform .ui-controlgroup-horizontal .ui-radio .ui-first-child {
     border-left: none;
 }
