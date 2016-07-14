@@ -179,22 +179,28 @@ textarea {
     background-color: #4F7B3C;
     background-image: url(../img/info.png);
 }
+
 /*Headers*/
 .ui-header {
-    height: 10%;
+    height: 9%;
 }
 
 /*Titles in headers*/
 .ui-header .ui-title,
 .ui-footer .ui-title {
-    margin-top: 2.8%;
+    /*margin-top: 2.8%;*/
+    position: absolute;
     margin-left: 0px;
+    padding-bottom: 0.5em;
+    bottom: 0;
     width: 100%;
 }
 
 /*Back buttons in header*/
 .ui-header-fixed .ui-btn-left {
-  margin-top: 2.8%;
+  bottom: 0;
+  position: absolute;
+  top: auto;
 }
 
 button {
