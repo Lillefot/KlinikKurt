@@ -1,3 +1,4 @@
+
 * {
     padding: 0;
     margin: 0;
@@ -66,9 +67,10 @@ h2,
 h3 {
     /*font-family: 'JosefinSlabSemiBold', Arial, sans-serif;*/
 
-    //font-family: Arial, sans-serif;
+    /*//font-family: Arial, sans-serif;*/
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
+    text-align: center;
 }
 h1 {
     font-size: 4em;
@@ -256,6 +258,10 @@ textarea {
   padding-right: 0;
 }
 
+#restofkk .ui-radio {
+  width: 16.67%;
+}
+
 /* === Forms and questions ===*/
 
 .questioncontainer {
@@ -264,7 +270,9 @@ textarea {
     font-weight: 500;
 }
 
-.ui-field-contain {
+#restofkk .ui-field-contain {
+  margin-top: 7%;
+  margin-bottom: 7%;
   /*width: auto;
   margin: auto;*/
 }
@@ -307,7 +315,82 @@ label.ui-btn.ui-corner-all.ui-btn-f.ui-btn-icon-left {
     border-left: #FFF solid 2px;
 }*/
 
+/* Questions scale buttons*/
+#vckurtform .ui-controlgroup-horizontal, #klinikkurt .ui-controlgroup-horizontal {
+/*margin-left: 8%;*/
+}
 
+/*Scale indicators*/
+.popupcontainer {
+    /*width: 100%;
+    height: 90px;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: -45px;*/
+}
+
+.popupleft {
+    width: 40%;
+    height: 45%;
+    background: url(../img/popupleftnew.png) no-repeat top left;
+    background-size: 100% 100%;
+    padding-top: 2%;
+    padding-right: auto;
+    padding-bottom: auto;
+    padding-left: auto;
+    color: #FFF;
+    font-family: Helvetica Neue;
+    font-weight: 1000;
+    font-size: 1em;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    pointer-events: none;
+    clear: none;
+    text-shadow: none;
+}
+
+.popupright {
+    width: 40%;
+    height: 45%;
+    background: url(../img/popuprightnew.png) no-repeat top center;
+    background-size: 100% 100%;
+    padding-top: 2%;
+    padding-right: auto;
+    padding-bottom: auto;
+    padding-left: auto;
+    color: #FFF;
+    font-family: Helvetica Neue;
+    font-weight: 1000;
+    font-size: 1em;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    pointer-events: none;
+    clear: none;
+    text-shadow: none;
+}
+
+#vcsex .ui-controlgroup-horizontal .ui-radio,
+#kksex .ui-controlgroup-horizontal .ui-radio {
+    width: 25%;
+    border: none;
+    left: 25%;
+}
+
+#kksex .ui-btn.ui-corner-all.ui-btn-f,
+#vcsex .ui-btn.ui-corner-all.ui-btn-f {
+  text-align: center;
+}
+
+#vcsex .ui-controlgroup-horizontal,
+#kksex .ui-controlgroup-horizontal {
+    /*margin-left: 25%;*/
+}
 
 button {
     clear: both;
@@ -562,57 +645,9 @@ button {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     z-index: 20;
 }
-.popupcontainer {
-    width: 100%;
-    height: 90px;
-    position: relative;
-    margin-top: 10px;
-    margin-bottom: -45px;
-}
-.popupright {
-    width: 146px;
-    height: 90px;
-    background: url(../img/popuprightnew.png) no-repeat top center;
-    background-size: 132px 50px;
-    padding-top: 10px;
-    padding-right: auto;
-    padding-bottom: auto;
-    padding-left: auto;
-    color: #FFF;
-    font-family: Helvetica Neue;
-    font-weight: 1000;
-    font-size: 14px;
-    text-align: center;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 10;
-    pointer-events: none;
-    clear: none;
-    text-shadow: none;
-}
-.popupleft {
-    width: 132px;
-    height: 90px;
-    background: url(../img/popupleftnew.png) no-repeat top left;
-    background-size: 132px 50px;
-    padding-top: 10px;
-    padding-right: auto;
-    padding-bottom: auto;
-    padding-left: auto;
-    color: #FFF;
-    font-family: Helvetica Neue;
-    font-weight: 1000;
-    font-size: 14px;
-    text-align: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    pointer-events: none;
-    clear: none;
-    text-shadow: none;
-}
+
+
+
 
 .fewq,
 .moreq {
@@ -1240,15 +1275,7 @@ a[data-rel='backbtn'] .ui-btn-inner {
     width: auto;
     border: none;
 }
-#vcsex .ui-controlgroup-horizontal .ui-radio,
-#kksex .ui-controlgroup-horizontal .ui-radio {
-    width: 25%;
-    border: none;
-}
-#vcsex .ui-controlgroup-horizontal,
-#kksex .ui-controlgroup-horizontal {
-    margin-left: 25%;
-}
+
 .ui-fullsize .ui-btn-inner {
     text-overflow: clip;
     overflow: visible;

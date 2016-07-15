@@ -8,18 +8,16 @@ width: 16%;
 width: 18%;
 border: none;
 }
-#vckurtform .ui-controlgroup-horizontal, #klinikkurt .ui-controlgroup-horizontal {
-margin-left: 8%;
-}
-.popupright {
+
+/*.popupright {
 //    right:3%;
 }
 .popupleft {
 //    left: 3%;
-}
-#vcsex .ui-controlgroup-horizontal, #kksex .ui-controlgroup-horizontal {
+}*/
+/*#vcsex .ui-controlgroup-horizontal, #kksex .ui-controlgroup-horizontal {
 margin-left:25%;
-}
+}*/
 
 #vccont h2{
     padding-left: 3%;
