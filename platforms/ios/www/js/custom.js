@@ -1172,7 +1172,8 @@ $(document).delegate("#vcpage", "pageshow", function(event) {
     }
 
     //openKurtCheckVC();
-    vCKurtnotfinished();
+// TODO: Sends back to homepage when trying to acces VC-kurt since it's not finished. Commented out for development reasons
+    //vCKurtnotfinished();
 
 });
 $(document).delegate("#vcpage", "pageinit", function() {

@@ -236,11 +236,11 @@ textarea {
     /*position: relative;*/
     margin: auto;
 }
- /*Semester buttons*/
+ /*Semester radio*/
 #kktermin .ui-controlgroup-horizontal .ui-radio {
     width: 20%;
 }
- /*Semester buttons text align*/
+ /*Semester radios text align*/
 #kktermin .ui-btn.ui-corner-all.ui-btn-f {
   text-align: center;
 }
@@ -257,12 +257,17 @@ textarea {
   padding-left: 0;
   padding-right: 0;
 }
-
+/*Question radios*/
 #restofkk .ui-radio {
   /* 16.67 causes clipping on narrower screens such as iPhone 5*/
-  width: 16.66%;
+  width: 16.33%;
+  /*Spacing*/
+  margin-left: 0.4%;
 }
-
+/*Removes the spacing border of the first question radio*/
+#restofkk .ui-radio:nth-child(2) {
+  margin-left: 0;
+}
 /* === Forms and questions ===*/
 
 .questioncontainer {
