@@ -8,7 +8,7 @@ $(document).bind("mobileinit", function() {
 });
 
 function clearVC() {
-    console.log('Clearing VCKurtForm');
+    console.log('Clearing vckurt');
     $('#vcq2').val('null').selectmenu('refresh');
     $('#vcpage input[type=radio]').attr('checked', false).next("label").removeClass("ui-btn-active");
     $('#vcpage :radio').attr('checked', false).checkboxradio("refresh");
@@ -328,7 +328,7 @@ showConfirm() ;
 }
 
 function onOffline() {
-    navigator.notification.alert("Du verkar ha lite problem med din n\344tverksanslutning. Du kan fortfarande fylla i din KURTning men du kommer inte kunna skicka in den utan att ansluta till ett WiFi-n\344tverk eller mobiln\344tverk.", null, "Kontrollera anslutning", "OK");
+    navigator.notification.alert("Du verkar ha lite problem med din nätverksanslutning. Du kan fortfarande fylla i din KURTning men du kommer inte kunna skicka in den utan att ansluta till ett WiFi-nätverk eller mobilnätverk.", null, "Kontrollera anslutning", "OK");
 }
 
 //function refreshPage(page) {
@@ -751,14 +751,14 @@ $(document).delegate("#kkpage", "pageshow", function(event) {
                     $.mobile.changePage("#hem", {
                         transition: "flip"
                     });
-                    navigator.notification.alert("Attans! Den h\344r terminens KlinikKurt har tyv\344rr st\344ngt. Om du vet med dig att den inte alls borde ha st\344ngt, kontrollera att du har den senaste uppdateringen av appen.", null, "KlinikKurt har st\344ngt!", "OK");
+                    navigator.notification.alert("Attans! Den här terminens KlinikKurt har tyvärr stängt. Om du vet med dig att den inte alls borde ha stängt, kontrollera att du har den senaste uppdateringen av appen.", null, "KlinikKurt har stängt!", "OK");
                     return false;
                     break;
                 case "construction":
                     $.mobile.changePage("#hem", {
                         transition: "flip"
                     });
-                    navigator.notification.alert("Attans! Den h\344r terminens KlinikKurt har tyv\344rr st\344ngt. Om du vet med dig att den inte alls borde ha st\344ngt, kontrollera att du har den senaste uppdateringen av appen.", null, "KlinikKurt har st\344ngt!", "OK");
+                    navigator.notification.alert("Attans! Den här terminens KlinikKurt har tyvärr stängt. Om du vet med dig att den inte alls borde ha stängt, kontrollera att du har den senaste uppdateringen av appen.", null, "KlinikKurt har stängt!", "OK");
                     return false;
                     break;
             }
@@ -874,6 +874,7 @@ $(document).delegate("#kkpage", "pageinit", function(event) {
             datatype: "html",
             contentType: "application/x-www-form-urlencoded;charset=utf-8",
             success: function(data) {
+                //The post will always succeed in loading the page. Hence the "if" which shows when the answers are received
                 if (data.indexOf("Du saknar behörighet för denna sida") > -1){
                 console.log("Success och Mottagen");
                 clearKK();
@@ -882,7 +883,7 @@ $(document).delegate("#kkpage", "pageinit", function(event) {
                 else {
                 console.log("Success och EJ mottagen");
                 $.mobile.loading('hide');
-                navigator.notification.alert("Attans! Din KURTning kunde inte skickas. Kontrollera att du har internet\345tkomst och f\366rs\366k igen!", null, "Kunde inte skicka KURTning", "OK");
+                navigator.notification.alert("Attans! Din KURTning kunde inte skickas. Kontrollera att du har internetåtkomst och försök igen!", null, "Kunde inte skicka KURTning", "OK");
                 $('#KKopendialog').removeClass('ui-disabled');
                 }
                 console.log(data);
@@ -890,7 +891,7 @@ $(document).delegate("#kkpage", "pageinit", function(event) {
             error: function(x, e) {
                 console.log("Error och EJ mottagen");
                 $.mobile.loading('hide');
-                navigator.notification.alert("Attans! Din KURTning kunde inte skickas. Kontrollera att du har internet\345tkomst och f\366rs\366k igen!", null, "Kunde inte skicka KURTning", "OK");
+                navigator.notification.alert("Attans! Din KURTning kunde inte skickas. Kontrollera att du har internetåtkomst och försök igen!", null, "Kunde inte skicka KURTning", "OK");
                 $('#KKopendialog').removeClass('ui-disabled');
             }
         });
@@ -1064,14 +1065,14 @@ $(document).delegate("#kkpage", "pageinit", function(event) {
         if ($("input:radio[name='q5']:checked").val() && $("input:radio[name='q6']:checked").val() && $("input:radio[name='q7']:checked").val() && $("input:radio[name='q8']:checked").val() && $("input:radio[name='q9']:checked").val() && $("input:radio[name='q10']:checked").val() && $("input:radio[name='q11']:checked").val() && $("input:radio[name='q12']:checked").val() && $("input:radio[name='q13']:checked").val() && $("input:radio[name='q14']:checked").val() && ($("#kkq15").val().length !== 0) && ($("#kkq16").val().length !== 0) && ($("#kkq17").val().length !== 0) && $("input:radio[name='q18']:checked").val() && ($("#kkq19").val().length !== 0)) {
             if ($("#kkq17").val().length === 0) {
                 $('#KKopendialog').addClass('ui-disabled');
-                navigator.notification.confirm('Du har inte l\344mnat n\345gon kommentar. \304r du s\344ker p\345 att du vill skicka in din Kurtning?', // message
+                navigator.notification.confirm('Du har inte lämnat någon kommentar. Är du säker på att du vill skicka in din Kurtning?', // message
                     SubKK, // callback to invoke with index of button pressed
                     'Skicka in?', // title
                     ["Ja","Nej"] // buttonLabels
                 );
             } else {
                 $('#KKopendialog').addClass('ui-disabled');
-                navigator.notification.confirm('\304r du s\344ker p\345 att du vill skicka in din Kurtning?', // message
+                navigator.notification.confirm('Är du säker på att du vill skicka in din Kurtning?', // message
                     SubKK, // callback to invoke with index of button pressed
                     'Skicka in?', // title
                     ["Ja","Nej"] // buttonLabels
@@ -1080,14 +1081,14 @@ $(document).delegate("#kkpage", "pageinit", function(event) {
         } else {
             if ($("#kkq17").val().length === 0) {
                 $('#KKopendialog').addClass('ui-disabled');
-                navigator.notification.confirm('Du har inte svarat p\345 alla fr\345gor och inte l\344mnat n\345gon kommentar.  \304r du s\344ker p\345 att du vill skicka in din Kurtning?', // message
+                navigator.notification.confirm('Du har inte svarat på alla frågor och inte lämnat någon kommentar.  Är du säker på att du vill skicka in din Kurtning?', // message
                     SubKK, // callback to invoke with index of button pressed
                     'Skicka in?', // title
                     ["Ja","Nej"] // buttonLabels
                 );
             } else {
                 $('#KKopendialog').addClass('ui-disabled');
-                navigator.notification.confirm('Du har inte svarat p\345 alla fr\345gor.  \304r du s\344ker p\345 att du vill skicka in din Kurtning?', // message
+                navigator.notification.confirm('Du har inte svarat på alla frågor.  Är du säker på att du vill skicka in din Kurtning?', // message
                     SubKK, // callback to invoke with index of button pressed
                     'Skicka in?', // title
                     ["Ja","Nej"] // buttonLabels
@@ -1135,7 +1136,7 @@ $(document).delegate("#vcpage", "pageshow", function(event) {
         $.mobile.changePage("#hem", {
             transition: "flip"
         });
-        navigator.notification.alert("Attans! VC-kurt g\345r ej att fylla i via appen just nu!", null, "VC-Kurt fungerar ej just nu!", "OK");
+        navigator.notification.alert("Attans! VC-kurt går ej att fylla i via appen just nu!", null, "VC-Kurt fungerar ej just nu!", "OK");
         return false;
     };
 
@@ -1157,14 +1158,14 @@ $(document).delegate("#vcpage", "pageshow", function(event) {
                     $.mobile.changePage("#hem", {
                         transition: "flip"
                     });
-                    navigator.notification.alert("Attans! Den h\344r terminens VC-Kurt har tyv\344rr st\344ngt. Om du vet med dig att den inte alls borde ha st\344ngt, kontrollera att du har den senaste uppdateringen av appen.", null, "VC-Kurt har st\344ngt denna termin!", "OK");
+                    navigator.notification.alert("Attans! Den här terminens VC-Kurt har tyvärr stängt. Om du vet med dig att den inte alls borde ha stängt, kontrollera att du har den senaste uppdateringen av appen.", null, "VC-Kurt har stängt denna termin!", "OK");
                     return false;
                     break;
                 case "construction":
                     $.mobile.changePage("#hem", {
                         transition: "flip"
                     });
-                    navigator.notification.alert("Attans! Den h\344r terminens VC-Kurt har tyv\344rr st\344ngt. Om du vet med dig att den inte alls borde ha st\344ngt, kontrollera att du har den senaste uppdateringen av appen.", null, "VC-Kurt har st\344ngt pga tekniska problem!", "OK");
+                    navigator.notification.alert("Attans! Den här terminens VC-Kurt har tyvärr stängt. Om du vet med dig att den inte alls borde ha stängt, kontrollera att du har den senaste uppdateringen av appen.", null, "VC-Kurt har stängt pga tekniska problem!", "OK");
                     return false;
                     break;
             }
@@ -1197,7 +1198,7 @@ $(document).delegate("#vcpage", "pageinit", function() {
         console.log($(this).attr("id"));
         if ($(this).attr("id") != 'vcq1v5' && counter < 1) {
             counter++;
-            navigator.notification.confirm('Attans! VC-kurt i mobilen finns bara för termin 11! Vill du KURTa din VC-placering p\345 internet?', // message
+            navigator.notification.confirm('Attans! VC-kurt i mobilen finns bara för termin 11! Vill du KURTa din VC-placering på internet?', // message
                 VCTermin, // callback to invoke with index of button pressed
                 'Bara termin 11!', // title
                 ["Ja","Nej"] // buttonLabels
@@ -1231,28 +1232,28 @@ $(document).delegate("#vcpage", "pageinit", function() {
 
     function SubVCK(button) {
         if (button === 1) {
-            $("#vckurtform").submit();
+            $("#vckurt").submit();
         } else if (button === 2) {
             $('#VCopendialog').removeClass('ui-disabled');
         }
     }
 
     function showConfirmVCK(cdata) {
-        $("#vckurtform").submit();
+        $("#vckurt").submit();
     }
 
     function showConfirmVCKbkp(cdata) {
         if ($("input:radio[name='q2']:checked").val() && $("input:radio[name='q3']:checked").val() && $("input:radio[name='q4']:checked").val() && $("input:radio[name='q5']:checked").val() && $("input:radio[name='q6']:checked").val() && $("input:radio[name='q7']:checked").val() && $("input:radio[name='q9']:checked").val() && $("input:radio[name='q10']:checked").val() && $("input:radio[name='q11']:checked").val() && $("input:radio[name='q13']:checked").val()) {
             if ($("#vcq14").val().length === 0) {
                 $('#VCopendialog').addClass('ui-disabled');
-                navigator.notification.confirm('Du har inte l\344mnat n\345gon kommentar. \304r du s\344ker p\345 att du vill skicka in din Kurtning?', // message
+                navigator.notification.confirm('Du har inte lämnat någon kommentar. Är du säker på att du vill skicka in din Kurtning?', // message
                     SubVCK, // callback to invoke with index of button pressed
                     'Skicka in?', // title
                     ["Ja","Nej"] // buttonLabels
                 );
             } else {
                 $('#VCopendialog').addClass('ui-disabled');
-                navigator.notification.confirm('\304r du s\344ker p\345 att du vill skicka in din Kurtning?', // message
+                navigator.notification.confirm('Är du säker på att du vill skicka in din Kurtning?', // message
                     SubVCK, // callback to invoke with index of button pressed
                     'Skicka in?', // title
                     ["Ja","Nej"] // buttonLabels
@@ -1261,14 +1262,14 @@ $(document).delegate("#vcpage", "pageinit", function() {
         } else {
             if ($("#vcq14").val().length === 0) {
                 $('#VCopendialog').addClass('ui-disabled');
-                navigator.notification.confirm('Du har inte svarat p\345 alla fr\345gor och inte l\344mnat n\345gon kommentar. \304r du s\344ker p\345 att du vill skicka in din Kurtning?', // message
+                navigator.notification.confirm('Du har inte svarat på alla frågor och inte lämnat någon kommentar. Är du säker på att du vill skicka in din Kurtning?', // message
                     SubVCK, // callback to invoke with index of button pressed
                     'Skicka in?', // title
                     ["Ja","Nej"] // buttonLabels
                 );
             } else {
                 $('#VCopendialog').addClass('ui-disabled');
-                navigator.notification.confirm('Du har inte svarat p\345 alla fr\345gor. \304r du s\344ker p\345 att du vill skicka in din Kurtning?', // message
+                navigator.notification.confirm('Du har inte svarat på alla frågor. Är du säker på att du vill skicka in din Kurtning?', // message
                     SubVCK, // callback to invoke with index of button pressed
                     'Skicka in?', // title
                     ["Ja","Nej"] // buttonLabels
@@ -1303,7 +1304,7 @@ $(document).delegate("#vcpage", "pageinit", function() {
      }
      */
     var cas_regex = /[a-zA-Z]+[a-zA-Z]+[a-zA-Z]+[a-zA-Z]+[0-9]+[0-9]+[0-9]+[0-9]/g;
-    $("#vckurtform").submit(function(e) {
+    $("#vckurt").submit(function(e) {
         e.preventDefault();
         BlurIt();
         //if (cas_regex.test($("#vcq16").val())) {
@@ -1313,14 +1314,14 @@ $(document).delegate("#vcpage", "pageinit", function() {
                 if ($("input:radio[name='q2']:checked").val() && $("input:radio[name='q3']:checked").val() && $("input:radio[name='q4']:checked").val() && $("input:radio[name='q5']:checked").val() && $("input:radio[name='q6']:checked").val() && $("input:radio[name='q7']:checked").val() && $("input:radio[name='q9']:checked").val() && $("input:radio[name='q10']:checked").val() && $("input:radio[name='q11']:checked").val() && $("input:radio[name='q13']:checked").val()) {
                     if ($("#vcq14").val().length === 0) {
                         $('#VCopendialog').addClass('ui-disabled');
-                        navigator.notification.confirm('Du har inte l\344mnat n\345gon kommentar. \304r du s\344ker p\345 att du vill skicka in din Kurtning?', // message
+                        navigator.notification.confirm('Du har inte lämnat någon kommentar. Är du säker på att du vill skicka in din Kurtning?', // message
                             SubVCKil, // callback to invoke with index of button pressed
                             'Skicka in?', // title
                             ["Ja","Nej"] // buttonLabels
                         );
                     } else {
                         $('#VCopendialog').addClass('ui-disabled');
-                        navigator.notification.confirm('\304r du s\344ker p\345 att du vill skicka in din Kurtning?', // message
+                        navigator.notification.confirm('Är du säker på att du vill skicka in din Kurtning?', // message
                             SubVCKil, // callback to invoke with index of button pressed
                             'Skicka in?', // title
                             ["Ja","Nej"] // buttonLabels
@@ -1329,14 +1330,14 @@ $(document).delegate("#vcpage", "pageinit", function() {
                 } else {
                     if ($("#vcq14").val().length === 0) {
                         $('#VCopendialog').addClass('ui-disabled');
-                        navigator.notification.confirm('Du har inte svarat p\345 alla fr\345gor och inte l\344mnat n\345gon kommentar. \304r du s\344ker p\345 att du vill skicka in din Kurtning?', // message
+                        navigator.notification.confirm('Du har inte svarat på alla frågor och inte lämnat någon kommentar. Är du säker på att du vill skicka in din Kurtning?', // message
                             SubVCKil, // callback to invoke with index of button pressed
                             'Skicka in?', // title
                             ["Ja","Nej"] // buttonLabels
                         );
                     } else {
                         $('#VCopendialog').addClass('ui-disabled');
-                        navigator.notification.confirm('Du har inte svarat p\345 alla fr\345gor. \304r du s\344ker p\345 att du vill skicka in din Kurtning?', // message
+                        navigator.notification.confirm('Du har inte svarat på alla frågor. Är du säker på att du vill skicka in din Kurtning?', // message
                             SubVCKil, // callback to invoke with index of button pressed
                             'Skicka in?', // title
                             ["Ja","Nej"] // buttonLabels
@@ -1350,7 +1351,7 @@ $(document).delegate("#vcpage", "pageinit", function() {
                 if (button === 1) {
                     $("#vcq17").val(deviceOS);
                     $.mobile.loading('show');
-                    var dataStringVC = $("#vckurtform").serialize();
+                    var dataStringVC = $("#vckurt").serialize();
                     console.log(dataStringVC);
                     $.ajax({
                         type: "POST",
@@ -1363,19 +1364,19 @@ $(document).delegate("#vcpage", "pageinit", function() {
                                         console.log("Mottagen");
                                         TillHem();
                                         //window.plugins.googleAnalyticsPlugin.trackPageview("VCKifyllt");
-                                        navigator.notification.alert("Tack f\366r din Kurtning! Du har precis gjort l\344karprogrammet lite b\344ttre. Se nu till att dina kursare g\366r samma sak!", null, "Tack!", "OK");
+                                        navigator.notification.alert("Tack för din Kurtning! Du har precis gjort läkarprogrammet lite bättre. Se nu till att dina kursare gör samma sak!", null, "Tack!", "OK");
                                         }
                                         else {
                                         console.log("Ej mottagen");
                                         $.mobile.loading('hide');
-                                        navigator.notification.alert("Attans! Din KURTning kunde inte skickas. Kontrollera att du har internet\345tkomst och f\366rs\366k igen!", null, "Kunde inte skicka KURTning", "OK");
+                                        navigator.notification.alert("Attans! Din KURTning kunde inte skickas. Kontrollera att du har internetåtkomst och försök igen!", null, "Kunde inte skicka KURTning", "OK");
                                         $('#VCopendialog').removeClass('ui-disabled');
                                         }
                                         console.log(data);
                                     },
                         error: function(x, e) {
                             $.mobile.loading('hide');
-                            navigator.notification.alert("Attans! Din KURTning kunde inte skickas. Kontrollera att du har internet\345tkomst och f\366rs\366k igen!", null, "Kunde inte skicka KURTning", "OK");
+                            navigator.notification.alert("Attans! Din KURTning kunde inte skickas. Kontrollera att du har internetåtkomst och försök igen!", null, "Kunde inte skicka KURTning", "OK");
                             $('#VCopendialog').removeClass('ui-disabled');
                         }
                     });

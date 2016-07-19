@@ -2,8 +2,7 @@
 <html>
 <head>
   <title>Klinikkurt</title>
-  <meta name="viewport"
-  content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
   <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
   <link rel="apple-touch-icon" href="icon.png"/>
   <!-- Energize.js som tar bort tap-lagg -->
@@ -19,7 +18,6 @@
   <link href="css/androidspecific.css" rel="stylesheet" type="text/css">
   <script src="js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
   <script src="js/custom.js"></script>
-  <script src="http://192.168.1.33:8080/target/target-script-min.js#anonymous"></script>
 
 </head>
 <body onload="onBodyLoad();">
@@ -52,12 +50,13 @@
     <h4>KlinikKurt VT16</h4>
   </div>
   <div data-role="content" id="kkcont">
-    <br>
+    <br/>
 
     <form id="kktermin" data-theme="d">
       <div class="questioncontainer">
         <h2>Termin / Placering / Ort</h2>
-        1a.&#9;Termin
+        <br/>
+        Termin
       </div>
 
       <div data-role="fieldcontain" data-theme="d">
@@ -81,30 +80,30 @@
       </div>
     </form>
 
-  <br/>
+    <br/>
 
   <!-- TODO: Ändra till rätt KlinikKurt -->
   <form id="klinikkurt" method="POST" target="result"
   acn="https://doit.medfarm.uu.se/script/kurt2/receive.php" accept-charset="ISO-8859-1">
-  <input type="hidden" name="id" value="8322"/>
+  <input type="hidden" name="id" value="9017"/>
   <input type="hidden" name="noframe" value=""/>
 
   <div class="questioncontainer">
-    <p id="placercont">1b.&#9;Placering</p>
-<!--    <a style="opacity:0;height:0px;" class="" data-role="button" data-theme="d">Av oklar anledning f&ouml;rskjuts
-      den f&ouml;rsta knappen. S&aring;ledes g&ouml;mmer jag den f&ouml;rsta knappen.</a> -->
+    <p id="placercont">Placering</p>
+<!--    <a style="opacity:0;height:0px;" class="" data-role="button" data-theme="d">Av oklar anledning förskjuts
+      den första knappen. Således gömmer jag den första knappen.</a> -->
 
       <div data-role="button" id="terminfo" class="animated ui-disabled">
-        V&auml;lj termin f&ouml;rst!
+        Välj termin först!
       </div>
       <fieldset data-role="controlgroup" data-theme="a">
         <div id="kkt5" class="animated bounceInUp" data-role="controlgroup">
           <input type="radio" name="q1" id="kkq1v1" value="1" data-theme="f"/>
-          <label for="kkq1v1">Akutsjukv&aring;rd I</label>
+          <label for="kkq1v1">Akutsjukvård I</label>
           <input type="radio" name="q1" id="kkq1v2" value="2" data-theme="f"/>
           <label for="kkq1v2">Geriatrik</label>
           <input type="radio" name="q1" id="kkq1v3" value="3" data-theme="f"/>
-          <label for="kkq1v3">Hj&auml;rta-k&auml;rl I</label>
+          <label for="kkq1v3">Hjärta-kärl I</label>
           <input type="radio" name="q1" id="kkq1v4" value="4" data-theme="f"/>
           <label for="kkq1v4">Lungmedicin</label>
         </div>
@@ -121,13 +120,13 @@
           <input type="radio" name="q1" id="kkq1v9" value="9" data-theme="f"/>
           <label for="kkq1v9">Gastrokirurgi nedre</label>
           <input type="radio" name="q1" id="kkq1v10" value="10" data-theme="f"/>
-          <label for="kkq1v10">Gastrokirurgi &ouml;vre</label>
+          <label for="kkq1v10">Gastrokirurgi övre</label>
           <input type="radio" name="q1" id="kkq1v11" value="11" data-theme="f"/>
           <label for="kkq1v11">Gastromedicin</label>
           <input type="radio" name="q1" id="kkq1v12" value="12" data-theme="f"/>
           <label for="kkq1v12">Kardiologi</label>
           <input type="radio" name="q1" id="kkq1v13" value="13" data-theme="f"/>
-          <label for="kkq1v13">K&auml;rlkirurgi</label>
+          <label for="kkq1v13">Kärlkirurgi</label>
           <input type="radio" name="q1" id="kkq1v14" value="14" data-theme="f"/>
           <label for="kkq1v14">Thoraxkirurgi</label>
         </div>
@@ -154,9 +153,9 @@
           <input type="radio" name="q1" id="kkq1v22" value="22" data-theme="f"/>
           <label for="kkq1v22">Psykiatri</label>
           <input type="radio" name="q1" id="kkq1v23" value="23" data-theme="f"/>
-          <label for="kkq1v23">&Ouml;gon</label>
+          <label for="kkq1v23">Ögon</label>
           <input type="radio" name="q1" id="kkq1v24" value="24" data-theme="f"/>
-          <label for="kkq1v24">&Ouml;ron-n&auml;sa-hals</label>
+          <label for="kkq1v24">Öron-näsa-hals</label>
           <input type="radio" name="q1" id="kkq1v25" value="25" data-theme="f"/>
           <label for="kkq1v25">Neurologi</label>
         </div>
@@ -178,31 +177,31 @@
 </div>
 
   <div class="questioncontainer animated bounceInUp" id="ortcont">
-    2.&#9;Ort
+    Ort
     <div data-role="fieldcontain">
       <select name="q2" id="kkq2" data-theme="f">
-        <option value="null"> -- V&auml;lj alternativ --</option>
+        <option value="null"> -- Välj alternativ --</option>
         <option id="kkq2v1" value="1">Avesta</option>
-        <option id="kkq2v2" value="2">Bolln&auml;s</option>
-        <option id="kkq2v3" value="3">Enk&ouml;ping</option>
+        <option id="kkq2v2" value="2">Bollnäs</option>
+        <option id="kkq2v3" value="3">Enköping</option>
         <option id="kkq2v4" value="4">Eskilstuna</option>
         <option id="kkq2v5" value="5">Falun</option>
-        <option id="kkq2v6" value="6">G&auml;vle</option>
+        <option id="kkq2v6" value="6">Gävle</option>
         <option id="kkq2v7" value="7">Hudiksvall</option>
         <option id="kkq2v8" value="8">Karlstad</option>
-        <option id="kkq2v9" value="9">K&ouml;ping</option>
+        <option id="kkq2v9" value="9">Köping</option>
         <option id="kkq2v10" value="10">Ludvika</option>
         <option id="kkq2v11" value="11">Mariehamn</option>
         <option id="kkq2v12" value="12">Mora</option>
-        <option id="kkq2v13" value="13">Nyk&ouml;ping</option>
-        <option id="kkq2v14" value="14">S&ouml;dert&auml;lje</option>
+        <option id="kkq2v13" value="13">Nyköping</option>
+        <option id="kkq2v14" value="14">Södertälje</option>
         <option id="kkq2v15" value="15">Tierp</option>
         <option id="kkq2v16" value="16">Uppsala</option>
         <option id="kkq2v17" value="17">Utlandsplacering</option>
         <option id="kkq2v18" value="18">Visby</option>
-        <option id="kkq2v19" value="19">V&auml;ster&aring;s</option>
-        <option id="kkq2v20" value="20">&Ouml;sthammar</option>
-        <option id="kkq2v21" value="21">&Ouml;vriga orter</option>
+        <option id="kkq2v19" value="19">Västerås</option>
+        <option id="kkq2v20" value="20">Östhammar</option>
+        <option id="kkq2v21" value="21">Övriga orter</option>
 
 
       </select>
@@ -210,45 +209,47 @@
       <br/>
     </div>
       <div id="restofkk" class="animated bounceInUp">
-        <div class="questioncontainer animated bounceInUp" id="kkfr3" style="width:100%">
-          3.&#9;Eftersom placering avser T8 Psykatri i Uppsala; v&auml;nligen ange h&auml;r ocks&aring;
-          verksamhetsomr&aring;de<br>
-          (ett verksamhetsomr&aring;de = en utv&auml;rdering = en lott >> fyll i f&ouml;r
-          varje verksamhetsomr&aring;de du &auml;r placerad p&aring;)
+        <div class="questioncontainer animated bounceInUp" id="kkfr3">
+          <div class="moreq">1</div>
+          Eftersom placering avser T8 Psykatri i Uppsala; vänligen ange här också
+          verksamhetsområde<br>
+          (ett verksamhetsområde = en utvärdering = en lott >> fyll i för
+          varje verksamhetsområde du är placerad på)
           <select name="q3" id="kkq3" data-theme="f">
-            <option value="null"> -- V&auml;lj alternativ --</option>
+            <option value="null"> -- Välj alternativ --</option>
             <option id="kkq3v1" value="1">Akutpsykiatri</option>
-            <option id="kkq3v2" value="2">Allm&auml;npsykiatri</option>
+            <option id="kkq3v2" value="2">Allmänpsykiatri</option>
             <option id="kkq3v3" value="3">Barn- och ungdomspsykiatri</option>
             <option id="kkq3v4" value="4">Beroendepsykiatri</option>
-            <option id="kkq3v5" value="5">Psykos och r&auml;ttspsykiatri</option>
-            <option id="kkq3v6" value="6">&Auml;ldrepsykiatri</option>
+            <option id="kkq3v5" value="5">Psykos och rättspsykiatri</option>
+            <option id="kkq3v6" value="6">Äldrepsykiatri</option>
           </select><br/></div>
 
-          <div class="questioncontainer animated bounceInUp" id="kkfr4" style="width:100%">
-            3. &#9;Eftersom placering avser T9 Gyn, Obstetrik eller Pediatrik i Uppsala; v&auml;ligen
-            ange h&auml;r ocks&aring; verksamhetsomr&aring;de<br>
-            (ett verksamhetsomr&aring;de = en utv&auml;rdering = en lott >> fyll i f&ouml;r
-            varje verksamhetsomr&aring;de du &auml;r placerad p&aring;)
+          <div class="questioncontainer animated bounceInUp" id="kkfr4">
+            <div class="moreq">1</div>
+            Eftersom placering avser T9 Gynekologi, Obstetrik eller Pediatrik i Uppsala; väligen
+            ange här också verksamhetsområde<br>
+            (ett verksamhetsområde = en utvärdering = en lott >> fyll i för
+            varje verksamhetsområde du är placerad på)
             <select name="q4" id="kkq4" data-theme="f">
-              <option value="null"> -- V&auml;lj alternativ --</option>
+              <ion value="null"> -- Välj alternativ --</option>
               <option id="kkq4v1" value="1">Pediatrik Avd 95A, 95B, 95E</option>
-              <option id="kkq4v2" value="2">Pediatrik &Ouml;ppenv&aring;rd</option>
+              <option id="kkq4v2" value="2">Pediatrik Öppenvård</option>
               <option id="kkq4v3" value="3">Pediatrik Specialistmottagning</option>
               <option id="kkq4v4" value="4">Pediatrik Akutmottagning</option>
-              <option id="kkq4v5" value="5">Gynekologi - &Ouml;ppenv&aring;rd</option>
-              <option id="kkq4v6" value="6">Gynekologi - Slutenv&aring;rd</option>
+              <option id="kkq4v5" value="5">Gynekologi - Öppenvård</option>
+              <option id="kkq4v6" value="6">Gynekologi - Slutenvård</option>
               <option id="kkq4v7" value="7">Obstetrik - BB och Specialist-MVC</option>
-              <option id="kkq4v8" value="8">Obstetrik - F&ouml;rlossningen</option>
+              <option id="kkq4v8" value="8">Obstetrik - Förlossningen</option>
             </select><br/></div>
 
             <h2>Skattning av placering</h2>
-
+            <br/>
 
             <div class="questioncontainer">
-              <div class="fewq">3.</div>
-              <div class="moreq">4.</div>
-              &#9;Hur var introduktionen och bem&ouml;tandet p&aring; placeringen?
+              <div class="fewq">1</div>
+              <div class="moreq">2</div>
+              Hur var introduktionen och bemötandet på placeringen?
               <div data-role="fieldcontain">
                 <fieldset data-role="controlgroup" data-type="horizontal">
                   <div class="popupcontainer">
@@ -259,7 +260,7 @@
                     </div>
                     <div class="popupleft">
                       <div class="popuptextcontainer">
-                          <p class="popuptext">D&aring;lig/Obefintlig</p>
+                          <p class="popuptext">Dålig/Obefintlig</p>
                       </div>
                     </div>
                   </div>
@@ -287,10 +288,10 @@
 
 
             <div class="questioncontainer">
-              <div class="fewq">4.</div>
-              <div class="moreq">5.</div>
-              &#9;I vilken utstr&auml;ckning visste du sj&auml;lv vad du f&ouml;rv&auml;ntades l&auml;ra dig
-              under din placering (b&aring;de teoretiska och praktiska kunskaper)?
+              <div class="fewq">2</div>
+              <div class="moreq">3</div>
+              I vilken utsträckning visste du själv vad du förväntades lära dig
+              under din placering (både teoretiska och praktiska kunskaper)?
               <div data-role="fieldcontain" >
                 <fieldset data-role="controlgroup" data-type="horizontal">
                   <div class="popupcontainer">
@@ -328,10 +329,10 @@
             </div>
 
             <div class="questioncontainer">
-              <div class="fewq">5.</div>
-              <div class="moreq">6.</div>
-              &#9;I vilken utstr&auml;ckning upplevde du att din/a handledare visste vad du skulle l&auml;ra
-              dig under din placering (b&aring;de teoretiska och praktiska kunskaper)?
+              <div class="fewq">3</div>
+              <div class="moreq">4</div>
+              I vilken utsträckning upplevde du att din/a handledare visste vad du skulle lära
+              dig under din placering (både teoretiska och praktiska kunskaper)?
               <div data-role="fieldcontain" >
                 <fieldset data-role="controlgroup" data-type="horizontal">
                   <div class="popupcontainer">
@@ -369,16 +370,16 @@
             </div>
 
             <div class="questioncontainer">
-              <div class="fewq">6.</div>
-              <div class="moreq">7.</div>
-              &#9;I vilken utstr&auml;ckning var din placering genomt&auml;nkt och planerad (arbetsuppgifter p&aring;
-              dagarna, tider, dagarnas uppl&auml;gg, etc.)?
+              <div class="fewq">4</div>
+              <div class="moreq">5</div>
+              I vilken utsträckning var din placering genomtänkt och planerad (arbetsuppgifter på
+              dagarna, tider, dagarnas upplägg, etc.)?
               <div data-role="fieldcontain" >
                 <fieldset data-role="controlgroup" data-type="horizontal">
                   <div class="popupcontainer">
                     <div class="popupright">
                       <div class="popuptextcontainer">
-                          <p class="popuptext">I allra h&ouml;gsta grad</p>
+                          <p class="popuptext">I allra högsta grad</p>
                       </div>
                     </div>
                     <div class="popupleft">
@@ -410,15 +411,15 @@
             </div>
 
             <div class="questioncontainer">
-              <div class="fewq">7.</div>
-              <div class="moreq">8.</div>
-              &#9;Intresserade sig din/a handledare f&ouml;r dig och utv&auml;rderade dina kunskaper och f&auml;rdigheter?
+              <div class="fewq">5</div>
+              <div class="moreq">6</div>
+              Intresserade sig din/a handledare för dig och utvärderade dina kunskaper och färdigheter?
               <div data-role="fieldcontain" >
                 <fieldset data-role="controlgroup" data-type="horizontal">
                   <div class="popupcontainer">
                     <div class="popupright">
                       <div class="popuptextcontainer">
-                          <p class="popuptext">I allra h&ouml;gsta grad</p>
+                          <p class="popuptext">I allra högsta grad</p>
                       </div>
                     </div>
                     <div class="popupleft">
@@ -450,9 +451,9 @@
             </div>
 
             <div class="questioncontainer">
-              <div class="fewq">8.</div>
-              <div class="moreq">9.</div>
-              &#9;Stimulerade placeringen till fortsatt l&auml;rande inom det aktuella kunskapsomr&aring;det?
+              <div class="fewq">6</div>
+              <div class="moreq">7</div>
+              Stimulerade placeringen till fortsatt lärande inom det aktuella kunskapsområdet?
               <div >
                 <div data-role="fieldcontain">
                   <fieldset data-role="controlgroup" data-type="horizontal">
@@ -492,17 +493,17 @@
             </div>
 
             <div class="questioncontainer">
-              <div class="fewq">9.</div>
-              <div class="moreq">10.</div>
-              &#9;I vilken grad fick du sj&auml;lv aktivt handl&auml;gga patienter (t.ex. leda rond,
-              resonera/diskutera/f&ouml;resl&aring; diagnoser/utredningar/behandlingar)?
+              <div class="fewq">7</div>
+              <div class="moreq">8</div>
+              I vilken grad fick du själv aktivt handlägga patienter (t.ex. leda rond,
+              resonera/diskutera/föreslå diagnoser/utredningar/behandlingar)?
               <div >
                 <div data-role="fieldcontain">
                   <fieldset data-role="controlgroup" data-type="horizontal">
                     <div class="popupcontainer">
                       <div class="popupright">
                         <div class="popuptextcontainer">
-                            <p class="popuptext">I allra h&ouml;gsta grad</p>
+                            <p class="popuptext">I allra högsta grad</p>
                         </div>
                       </div>
                       <div class="popupleft">
@@ -535,11 +536,11 @@
             </div>
 
             <div class="questioncontainer">
-              <div class="fewq">10.</div>
-              <div class="moreq">11.</div>
-              &#9;Hur har undervisningen/handledningen i praktiska moment varit?<br>Mycket bra = min
-              handledare har visat och f&ouml;rklarat och jag har f&aring;tt prova sj&auml;lv.<br>Mycket d&aring;lig
-              = jag har inte f&aring;tt handledning alls/inte f&aring;tt f&ouml;rs&ouml;ka
+              <div class="fewq">8</div>
+              <div class="moreq">9</div>
+              Hur har undervisningen/handledningen i praktiska moment varit?<br>Mycket bra = min
+              handledare har visat och förklarat och jag har fått prova själv.<br>Mycket dålig
+              = jag har inte fått handledning alls/inte fått försöka
               <div >
                 <div data-role="fieldcontain">
                   <fieldset data-role="controlgroup" data-type="horizontal">
@@ -551,7 +552,7 @@
                       </div>
                       <div class="popupleft">
                         <div class="popuptextcontainer">
-                            <p class="popuptext">Mycket d&aring;lig</p>
+                            <p class="popuptext">Mycket dålig</p>
                         </div>
                       </div>
                     </div>
@@ -579,9 +580,9 @@
             </div>
 
             <div class="questioncontainer">
-              <div class="fewq">11.</div>
-              <div class="moreq">12.</div>
-              &#9;Hur ofta fick du &aring;terkoppling p&aring; det du gjorde p&aring; din placering (t.ex.
+              <div class="fewq">9</div>
+              <div class="moreq">10</div>
+              Hur ofta fick du återkoppling på det du gjorde på din placering (t.ex.
               journalanteckningar, praktiska moment, etc.)?
               <div >
                 <div data-role="fieldcontain">
@@ -622,9 +623,9 @@
             </div>
 
             <div class="questioncontainer">
-              <div class="fewq">12.</div>
-              <div class="moreq">13.</div>
-              &#9;Engagerade/intresserade sig &auml;ven andra personalkategorier &auml;n l&auml;kare i/f&ouml;r
+              <div class="fewq">10</div>
+              <div class="moreq">11</div>
+              Engagerade/intresserade sig även andra personalkategorier än läkare i/för
               din utbildning?
               <div >
                 <div data-role="fieldcontain">
@@ -665,30 +666,30 @@
             </div>
 
             <div class="questioncontainer">
-              <div class="fewq">13.</div>
-              <div class="moreq">14.</div>
-              &#9;N&auml;mn en (och enbart en!) l&auml;kare/handledare (inklusive Regionen) som varit s&auml;rskilt bra under din placering (OBS! Enbart namn! Skriv sedan gärna en motivering i nästa fält.)
+              <div class="fewq">11</div>
+              <div class="moreq">12</div>
+              Nämn en (och enbart en!) läkare/handledare (inklusive Regionen) som varit särskilt bra under din placering (OBS! Enbart namn! Skriv sedan gärna en motivering i nästa fält.)
               <textarea name="q15" id="kkq15" cols="60" rows="1" data-theme="f"></textarea>
             </div>
 
             <div class="questioncontainer">
-              <div class="fewq">15.</div>
-              <div class="moreq">16.</div>
-              &#9;Motivering till val av l&auml;kare/handledare
+              <div class="fewq">12</div>
+              <div class="moreq">13</div>
+              Motivering till val av läkare/handledare
               <textarea name="q16" id="kkq16" cols="60" rows="3" data-theme="f"></textarea>
             </div>
 
             <div class="questioncontainer">
-              <div class="fewq">16.</div>
-              <div class="moreq">17.</div>
-              &#9;Kommentarer
+              <div class="fewq">13</div>
+              <div class="moreq">14</div>
+              Kommentarer
               <textarea name="q17" id="kkq17" cols="60" rows="3" data-theme="f"></textarea>
             </div>
 
             <div class="questioncontainer" id="kksex">
-              <div class="fewq">18.</div>
-              <div class="moreq">19.</div>
-              Jag &auml;r: (ej obligatorisk)
+              <div class="fewq">14</div>
+              <div class="moreq">15</div>
+              Jag är: (ej obligatorisk)
 
               <div data-role="fieldcontain">
                 <fieldset data-role="controlgroup" data-type="horizontal" class="kvinman">
@@ -703,17 +704,16 @@
 
 
             <h2>Lotteri</h2>
-
+            <br/>
             <div class="questioncontainer">
-              Fyll i ditt UpUnet-S anv&auml;ndarnamn (t ex "abcd1234") i rutan nedan och deltag i lotteriet
-              med fina priser. Ditt anv&auml;ndarnamn kommer ej att synas i n&aring;gon sammanst&auml;llning
-              och enbart anv&auml;ndas vid utlottningen. F&ouml;r varje klinikv&auml;rdering som du fyller i
-              erh&aring;ller du en lott. Samtliga vinnare kommer att kontrolleras med avseende på 1) att
-              kandidaten faktiskt har g&aring;tt placeringen och 2) att inte dubbla registreringar f&ouml;r
-              samma placering skickats in. Om du &auml;r os&auml;ker p&aring; om du har fyllt i en
-              kursv&auml;rdering kan du via <a href='http://www.klinikkurt.se' target='_blank'>www.klinikkurt.se</a>
-              best&auml;lla ett utdrag p&aring; vilka du har fyllt i.
-              <!-- TODO: Change to textarea-->
+              Fyll i ditt UpUnet-S användarnamn (t ex "abcd1234") i rutan nedan och deltag i lotteriet
+              med fina priser. Ditt användarnamn kommer ej att synas i någon sammanställning
+              och enbart användas vid utlottningen. För varje klinikvärdering som du fyller i
+              erhåller du en lott. Samtliga vinnare kommer att kontrolleras med avseende på 1) att
+              kandidaten faktiskt har gått placeringen och 2) att inte dubbla registreringar för
+              samma placering skickats in. Om du är osäker på om du har fyllt i en
+              kursvärdering kan du via <a href='http://www.klinikkurt.se' target='_blank'>www.klinikkurt.se</a>
+              beställa ett utdrag på vilka du har fyllt i.
               <!--<input type=text name="q19" id="kkq19" cols="8" rows="1" width="80%" data-theme="f"/>-->
               <textarea name="q19" id="kkq19" cols="60" rows="1" data-theme="f"></textarea>
             </div>
@@ -721,49 +721,28 @@
             <input type="hidden" name="q20" id="kkq20" value="app" />
 
             <input type="hidden" name="klinik-kurt-username" id="klinik-kurt-username" value="Username" />
-            <div class="questioncontainer" id="kkreqmsg"><br><br>Oj d&aring;! Du kan tyv&auml;rr inte skicka in
+            <div class="questioncontainer" id="kkreqmsg"><br><br>Oj då! Du kan tyvärr inte skicka in
               en kurtning utan att ange termin och placering!
             </div>
             <!--<a style="opacity:0;" data-role="button" data-rel="dialog" data-transition="slideup" data-theme="d">Av
-              oklar anledning f&ouml;rskjuts den f&ouml;rsta knappen. S&aring;ledes g&ouml;mmer jag den f&ouml;rsta
+              oklar anledning förskjuts den första knappen. Således gömmer jag den första
               knappen.</a>-->
-              <a href="#" id="KKopendialog" style="margin-top:20px" data-role="button" data-theme="f">Skicka
+              <a href="#" id="KKopendialog" data-role="button" data-theme="f">Skicka
                 in</a>
               </div>
             </form>
             <!--<a id="tackkklink" href="#tackkkbody" style="opacity:0;width:1px;" data-prefetch></a>-->
           </div>
-          ​
-          <script type='text/javascript'>
-          /*
-          $().ready(function() {
-          $.mobile.hidePageLoadingMsg();
-          $.ajaxSetup({
-          error: function(x, e) {
-          $.mobile.hidePageLoadingMsg();
-          navigator.notification.alert("Attans! Din KURTning kunde inte skickas. Kontrollera att du har internet\345tkomst och f\366rs\366k igen!", null, "Kunde inte skicka KURTning", "OK");
-          $('#KKopendialog').removeClass('ui-disabled');
-        }
-      });
-
-    });
-    */
-
-
-
-
-
-    </script>
-    <script>
+    <!--<script>
     if ( typeof jQuery == 'undefined') {
-      navigator.notification.alert("N\345gonting har g\345tt snett. Om felet uppstod n\344r du skickade in en utv\344rdering s\345 kommer du att beh\366va skicka in den igen. Om felet kvarst\345r s\345 f\345r du hemskt g\344rna rapportera in det.", null, "Attans!", "OK");
+      navigator.notification.alert("Någonting har gått snett. Om felet uppstod när du skickade in en utvärdering så kommer du att behöva skicka in den igen. Om felet kvarstår så får du hemskt gärna rapportera in det. (Script-source: index.html)", null, "Attans!", "OK");
       location.replace('index.html');
     }
 
 
 
 
-    </script>
+  </script>-->
 </div>
 <!-- End of KK -->
 
@@ -773,16 +752,19 @@
     <a href="#" data-role="button" class="hemKnapp" data-theme="d" data-icon="arrow-l">Start</a>
     <h4>VC-Kurt VT16</h4>
   </div>
-  <div data-role="content" id="vccont" style="padding-top:20px; width: 100%; display:block;"
-  class="animated fadeIn">
+  <div data-role="content" id="vccont">
+  <br/>
 
-  <h2>Termin &amp; v&aring;rdcentral!</h2>
+  <form id="vctermin" data-theme="d">
 
-  <div class="questioncontainer" id="vcterm" style="padding-left:3%;">
-    1.&#9;Termin<br/>
+    <div class="questioncontainer">
+      <h2>Termin / Vårdcentral</h2>
+      <br/>
+      Termin
+    </div>
 
-    <div data-role="fieldcontain" data-theme="d" id="vctermradio">
-      <fieldset data-role="controlgroup" style="margin-left:20px;" data-type="horizontal"
+    <div data-role="fieldcontain" data-theme="d">
+      <fieldset data-role="controlgroup" data-type="horizontal"
       data-theme="d">
         <input type="radio" name="qT" id="vcq1v1" value="1" data-theme="d"/>
         <label for="vcq1v1">1</label>
@@ -800,74 +782,91 @@
         <label for="vcq1v5">11</label>
       </fieldset>
     </div>
-    <br/>
-  </div>
+  </form>
+
+  <br/>
     <!-- TODO: Ändra till rätt VC-Kurt -->
-    <form id="vckurtform" name="vckurtform" method="POST" target="result">
-      <input type="hidden" name="id" value="9018"/><input type="hidden" name="noframe" value=""/>
+    <!-- TODO: Is name="vckurt" required?-->
+    <form id="vckurt" name="vckurt" method="POST" target="result">
+      <input type="hidden" name="id" value="9018"/>
+      <input type="hidden" name="noframe" value=""/>
 
-      <div class="questioncontainer">
-        2.&#9;V&aring;rdcentral
-        <select name="q1" id="vcq2" data-theme="d">
-          <option value="null"> -- V&auml;lj alternativ --</option>
-          <option id="vcq2v1" value="1">Aleris Barncentrum och v&aring;rdcentral</option>
-          <option id="vcq2v2" value="2">Aleris v&aring;rdcentral Nyby</option>
-          <option id="vcq2v3" value="3">Alunda v&aring;rdcentral</option>
-          <option id="vcq2v4" value="4">Aros l&auml;karmottagning</option>
-          <option id="vcq2v5" value="5">B&aring;lsta Doktorn</option>
-          <option id="vcq2v6" value="6">B&aring;lstadoktorn</option>
-          <option id="vcq2v7" value="7">Capio v&aring;rdcentral Enk&ouml;ping</option>
-          <option id="vcq2v8" value="8">Capio v&aring;rdcentral Liljeforstorg</option>
-          <option id="vcq2v9" value="9">Capio v&aring;rdcentral S&auml;vja</option>
-          <option id="vcq2v10" value="10">Dr Wahlunds l&auml;karmottagning</option>
-          <option id="vcq2v11" value="11">Ekeby h&auml;lsocenter</option>
-          <option id="vcq2v12" value="12">Ekeby h&auml;lsocentral</option>
-          <option id="vcq2v13" value="13">Enk&ouml;pings husl&auml;karcentrum</option>
-          <option id="vcq2v14" value="14">Enk&ouml;pings husl&auml;karcentrum</option>
-          <option id="vcq2v15" value="15">Enk&ouml;pingsh&auml;lsan</option>
-          <option id="vcq2v16" value="16">Eriksbergs v&aring;rdcentral</option>
-          <option id="vcq2v17" value="17">Familjedoktorn</option>
-          <option id="vcq2v18" value="18">Familjel&auml;karna B&aring;lsta</option>
-          <option id="vcq2v19" value="19">Fj&auml;rdhundra v&aring;rdcentral</option>
-          <option id="vcq2v20" value="20">Flogsta v&aring;rdcentral</option>
-          <option id="vcq2v21" value="21">F&aring;lhagens v&aring;rdcentral</option>
-          <option id="vcq2v22" value="22">Gimo v&aring;rdcentral</option>
-          <option id="vcq2v23" value="23">Gottsunda v&aring;rdcentral</option>
-          <option id="vcq2v24" value="24">Heby v&aring;rdcentral</option>
-          <option id="vcq2v25" value="25">Husl&auml;kargruppen Luthagsg&aring;rden</option>
-          <option id="vcq2v26" value="26">H&auml;lsohuset i Enk&ouml;ping</option>
-          <option id="vcq2v27" value="27">Knivsta l&auml;kargrupp</option>
-          <option id="vcq2v28" value="28">Knivsta v&aring;rdcentral</option>
-          <option id="vcq2v29" value="29">Kungsg&auml;rdets v&aring;rdcentral</option>
-          <option id="vcq2v30" value="30">K&aring;boh&auml;lsan</option>
-          <option id="vcq2v31" value="31">Rasbo v&aring;rdcentral</option>
-          <option id="vcq2v32" value="32">Samariterhemmets v&aring;rdcentral</option>
-          <option id="vcq2v33" value="33">Skutsk&auml;rs v&aring;rdcentral</option>
-          <option id="vcq2v34" value="34">Storvreta v&aring;rdcentral</option>
-          <option id="vcq2v35" value="35">Svartb&auml;ckens v&aring;rdcentral</option>
-          <option id="vcq2v36" value="36">S&ouml;dertulls h&auml;lsocentral, G&auml;vle</option>
-          <option id="vcq2v37" value="37">Tierps v&aring;rdcentral</option>
-          <option id="vcq2v38" value="38">Ture &Aring;landers l&auml;karpraktik</option>
-          <option id="vcq2v39" value="39">V&aring;rdcentralen Centrum</option>
-          <option id="vcq2v40" value="40">&Aring;rsta v&aring;rdcentral</option>
-          <option id="vcq2v41" value="41">&Ouml;regrunds v&aring;rdcentral</option>
-          <option id="vcq2v42" value="42">&Ouml;rsundsbro v&aring;rdcentral</option>
-          <option id="vcq2v43" value="43">&Ouml;sterbybruks v&aring;rdcentral</option>
-          <option id="vcq2v44" value="44">&Ouml;sterv&aring;la v&aring;rdcentral</option>
-          <option id="vcq2v45" value="45">&Ouml;sthammars v&aring;rdcentral</option>
-          <option id="vcq2v46" value="46">&Ouml;vriga v&aring;rdcentraler</option>
-        </select><br/></div>
+      <div class="questioncontainer" id="vcOrt">
+        Vårdcentral
+        <br/>
+        <div data-role="fieldcontain">
+          <select name="q1" id="vcq2" data-theme="d">
+            <option value="null"> -- Välj alternativ --</option>
+            <option id="vcq2v1" value="1">Aleris Barncentrum och vårdcentral</option>
+            <option id="vcq2v2" value="2">Aleris vårdcentral Nyby</option>
+            <option id="vcq2v3" value="3">Alunda vårdcentral</option>
+            <option id="vcq2v4" value="4">Aros läkarmottagning</option>
+            <option id="vcq2v5" value="5">Bålsta Doktorn</option>
+            <option id="vcq2v6" value="6">Bålstadoktorn</option>
+            <option id="vcq2v7" value="7">Capio vårdcentral Enköping</option>
+            <option id="vcq2v8" value="8">Capio vårdcentral Liljeforstorg</option>
+            <option id="vcq2v9" value="9">Capio vårdcentral Sävja</option>
+            <option id="vcq2v10" value="10">Dr Wahlunds läkarmottagning</option>
+            <option id="vcq2v11" value="11">Ekeby hälsocenter</option>
+            <option id="vcq2v12" value="12">Ekeby hälsocentral</option>
+            <option id="vcq2v13" value="13">Enköpings husläkarcentrum</option>
+            <option id="vcq2v14" value="14">Enköpings husläkarcentrum</option>
+            <option id="vcq2v15" value="15">Enköpingshälsan</option>
+            <option id="vcq2v16" value="16">Eriksbergs vårdcentral</option>
+            <option id="vcq2v17" value="17">Familjedoktorn</option>
+            <option id="vcq2v18" value="18">Familjeläkarna Bålsta</option>
+            <option id="vcq2v19" value="19">Fjärdhundra vårdcentral</option>
+            <option id="vcq2v20" value="20">Flogsta vårdcentral</option>
+            <option id="vcq2v21" value="21">Fålhagens vårdcentral</option>
+            <option id="vcq2v22" value="22">Gimo vårdcentral</option>
+            <option id="vcq2v23" value="23">Gottsunda vårdcentral</option>
+            <option id="vcq2v24" value="24">Heby vårdcentral</option>
+            <option id="vcq2v25" value="25">Husläkargruppen Luthagsgården</option>
+            <option id="vcq2v26" value="26">Hälsohuset i Enköping</option>
+            <option id="vcq2v27" value="27">Knivsta läkargrupp</option>
+            <option id="vcq2v28" value="28">Knivsta vårdcentral</option>
+            <option id="vcq2v29" value="29">Kungsgärdets vårdcentral</option>
+            <option id="vcq2v30" value="30">Kåbohälsan</option>
+            <option id="vcq2v31" value="31">Rasbo vårdcentral</option>
+            <option id="vcq2v32" value="32">Samariterhemmets vårdcentral</option>
+            <option id="vcq2v33" value="33">Skutskärs vårdcentral</option>
+            <option id="vcq2v34" value="34">Storvreta vårdcentral</option>
+            <option id="vcq2v35" value="35">Svartbäckens vårdcentral</option>
+            <option id="vcq2v36" value="36">Södertulls hälsocentral, Gävle</option>
+            <option id="vcq2v37" value="37">Tierps vårdcentral</option>
+            <option id="vcq2v38" value="38">Ture Ålanders läkarpraktik</option>
+            <option id="vcq2v39" value="39">Vårdcentralen Centrum</option>
+            <option id="vcq2v40" value="40">Årsta vårdcentral</option>
+            <option id="vcq2v41" value="41">Öregrunds vårdcentral</option>
+            <option id="vcq2v42" value="42">Örsundsbro vårdcentral</option>
+            <option id="vcq2v43" value="43">Österbybruks vårdcentral</option>
+            <option id="vcq2v44" value="44">Östervåla vårdcentral</option>
+            <option id="vcq2v45" value="45">Östhammars vårdcentral</option>
+            <option id="vcq2v46" value="46">Övriga vårdcentraler</option>
+          </select>
+      </div>
+      <br/>
+    </div>
 
-        <h2>Skattning av v&aring;rdcentralsplacering</h2>
+        <h2>Skattning av vårdcentralsplacering</h2>
+        <br/>
 
         <div class="questioncontainer">
-          3.&#9;Hur var introduktionen och bem&ouml;tandet p&aring; placeringen?
+          <div class="vckq">1</div>
+          Hur var introduktionen och bemötandet på placeringen?
           <div data-role="fieldcontain">
-            <fieldset data-role="controlgroup" data-type="horizontal" id="vcq3" class="opt"
-            style="position:relative;top:-10px;">
+            <fieldset data-role="controlgroup" data-type="horizontal" id="vcq3">
             <div class="popupcontainer">
-              <div class="popupright">Mycket bra</div>
-              <div class="popupleft">D&aring;lig/Obefintlig</div>
+              <div class="popupright">
+                <div class="popuptextcontainer">
+                    <p class="popuptext">Mycket Bra</p>
+                </div>
+              </div>
+              <div class="popupleft">
+                <div class="popuptextcontainer">
+                    <p class="popuptext">Dålig/Obefintlig</p>
+                </div>
+              </div>
             </div>
             <legend>&nbsp;</legend>
             <input type="radio" name="q2" id="vcq3v1" value="1" data-theme="d"/>
@@ -890,17 +889,23 @@
           </fieldset>
         </div>
       </div>
+
       <div class="questioncontainer">
-        4.&#9;I vilken utstr&auml;ckning visste du sj&auml;lv vad du f&ouml;rv&auml;ntades l&auml;ra dig
-        under din v&aring;rdcentralsplacering (b&aring;de teoretiska och praktiska kunskaper)?
+        <div class="vckq">2</div>
+        I vilken utsträckning visste du själv vad du förväntades lära dig
+        under din vårdcentralsplacering (både teoretiska och praktiska kunskaper)?
         <div data-role="fieldcontain" >
-          <fieldset data-role="controlgroup" data-type="horizontal" id="vcq4" class="opt">
+          <fieldset data-role="controlgroup" data-type="horizontal" id="vcq4">
             <div class="popupcontainer">
               <div class="popupright">
-                  <div class="popuptextcontainer">Visste precis</div>
+                <div class="popuptextcontainer">
+                    <p class="popuptext">Visste precis</p>
+                </div>
               </div>
               <div class="popupleft">
-                  <div class="popuptextcontainer">Hade ingen aning</div>
+                <div class="popuptextcontainer">
+                    <p class="popuptext">Hade ingen aning</p>
+                </div>
               </div>
             </div>
             <legend>&nbsp;</legend>
@@ -926,13 +931,22 @@
       </div>
 
       <div class="questioncontainer">
-        5.&#9;I vilken utstr&auml;ckning upplevde du att din/a handledare visste vad du skulle l&auml;ra
-        dig under din v&aring;rdcentralsplacering (b&aring;de teoretiska och praktiska kunskaper)?
+        <div class="vckq">3</div>
+        I vilken utsträckning upplevde du att din/a handledare visste vad du skulle lära
+        dig under din vårdcentralsplacering (både teoretiska och praktiska kunskaper)?
         <div data-role="fieldcontain" >
-          <fieldset data-role="controlgroup" data-type="horizontal" id="vcq5" class="opt">
+          <fieldset data-role="controlgroup" data-type="horizontal" id="vcq5">
             <div class="popupcontainer">
-              <div class="popupright">Visste precis</div>
-              <div class="popupleft">Hade ingen aning</div>
+              <div class="popupright">
+                <div class="popuptextcontainer">
+                    <p class="popuptext">Visste precis</p>
+                </div>
+              </div>
+              <div class="popupleft">
+                <div class="popuptextcontainer">
+                    <p class="popuptext">Hade ingen aning</p>
+                </div>
+              </div>
             </div>
             <legend>&nbsp;</legend>
             <input type="radio" name="q4" id="vcq5v1" value="1" data-theme="d"/>
@@ -958,13 +972,22 @@
 
 
       <div class="questioncontainer">
-        6.&#9;I vilken utstr&auml;ckning var din v&aring;rdcentralsplacering genomt&auml;nkt och
-        planerad (arbetsuppgifter p&aring; dagarna, tider, dagarnas uppl&auml;gg, etc.)?
+        <div class="vckq">4</div>
+        I vilken utsträckning var din vårdcentralsplacering genomtänkt och
+        planerad (arbetsuppgifter på dagarna, tider, dagarnas upplägg, etc.)?
         <div data-role="fieldcontain" >
-          <fieldset data-role="controlgroup" data-type="horizontal" id="vcq6" class="opt">
+          <fieldset data-role="controlgroup" data-type="horizontal" id="vcq6">
             <div class="popupcontainer">
-              <div class="popupright">I allra h&ouml;gsta grad</div>
-              <div class="popupleft">Inte alls</div>
+              <div class="popupright">
+                <div class="popuptextcontainer">
+                    <p class="popuptext">I allra högsta grad</p>
+                </div>
+              </div>
+              <div class="popupleft">
+                <div class="popuptextcontainer">
+                    <p class="popuptext">Inte alls</p>
+                </div>
+              </div>
             </div>
             <legend>&nbsp;</legend>
             <input type="radio" name="q5" id="vcq6v1" value="1" data-theme="d"/>
@@ -989,12 +1012,21 @@
       </div>
 
       <div class="questioncontainer">
-        7.&#9;Intresserade sig din/a handledare f&ouml;r dig och utv&auml;rderade dina kunskaper och f&auml;rdigheter?
+        <div class="vckq">5</div>
+        Intresserade sig din/a handledare för dig och utvärderade dina kunskaper och färdigheter?
         <div data-role="fieldcontain" >
-          <fieldset data-role="controlgroup" data-type="horizontal" id="vcq7" class="opt">
+          <fieldset data-role="controlgroup" data-type="horizontal" id="vcq7">
             <div class="popupcontainer">
-              <div class="popupright">I allra h&ouml;gsta grad</div>
-              <div class="popupleft">Inte alls</div>
+              <div class="popupright">
+                <div class="popuptextcontainer">
+                    <p class="popuptext">I allra högsta grad</p>
+                </div>
+              </div>
+              <div class="popupleft">
+                <div class="popuptextcontainer">
+                    <p class="popuptext">Inte alls</p>
+                </div>
+              </div>
             </div>
             <legend>&nbsp;</legend>
             <input type="radio" name="q6" id="vcq7v1" value="1" data-theme="d"/>
@@ -1019,13 +1051,22 @@
       </div>
 
       <div class="questioncontainer">
-        8.&#9;Stimulerade v&aring;rdcentralsplaceringen till fortsatt l&auml;rande inom det aktuella
-        kunskapsomr&aring;det?
+        <div class="vckq">6</div>
+        Stimulerade vårdcentralsplaceringen till fortsatt lärande inom det aktuella
+        kunskapsområdet?
         <div data-role="fieldcontain" >
-          <fieldset data-role="controlgroup" data-type="horizontal" id="vcq8" class="opt">
+          <fieldset data-role="controlgroup" data-type="horizontal" id="vcq8">
             <div class="popupcontainer">
-              <div class="popupright">Ja, verkligen</div>
-              <div class="popupleft">Nej, inte alls</div>
+              <div class="popupright">
+                <div class="popuptextcontainer">
+                    <p class="popuptext">Ja, verkligen</p>
+                </div>
+              </div>
+              <div class="popupleft">
+                <div class="popuptextcontainer">
+                    <p class="popuptext">Nej, inte alls</p>
+                </div>
+              </div>
             </div>
             <legend>&nbsp;</legend>
             <input type="radio" name="q7" id="vcq8v1" value="1" data-theme="d"/>
@@ -1050,16 +1091,23 @@
       </div>
 
       <div class="questioncontainer" id="vcfr10">
-        <b>Eftersom du &auml;r p&aring; v&aring;rdcentral i samband med allm&auml;nmedicinkursen under
-          T11:</b><br>
-          9.&#9;I vilken grad fick du sj&auml;lv aktivt handl&auml;gga patienter (t.ex.
-          resonera/diskutera/f&ouml;resl&aring; diagnoser/utredningar/behandlingar)?
+          <div class="vckq">7</div>
+          I vilken grad fick du själv aktivt handlägga patienter (t.ex.
+          resonera/diskutera/föreslå diagnoser/utredningar/behandlingar)?
           <div >
             <div data-role="fieldcontain">
               <fieldset data-role="controlgroup" data-type="horizontal">
                 <div class="popupcontainer">
-                  <div class="popupright">I allra h&ouml;gsta grad</div>
-                  <div class="popupleft">Inte alls</div>
+                  <div class="popupright">
+                    <div class="popuptextcontainer">
+                        <p class="popuptext">I allra högsta grad</p>
+                    </div>
+                  </div>
+                  <div class="popupleft">
+                    <div class="popuptextcontainer">
+                        <p class="popuptext">Inte alls</p>
+                    </div>
+                  </div>
                 </div>
                 <legend>&nbsp;</legend>
                 <input type="radio" name="q8" id="vcq10v1" value="1" data-theme="d"/>
@@ -1085,15 +1133,24 @@
         </div>
 
         <div class="questioncontainer">
-          10.&#9;Hur har undervisningen/handledningen i praktiska moment varit?<br>
-          Mycket bra = Min handledare har visat och f&ouml;rklarat och jag har f&aring;tt prova sj&auml;lv<br>
-          Mycket d&aring;lig = Jag har inte f&aring;tt handledning alls/inte f&aring;tt f&ouml;rs&ouml;ka
+          <div class="vckq">8</div>
+          Hur har undervisningen/handledningen i praktiska moment varit?<br>
+          Mycket bra = Min handledare har visat och förklarat och jag har fått prova själv<br>
+          Mycket dålig = Jag har inte fått handledning alls/inte fått försöka
           <div >
             <div data-role="fieldcontain">
-              <fieldset data-role="controlgroup" data-type="horizontal" id="vcq11" class="opt">
+              <fieldset data-role="controlgroup" data-type="horizontal" id="vcq11" >
                 <div class="popupcontainer">
-                  <div class="popupright">Mycket bra</div>
-                  <div class="popupleft">Mycket d&aring;lig</div>
+                  <div class="popupright">
+                    <div class="popuptextcontainer">
+                        <p class="popuptext">Mycket bra</p>
+                    </div>
+                  </div>
+                  <div class="popupleft">
+                    <div class="popuptextcontainer">
+                        <p class="popuptext">Mycket dålig</p>
+                    </div>
+                  </div>
                 </div>
                 <legend>&nbsp;</legend>
                 <input type="radio" name="q9" id="vcq11v1" value="1" data-theme="d"/>
@@ -1119,14 +1176,23 @@
         </div>
 
         <div class="questioncontainer">
-          11.&#9;Hur ofta fick du &aring;terkoppling p&aring; det du gjorde p&aring; din v&aring;rdcentralsplacering
+          <div class="vckq">9</div>
+          Hur ofta fick du återkoppling på det du gjorde på din vårdcentralsplacering
           (t.ex. praktiska moment)?
           <div >
             <div data-role="fieldcontain">
-              <fieldset data-role="controlgroup" data-type="horizontal" id="vcq12" class="opt">
+              <fieldset data-role="controlgroup" data-type="horizontal" id="vcq12" >
                 <div class="popupcontainer">
-                  <div class="popupright">Alltid</div>
-                  <div class="popupleft">Aldrig</div>
+                  <div class="popupright">
+                    <div class="popuptextcontainer">
+                        <p class="popuptext">Alltid</p>
+                    </div>
+                  </div>
+                  <div class="popupleft">
+                    <div class="popuptextcontainer">
+                        <p class="popuptext">Aldrig</p>
+                    </div>
+                  </div>
                 </div>
                 <legend>&nbsp;</legend>
                 <input type="radio" name="q10" id="vcq12v1" value="1" data-theme="d"/>
@@ -1152,14 +1218,23 @@
         </div>
 
         <div class="questioncontainer">
-          12.&#9;Engagerade/intresserade sig &auml;ven andra personalkategorier &auml;n l&auml;kare i/f&ouml;r
+          <div class="vckq">10</div>
+          Engagerade/intresserade sig även andra personalkategorier än läkare i/för
           din utbildning?
           <div >
             <div data-role="fieldcontain">
-              <fieldset data-role="controlgroup" data-type="horizontal" id="vcq13" class="opt">
+              <fieldset data-role="controlgroup" data-type="horizontal" id="vcq13">
                 <div class="popupcontainer">
-                  <div class="popupright">Ja, absolut</div>
-                  <div class="popupleft">Nej, inte alls</div>
+                  <div class="popupright">
+                    <div class="popuptextcontainer">
+                        <p class="popuptext">Ja, absolut</p>
+                    </div>
+                  </div>
+                  <div class="popupleft">
+                    <div class="popuptextcontainer">
+                        <p class="popuptext">Nej, inte alls</p>
+                    </div>
+                  </div>
                 </div>
                 <legend>&nbsp;</legend>
                 <input type="radio" name="q11" id="vcq13v1" value="1" data-theme="d"/>
@@ -1185,15 +1260,15 @@
         </div>
 
         <div class="questioncontainer">
-          13.&#9;Kommentarer
+          <div class="vckq">11</div>
+          Kommentarer
           <textarea name="q12" id="vcq14" cols="60" rows="3"></textarea>
         </div>
         <br>
 
         <div class="questioncontainer" id="vcsex">
-          14.Jag &auml;r: (ej obligatorisk)
-          <br/><br/>
-
+          <div class="vckq">12</div>
+          Jag är: (ej obligatorisk)
           <div data-role="fieldcontain">
             <fieldset class="kvinman" data-role="controlgroup" data-type="horizontal">
               <input type="radio" name="q13" id="vcq15v1" value="1" data-theme="d"/>
@@ -1205,44 +1280,49 @@
           </div>
         </div>
 
-        <p>Tack f&ouml;r dina svar!</p>
-
         <h2>Lotteri</h2>
-
-        <div class="questioncontainer" style="margin-bottom:-40px;">
-          Fyll i ditt UpUnet-S anv&auml;ndarnamn om du vill delta i lotteriet.
-          <input type=text name="q14" id="vcq16" cols="8" rows="1" width="80%" data-theme="d"/>
+        <br/>
+        <div class="questioncontainer">
+          Fyll i ditt UpUnet-S användarnamn (t ex "abcd1234") i rutan nedan och deltag i lotteriet
+          med fina priser. Ditt användarnamn kommer ej att synas i någon sammanställning
+          och enbart användas vid utlottningen. För varje klinikvärdering som du fyller i
+          erhåller du en lott. Samtliga vinnare kommer att kontrolleras med avseende på 1) att
+          kandidaten faktiskt har gått placeringen och 2) att inte dubbla registreringar för
+          samma placering skickats in. Om du är osäker på om du har fyllt i en
+          kursvärdering kan du via <a href='http://www.klinikkurt.se' target='_blank'>www.klinikkurt.se</a>
+          beställa ett utdrag på vilka du har fyllt i.
+          <textarea name="q14" id="vcq16" cols="60" rows="1" data-theme="d"></textarea>
         </div>
-        <br>
 
+        <!-- TODO: Is q15 still needed?-->
         <input type="hidden" name="q15" id="vcq17" value="iOS (2.5.1)">
 
+        <!-- TODO: Does not send the correct username -->
         <input type="hidden" name="vc-kurt-username" id="vc-kurt-username" value="Username" />
 
-        <a style="opacity:0"
+        <!-- <a style="opacity:0"
         data-role="button"
         data-rel="dialog"
         data-transition="slideup"
         data-theme="d">Av oklar anledning
-        f&ouml;rskjuts den f&ouml;rsta knappen i formul&auml;ret. S&aring;ledes g&ouml;mmer jag den f&ouml;rsta
-        knappen.</a>
+        förskjuts den första knappen i formuläret. Således gömmer jag den första
+        knappen.</a> -->
 
-        <div id="vcreqmsg">Oj d&aring;! Du kan tyv&auml;rr inte skicka in en kurtning utan att ange termin och v&aring;rdcentral.
+        <div class="questioncontainer ui-disabled" id="vcreqmsg">
+          Oj då! Du kan tyvärr inte skicka in en kurtning utan att ange termin och vårdcentral.
         </div>
-        <a href="#" id="VCopendialog" data-role="button" data-theme="d">Skicka in</a>
+        <a href="#" id="VCopendialog" data-role="button" data-theme="d">
+          Skicka in
+        </a>
 
       </form>
   </div>
-    <script>
+    <!--<script>
     if ( typeof jQuery == 'undefined') {
-      navigator.notification.alert("N\345gonting har g\345tt snett. Om felet uppstod n\344r du skickade in en utv\344rdering s\345 kommer du att beh\366va skicka in den igen. Om felet kvarst\345r s\345 f\345r du hemskt g\344rna rapportera in det.", null, "Attans!", "OK");
+      navigator.notification.alert("Någonting har gått snett. Om felet uppstod när du skickade in en utvärdering så kommer du att behöva skicka in den igen. Om felet kvarstår så får du hemskt gärna rapportera in det. (Script-source: index.html)", null, "Attans!", "OK");
       location.replace('index.html');
     }
-
-
-
-
-    </script>
+  </script>-->
 </div>
 <!-- End of VCK -->
 
@@ -1259,23 +1339,23 @@
   ontouchmove="touchMove(event);">
     <div id="vfjcont" class="animatedFast fadeIn" style="width:100%;overflow-x:hidden;">
       <h2>Se vad du har fyllt i </h2>
-      <br/><h5 style="margin-bottom:15px;margin-top:-25px;">(g&auml;ller enbart
+      <br/><h5 style="margin-bottom:15px;margin-top:-25px;">(gäller enbart
         KlinikKurt):</h5>
-        Ange ditt UpUnet-id nedan s&aring; kommer du automatiskt att f&aring; dessa uppgifter
-        skickade till din studentmail (f&ouml;ruts&auml;tter att du har fyllt i utv&auml;rderingar
+        Ange ditt UpUnet-id nedan så kommer du automatiskt att få dessa uppgifter
+        skickade till din studentmail (förutsätter att du har fyllt i utvärderingar
         och angivit UpUnet-id).
         Observera att denna databas inte uppdateras i realtid.<br/><br/><br/>
 
         <form id="mailk" style="float: left; width: 100%;" target="result">CAS-id:<br/>
           <label class="ui-hidden-accessible" for="mailkcasid">CAS-id:</label>
           <input type="text" name="casid" maxlength="8" id="mailkcasid"/>
-          <input type="submit" data-theme="e" value="Best&auml;ll!" name="submit"
+          <input type="submit" data-theme="e" value="Beställ!" name="submit"
           id="submitmailk" style="margin-bottom:0px;">
         </form>
     </div>
     <div id="vftcont" class="animatedFast fadeIn" style="display:none;" style="width:100%;">
         <h2>Se din termins svarsfrekvens</h2>
-        <h5 style="margin-bottom:15px;margin-top:-5px;">(g&auml;ller
+        <h5 style="margin-bottom:15px;margin-top:-5px;">(gäller
           enbart KlinikKurt):</h5>
           Ange termin och CAS-id.<br>Svar kommer direkt till din studentmail.<br><br>
 
@@ -1314,7 +1394,7 @@
           <br>
 
           <div style="position:relative;top:-22px;">
-            <input type="submit" data-theme="e" value="Best&auml;ll!" name="submit"
+            <input type="submit" data-theme="e" value="Beställ!" name="submit"
             id="submitsvark" style="margin-bottom:0px;">
           </div>
         </form>
@@ -1357,37 +1437,37 @@
   id="omallcont">
     <div id="omallframe">
       <div id="ommsrdiv" class="animatedFast fadeIn" style="display:none;width:100%;">
-        Medicinska Studier&aring;det (MSR) ansvarar f&ouml;r den studiebevakande
-        verksamheten p&aring; l&auml;karprogrammet.<br><br>MSR representerar l&auml;karstudenter
+        Medicinska Studierådet (MSR) ansvarar för den studiebevakande
+        verksamheten på läkarprogrammet.<br><br>MSR representerar läkarstudenter
         i bland annat Programkommittén, Medicinska sektionen, Grundutbildningskommittén samt
-        olika arbetsgrupper.<br><br>Studier&aring;det arbetar aktivt f&ouml;r att utveckla
-        och f&ouml;rb&auml;ttra utbildningen. Ett viktigt verktyg i detta arbete &auml;r
-        kursv&auml;rderingar, inklusive KlinikKurt samt V&aring;rdcentralKurt.<br/><br/>Har
-        du synpunkter p&aring;, eller fr&aring;gor om, din utbildning &auml;r du varmt v&auml;lkommen
-        att h&ouml;ra av dig till din kursrepresentant.<br/><br/>F&ouml;r mer information om
-        MSR, bes&ouml;k <a href="#" id=msrsdr>studier&aring;det.se</a>. Du kan &auml;ven
+        olika arbetsgrupper.<br><br>Studierådet arbetar aktivt för att utveckla
+        och förbättra utbildningen. Ett viktigt verktyg i detta arbete är
+        kursvärderingar, inklusive KlinikKurt samt VårdcentralKurt.<br/><br/>Har
+        du synpunkter på, eller frågor om, din utbildning är du varmt välkommen
+        att höra av dig till din kursrepresentant.<br/><br/>För mer information om
+        MSR, besök <a href="#" id=msrsdr>studierådet.se</a>. Du kan även
         kontakta oss via mail: <a href="mailto:ordf@msr.studorg.uu.se" id=msrordf>ordf@msr.studorg.uu.se</a>
         eller <a href="mailto:vordf@msr.studorg.uu.se" target="_blank">vordf@msr.studorg.uu.se</a>
       </div>
       <!-- TODO: Ändra till rätt datum och temrin -->
       <div id="omkkdiv" class="animatedFast fadeIn" style="width:100%;">
-        KlinikKurt och V&aring;rdcentralKurt &auml;r kursv&auml;rderingar f&ouml;r de
-        kliniska placeringarna p&aring; l&auml;karprogrammet i Uppsala.<br/><br/>Genom att
-        utv&auml;rdera dina placeringar bidrar du till att f&ouml;rb&auml;ttra den kliniska
-        undervisningen samt den kliniska handledningen. Dessutom har du m&ouml;jlighet att
-        delta i KlinikKurt/V&aring;rdcentralKurt-lotteriet d&auml;r h&ouml;gsta
-        vinsten &auml;r en tur med intensivv&aring;rdshelikoptern. <br/><br/>KlinikKurt samt
-        V&aring;rdcentralKurt st&auml;nger den 5:e juni f&ouml;r VT16. <br/><br/>F&ouml;r
-        mer information, bes&ouml;k <a href="#" id=kkkk target="_blank" rel="external">klinikkurt.se</a>
-        eller <a href="#" id=kksdr>studier&aring;det.se</a>
+        KlinikKurt och VårdcentralKurt är kursvärderingar för de
+        kliniska placeringarna på läkarprogrammet i Uppsala.<br/><br/>Genom att
+        utvärdera dina placeringar bidrar du till att förbättra den kliniska
+        undervisningen samt den kliniska handledningen. Dessutom har du möjlighet att
+        delta i KlinikKurt/VårdcentralKurt-lotteriet där högsta
+        vinsten är en tur med intensivvårdshelikoptern. <br/><br/>KlinikKurt samt
+        VårdcentralKurt stänger den 5:e juni för VT16. <br/><br/>För
+        mer information, besök <a href="#" id=kkkk target="_blank" rel="external">klinikkurt.se</a>
+        eller <a href="#" id=kksdr>studierådet.se</a>
       </div>
       <div id="omappdiv" class="animatedFast fadeIn" style="display:none;width:100%;">
-        Den h&auml;r appen &auml;r utvecklad av <a href="#" id=apptw>Appanaget</a> f&ouml;r
-        l&auml;karprogrammet i Uppsala. Den fortl&ouml;pande utvecklingen sk&ouml;ts av l&auml;karprogrammets
-        IT-bevakare<br><br>Stort tack till Ahsan Shahzad p&aring; MedFarm DoIT som bist&aring;tt
-        med hj&auml;lp och anpassningar f&ouml;r att underl&auml;tta utvecklandet och
-        kompatibiliteten med Kurt-systemet.<br><br>Om du har uppt&auml;ckt en bugg, har en
-        idé som kan f&ouml;rb&auml;ttra appen eller bara sm&aring;prata, h&ouml;r av dig
+        Den här appen är utvecklad av <a href="#" id=apptw>Appanaget</a> för
+        läkarprogrammet i Uppsala. Den fortlöpande utvecklingen sköts av läkarprogrammets
+        IT-bevakare<br><br>Stort tack till Ahsan Shahzad på MedFarm DoIT som bistått
+        med hjälp och anpassningar för att underlätta utvecklandet och
+        kompatibiliteten med Kurt-systemet.<br><br>Om du har upptäckt en bugg, har en
+        idé som kan förbättra appen eller bara småprata, hör av dig
         till <a href="mailto:it-bevakare@msr.studorg.uu.se" target="_blank">it-bevakare@msr.studorg.uu.se</a>
       </div>
     </div>
@@ -1440,9 +1520,9 @@
       }
 
       function extLink(link) {
-        navigator.notification.confirm(link + ' kommer att \366ppnas i din webbl\344sare, \344r du s\344ker p\345 att du vill forts\344tta?', // message
+        navigator.notification.confirm(link + ' kommer att öppnas i din webbläsare, är du säker på att du vill fortsätta?', // message
         openLink, // callback to invoke with index of button pressed
-        'L\344mna appen?', // title
+        'Lämna appen?', // title
         'Ja,Nej' // buttonLabels
       );
       function openLink(button) {
