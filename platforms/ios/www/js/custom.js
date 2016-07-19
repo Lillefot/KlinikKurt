@@ -874,13 +874,13 @@ $(document).delegate("#kkpage", "pageinit", function(event) {
             datatype: "html",
             contentType: "application/x-www-form-urlencoded;charset=utf-8",
             success: function(data) {
-                if (data.indexOf("mottagen") > -1){
-                console.log("Mottagen");
+                if (data.indexOf("Du saknar behörighet för denna sida") > -1){
+                console.log("Success och Mottagen");
                 clearKK();
                 tackPrompt();
                 }
                 else {
-                console.log("Ej mottagen");
+                console.log("Success och EJ mottagen");
                 $.mobile.loading('hide');
                 navigator.notification.alert("Attans! Din KURTning kunde inte skickas. Kontrollera att du har internet\345tkomst och f\366rs\366k igen!", null, "Kunde inte skicka KURTning", "OK");
                 $('#KKopendialog').removeClass('ui-disabled');
@@ -888,6 +888,7 @@ $(document).delegate("#kkpage", "pageinit", function(event) {
                 console.log(data);
             },
             error: function(x, e) {
+                console.log("Error och EJ mottagen");
                 $.mobile.loading('hide');
                 navigator.notification.alert("Attans! Din KURTning kunde inte skickas. Kontrollera att du har internet\345tkomst och f\366rs\366k igen!", null, "Kunde inte skicka KURTning", "OK");
                 $('#KKopendialog').removeClass('ui-disabled');
