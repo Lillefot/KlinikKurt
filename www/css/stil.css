@@ -461,11 +461,6 @@ textarea.ui-input-text{
 }
 
 /*==== VadFyllt pages ====*/
-#vfjcont,
-#vftcont {
-  width: 95%;
-  margin: auto;
-}
 
 #vadfylltjag textarea[placeholder] {
   text-align: center;
@@ -517,12 +512,6 @@ textarea.ui-input-text{
     background-color: #F1BC4D !important;
 }
 
-/*Removes the left border*/
-#tabD,
-#tabE {
-  border: none;
-}
-
 /* D = Me */
 
 /*Not selected*/
@@ -572,10 +561,74 @@ textarea.ui-input-text{
     background: url(../img/iftermanew.png)no-repeat center center;
 }
 
+/*==== Omall pages ====*/
+
+#omallcont {
+    /*background-color: #ffffff !important;
+    background: #ffffff !important;*/
+}
+
+
+#omkkframe,
+#omappframe,
+#ommsrframe,
+#omallframe {
+    /*overflow-x: hidden !important;
+    overflow-y: scroll !important;
+    height: 100%;
+    padding-top: 44px;
+    padding-bottom: 60px;
+    background-color: #ffffff;*/
+}
+
+/*Tabs*/
+
+/* F = About MSR */
+/* TODO: -webkit-image-set for all tabs */
+.ui-icon-tabF:after {
+    background: -webkit-image-set(url(../img/ommsrinew.png) 1x, url(../img/ommsri@2xnew.png) 2x) no-repeat center center;
+    background-size: 48px 48px;
+}
+.ui-btn-active.ui-icon-tabF:after {
+    background: url(../img/ommsranew.png)no-repeat center center;
+    background-size: 48px 48px;
+}
+
+/* G = About KK */
+
+.ui-icon-tabG:after {
+    background: url(../img/omkkinew.png)no-repeat center center;
+    /*background-size: 48px 48px;*/
+}
+.ui-btn-active.ui-icon-tabG:after {
+    background: url(../img/omkkanew.png)no-repeat center center;
+    /*background-size: 48px 48px;*/
+}
+
+/* H = About App */
+
+.ui-icon-tabH:after {
+    background: url(../img/omappinew.png)no-repeat center center;
+    /*background-size: 48px 48px;*/
+}
+.ui-btn-active.ui-icon-tabH:after {
+    background: url(../img/omappanew.png)no-repeat center center;
+    /*background-size: 48px 48px;*/
+}
+
 /*==== Tabs: General rules ====*/
 
 /*Fixes the left margin of the bottom navbar*/
 html .ui-bar-c {
+  border: none;
+}
+
+/*Removes the left border*/
+#tabD,
+#tabE,
+#tabF,
+#tabG,
+#tabH {
   border: none;
 }
 
@@ -605,7 +658,8 @@ html .ui-bar-c {
 /*==== The rest ====*/
 #kkcont,
 #vccont,
-#jagcont {
+#jagcont,
+#omallcont {
     /*width: auto;*/
     padding: 0 0 0 0;
     /*margin: 0 !important;
@@ -625,6 +679,14 @@ html .ui-bar-c {
     position:relative;*/
 }
 
+#vfjcont,
+#vftcont,
+#ommsrdiv,
+#omkkdiv,
+#omappdiv {
+  width: 95%;
+  margin: auto;
+}
 /* ==== Untouched ====*/
 
 #page {
@@ -1307,36 +1369,15 @@ transition: opacity .5s;
     text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.0) !important;
 }
 
-.ui-footer .greentab .ui-btn-text,
+.ui-footer .ui-btn-active .ui-btn-text,
 .ui-footer .yellowtab .ui-btn-text {
     color: rgba(255, 255, 255, 1);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.0) !important;
 }
 
-.ui-icon-tabF:after {
-    background: url(../img/ommsrinew.png)no-repeat center center;
-    background-size: 48px 48px;
-}
-.greentab.ui-icon-tabF:after {
-    background: url(../img/ommsranew.png)no-repeat center center;
-    background-size: 48px 48px;
-}
-.ui-icon-tabG:after {
-    background: url(../img/omkkinew.png)no-repeat center center;
-    background-size: 48px 48px;
-}
-.greentab.ui-icon-tabG:after {
-    background: url(../img/omkkanew.png)no-repeat center center;
-    background-size: 48px 48px;
-}
-.ui-icon-tabH:after {
-    background: url(../img/omappinew.png)no-repeat center center;
-    background-size: 48px 48px;
-}
-.greentab.ui-icon-tabH:after {
-    background: url(../img/omappanew.png)no-repeat center center;
-    background-size: 48px 48px;
-}
+
+
+
 
 
 @media (-webkit-min-device-pixel-ratio: 1.5),
@@ -1345,7 +1386,7 @@ transition: opacity .5s;
         background: url(../img/ommsri@2xnew.png)no-repeat center center;
         background-size: 48px 48px;
     }
-    #tabF.greentab .ui-icon {
+    #tabF.ui-btn-active .ui-icon {
         background: url(../img/ommsra@2xnew.png)no-repeat center center;
         background-size: 48px 48px;
     }
@@ -1353,7 +1394,7 @@ transition: opacity .5s;
         background: url(../img/omkki@2xnew.png)no-repeat center center;
         background-size: 48px 48px;
     }
-    #tabG.greentab .ui-icon {
+    #tabG.ui-btn-active .ui-icon {
         background: url(../img/omkka@2xnew.png)no-repeat center center;
         background-size: 48px 48px;
     }
@@ -1361,7 +1402,7 @@ transition: opacity .5s;
         background: url(../img/omappi@2xnew.png)no-repeat center center;
         background-size: 48px 48px;
     }
-    #tabH.greentab .ui-icon {
+    #tabH.ui-btn-active .ui-icon {
         background: url(../img/omappa@2xnew.png)no-repeat center center;
         background-size: 48px 48px;
     }
@@ -1430,7 +1471,7 @@ a[data-rel='backbtn'] .ui-btn-inner {
     // background-color: #F1BC4D;
     background-color: #F1BC4D !important;
 }
-.greentab {
+.ui-btn-active {
     //background-color: #4F7B3C;
     //background-color: #2ecc71;
     background-color: #4F7B3C !important;
@@ -1465,21 +1506,8 @@ a[data-rel='backbtn'] .ui-btn-inner {
 
 }
 
-#omkkframe,
-#omappframe,
-#ommsrframe,
-#omallframe {
-    overflow-x: hidden !important;
-    overflow-y: scroll !important;
-    height: 100%;
-    padding-top: 44px;
-    padding-bottom: 60px;
-    background-color: #ffffff;
-}
-#omallcont {
-    background-color: #ffffff !important;
-    background: #ffffff !important;
-}
+
+
 #appanaget {
     width: 100%;
     padding-left: 35%;
