@@ -2,12 +2,12 @@
 	display:none;
 }
 #svark .ui-controlgroup-horizontal .ui-radio {
-width: 16%;
+/*width: 16%;*/
 }
 #vctermradio .ui-controlgroup-horizontal .ui-radio {
-width: 18%;
+/*width: 18%;
 border: none;
-}
+}*/
 
 /*.popupright {
 //    right:3%;

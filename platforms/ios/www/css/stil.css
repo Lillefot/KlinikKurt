@@ -166,6 +166,22 @@ fieldset {
     //-webkit-animation: restofkkanim .5s 1;
 }
 
+.hideit,
+#kkfr3,
+#kkfr4,
+.fewq,
+.moreq,
+#kkt5,
+#kkt6,
+#kkt7,
+#kkt8,
+#kkt9,
+#kkt10,
+#ortcont,
+#restofkk {
+    display: none;
+}
+
 /*Placement button labels*/
 label.ui-btn.ui-corner-all.ui-btn-f.ui-btn-icon-left {
   text-align: center;
@@ -195,14 +211,6 @@ label.ui-btn.ui-corner-all.ui-btn-f.ui-btn-icon-left {
 
 
 /* === Forms and questions ===*/
-#kkcont,
-#vccont {
-    /*width: auto;*/
-    padding: 0 0 0 0;
-    /*margin: 0 !important;
-    overflow-x: hidden !important;
-    overflow-y: scroll !important;*/
-}
 
 #kktermin,
 #vctermin {
@@ -212,12 +220,14 @@ label.ui-btn.ui-corner-all.ui-btn-f.ui-btn-icon-left {
 }
  /*Semester radio*/
 #kktermin .ui-controlgroup-horizontal .ui-radio,
-#vctermin .ui-controlgroup-horizontal .ui-radio {
+#vctermin .ui-controlgroup-horizontal .ui-radio,
+#svark .ui-controlgroup-horizontal .ui-radio {
     width: 20%;
 }
  /*Semester radios text align*/
 #kktermin .ui-btn.ui-corner-all.ui-btn-f,
-#vctermin .ui-btn.ui-corner-all.ui-btn-d {
+#vctermin .ui-btn.ui-corner-all.ui-btn-d,
+#svark .ui-btn.ui-corner-all.ui-btn-e {
   text-align: center;
 }
 
@@ -450,7 +460,137 @@ textarea.ui-input-text{
     padding: 0;*/
 }
 
+/*==== VadFyllt pages ====*/
+#vfjcont,
+#vftcont {
+  width: 95%;
+  margin: auto;
+}
+
+#vadfylltjag textarea[placeholder] {
+  text-align: center;
+}
+
+#mailkcasid,
+#svarkcasid {
+  max-height: 2.4em;
+}
+
+#vftradios {
+    width: 100%;
+    height: 50px;
+    position: relative;
+    left: -3%;
+}
+
+#svark .ui-controlgroup-horizontal {
+    /*position: absolute;
+    left: 0%;*/
+}
+
+#svark .ui-controlgroup-horizontal .ui-radio {
+    /*width: 15%;*/
+}
+
+#svark #vftradios .ui-btn-text {
+    /*position: relative;
+    left: -35%;*/
+}
+
+#omappcont,
+#jagcont,
+#termincont {
+    /*overflow-x: hidden !important;
+    //height:330px !important;
+    width: 90% !important;
+    overflow-y: scroll !important;
+    -webkit-overflow-scrolling: touch !important;
+    background: none !important;
+    background-color: none !important;*/
+}
+/*Tabs*/
+.ui-icon-tabD.ui-btn-active,
+.ui-icon-tabE.ui-btn-active {
+    background-color: #F1BC4D !important;
+}
+
+/* D = Me */
+.ui-icon-tabD:after {
+    background: url(../img/ifjaginew.png)no-repeat center center;
+    width: 30px !important;
+    height: 30px !important;
+    margin-left: -15px !important;
+    top: .425em !important;
+}
+
+#tabD.ui-btn-active.ui-icon-tabD:after {
+    background: url(../img/ifjaganew.png)no-repeat center center !important;
+}
+
+#tabDe.ui-icon {
+    background: url(../img/ifjagi@2xnew.png)no-repeat center center;
+    background-size: 48px 48px;
+}
+#tabDe.yellowtab .ui-icon-custom {
+    background: url(../img/ifjaga@2xnew.png)no-repeat center center;
+    background-size: 48px 48px;
+}
+
+/* E = Semester */
+
+#tabEe.ui-icon {
+    background: url(../img/iftermi@2xnew.png)no-repeat center center;
+    background-size: 48px 48px;
+}
+#tabEe.yellowtab .ui-icon-custom {
+    background: url(../img/ifterma@2xnew.png)no-repeat center center;
+    background-size: 48px 48px;
+}
+
+.ui-icon-tabE:after {
+    background: url(../img/ifterminew.png)no-repeat center center;
+    width: 48px !important;
+    height: 48px !important;
+    margin-left: -24px !important;
+    top: -.25em !important;
+}
+
+#tabE.ui-btn-active.ui-icon-tabE:after {
+    background: url(../img/iftermanew.png)no-repeat center center !important;
+}
+
+/*==== Tabs: General rules ====*/
+.ui-icon-tabF:after,
+.ui-icon-tabG:after,
+.ui-icon-tabH:after,
+.ui-icon-tabD:after,
+.ui-icon-tabE:after {
+    width: 50% !important;
+    height: 50% !important;
+    padding: none !important;
+    //background-color: #000 !important;
+    margin-left: -25% !important;
+}
+
+#tabD.ui-btn-icon-top,
+#tabE.ui-btn-icon-top,
+#tabF.ui-btn-icon-top,
+#tabG.ui-btn-icon-top,
+#tabH.ui-btn-icon-top{
+  padding-top: 2.9em !important;
+}
+
 /*==== The rest ====*/
+#kkcont,
+#vccont,
+#jagcont {
+    /*width: auto;*/
+    padding: 0 0 0 0;
+    /*margin: 0 !important;
+    overflow-x: hidden !important;
+    overflow-y: scroll !important;*/
+}
+
 #kkbody,
 #vcpage,
 #vcbody {
@@ -925,22 +1065,6 @@ button {
 
 
 
-.hideit,
-#kkfr3,
-#kkfr4,
-.fewq,
-.moreq,
-#kkt5,
-#kkt6,
-#kkt7,
-#kkt8,
-#kkt9,
-#kkt10,
-#ortcont,
-#restofkk {
-    display: none;
-}
-
 @-webkit-keyframes restofkkanim {
     0% {
         opacity: 0;
@@ -979,17 +1103,7 @@ transition: opacity .5s;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
 }
-#omappcont,
-#jagcont,
-#termincont {
-    overflow-x: hidden !important;
-    //height:330px !important;
-    width: 90% !important;
-    overflow-y: scroll !important;
-    -webkit-overflow-scrolling: touch !important;
-    background: none !important;
-    background-color: none !important;
-}
+
 
 
 
@@ -1175,17 +1289,7 @@ transition: opacity .5s;
     color: rgba(255, 255, 255, 1);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.0) !important;
 }
-.ui-icon-tabF:after,
-.ui-icon-tabG:after,
-.ui-icon-tabH:after,
-.ui-icon-tabD:after,
-.ui-icon-tabE:after {
-    width: 50% !important;
-    height: 50% !important;
-    padding: none !important;
-    //background-color: #000 !important;
-    margin-left: -25% !important;
-}
+
 .ui-icon-tabF:after {
     background: url(../img/ommsrinew.png)no-repeat center center;
     background-size: 48px 48px;
@@ -1210,37 +1314,8 @@ transition: opacity .5s;
     background: url(../img/omappanew.png)no-repeat center center;
     background-size: 48px 48px;
 }
-.ui-icon-tabE:after {
-    background: url(../img/ifterminew.png)no-repeat center center;
-    width: 48px !important;
-    height: 48px !important;
-    margin-left: -24px !important;
-    top: -.25em !important;
-}
-.ui-icon-tabD:after {
-    background: url(../img/ifjaginew.png)no-repeat center center;
-    width: 30px !important;
-    height: 30px !important;
-    margin-left: -15px !important;
-    top: .425em !important;
-}
-#tabD.ui-btn-icon-top,
-#tabE.ui-btn-icon-top,
- #tabF.ui-btn-icon-top,
- #tabG.ui-btn-icon-top,
- #tabH.ui-btn-icon-top{
-    padding-top: 2.9em !important;
-}
-#tabE.ui-btn-active.ui-icon-tabE:after {
-    background: url(../img/iftermanew.png)no-repeat center center !important;
-}
-#tabD.ui-btn-active.ui-icon-tabD:after {
-    background: url(../img/ifjaganew.png)no-repeat center center !important;
-}
-.ui-icon-tabD.ui-btn-active,
-.ui-icon-tabE.ui-btn-active {
-    background-color: #F1BC4D !important;
-}
+
+
 @media (-webkit-min-device-pixel-ratio: 1.5),
 (min-device-pixel-ratio: 1.5) {
     #tabF.ui-icon {
@@ -1267,22 +1342,7 @@ transition: opacity .5s;
         background: url(../img/omappa@2xnew.png)no-repeat center center;
         background-size: 48px 48px;
     }
-    #tabDe.ui-icon {
-        background: url(../img/ifjagi@2xnew.png)no-repeat center center;
-        background-size: 48px 48px;
-    }
-    #tabDe.yellowtab .ui-icon-custom {
-        background: url(../img/ifjaga@2xnew.png)no-repeat center center;
-        background-size: 48px 48px;
-    }
-    #tabEe.ui-icon {
-        background: url(../img/iftermi@2xnew.png)no-repeat center center;
-        background-size: 48px 48px;
-    }
-    #tabEe.yellowtab .ui-icon-custom {
-        background: url(../img/ifterma@2xnew.png)no-repeat center center;
-        background-size: 48px 48px;
-    }
+
 }
 .ui-header.ui-bar-y {
     background: url(../img/headerbg.jpg)no-repeat 0 0 !important;
@@ -1323,19 +1383,8 @@ a[data-rel='backbtn'] .ui-btn-inner {
 #vcterminradio {
     margin-top: 10px;
 }
-#vftradios {
-    width: 100%;
-    height: 50px;
-    position: relative;
-    left: -3%;
-}
-#svark .ui-controlgroup-horizontal {
-    position: absolute;
-    left: 0%;
-}
-#svark .ui-controlgroup-horizontal .ui-radio {
-    width: 15%;
-}
+
+
 
 
 #vckurt .ui-controlgroup-horizontal .ui-radio .ui-first-child {
@@ -1383,10 +1432,7 @@ a[data-rel='backbtn'] .ui-btn-inner {
     -o-animation-fill-mode: both;
     animation-fill-mode: both
 }
-#svark #vftradios .ui-btn-text {
-    position: relative;
-    left: -35%;
-}
+
 
 .ui-footer {
     height: 60px;

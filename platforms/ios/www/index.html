@@ -1328,93 +1328,95 @@
 
 <!-- Beginning of VadFyllt pages -->
 <div data-role="page" id="vadfylltjag">
-  <div data-role="header" data-theme="e" data-position="fixed">
+  <div data-role="header" data-theme="e" data-position="fixed" data-tap-toggle="false">
     <a href="#" data-role="button" class="hemKnapp" data-theme="e" data-icon="arrow-l">Start</a>
     <h4 id="vfjtitle" class="animatedFast fadeIn">Jag</h4>
-    <h4 id="vfttitle" class="animatedFast fadeIn">Min
-      termin</h4>
+    <h4 id="vfttitle" class="animatedFast fadeIn">Min termin</h4>
   </div>
-  <div data-role="content" data-theme="f"
-  style="text-align:left;padding-top:50px;width:100%;overflow-x:hidden;" id="jagcont"
-  ontouchmove="touchMove(event);">
-    <div id="vfjcont" class="animatedFast fadeIn" style="width:100%;overflow-x:hidden;">
+
+  <div data-role="content" data-theme="f" id="jagcont" ontouchmove="touchMove(event);">
+    <div id="vfjcont" class="animatedFast fadeIn questioncontainer">
+      <br/>
       <h2>Se vad du har fyllt i </h2>
-      <br/><h5 style="margin-bottom:15px;margin-top:-25px;">(gäller enbart
-        KlinikKurt):</h5>
-        Ange ditt UpUnet-id nedan så kommer du automatiskt att få dessa uppgifter
+      <h5>(gäller enbart KlinikKurt)</h5>
+      <br/>
+        Ange ditt CAS-id nedan så kommer du automatiskt att få dessa uppgifter
         skickade till din studentmail (förutsätter att du har fyllt i utvärderingar
-        och angivit UpUnet-id).
-        Observera att denna databas inte uppdateras i realtid.<br/><br/><br/>
+        och angivit CAS-id).
+        Observera att denna databas inte uppdateras i realtid.
+      <br/>
+      <br/>
+      <br/>
 
-        <form id="mailk" style="float: left; width: 100%;" target="result">CAS-id:<br/>
-          <label class="ui-hidden-accessible" for="mailkcasid">CAS-id:</label>
-          <input type="text" name="casid" maxlength="8" id="mailkcasid"/>
-          <input type="submit" data-theme="e" value="Beställ!" name="submit"
-          id="submitmailk" style="margin-bottom:0px;">
-        </form>
+      <form id="mailk" target="result">
+        <textarea name="casid" maxlength="8" id="mailkcasid" placeholder="CAS-id"></textarea>
+        <input type="submit" data-theme="e" value="Beställ!" name="submit" id="submitmailk">
+      </form>
     </div>
-    <div id="vftcont" class="animatedFast fadeIn" style="display:none;" style="width:100%;">
+    <!-- TODO: Hide in CSS instead-->
+    <div id="vftcont" class="animatedFast fadeIn questioncontainer" style="display:none;">
+        <br/>
         <h2>Se din termins svarsfrekvens</h2>
-        <h5 style="margin-bottom:15px;margin-top:-5px;">(gäller
-          enbart KlinikKurt):</h5>
-          Ange termin och CAS-id.<br>Svar kommer direkt till din studentmail.<br><br>
+        <h5>(gäller enbart KlinikKurt)</h5>
+        <br/>
+        Ange termin och CAS-id.
+        <br/>
+        Svar kommer direkt till din studentmail.
+        <br/>
+        <br/>
 
-        <form id="svark" style="float: left;width: 100%; margin-bottom: 0px;margin-top:-8px;"
-        data-theme="e" target="result">
-        Termin:
-          <div id="vftradios">
-            <center>
-              <fieldset data-role="controlgroup" data-type="horizontal" data-theme="e"
-              data-mini="false">
-              <input type="radio" name="termin" id="ift5" value="T5" data-theme="e"/>
-              <label for="ift5">5</label>
+        <form id="svark" data-theme="e" target="result">
+          Termin
+          <div data-role="fieldcontain" data-theme="e">
+              <!-- TODO: data-mini?-->
+              <fieldset data-role="controlgroup" data-type="horizontal" data-theme="e">
+                <input type="radio" name="termin" id="ift5" value="T5" data-theme="e"/>
+                <label for="ift5">5</label>
 
-              <input type="radio" name="termin" id="ift6" value="T6" data-theme="e"/>
-              <label for="ift6">6</label>
+                <input type="radio" name="termin" id="ift6" value="T6" data-theme="e"/>
+                <label for="ift6">6</label>
 
-              <input type="radio" name="termin" id="ift7" value="T7" data-theme="e"/>
-              <label for="ift7">7</label>
+                <input type="radio" name="termin" id="ift7" value="T7" data-theme="e"/>
+                <label for="ift7">7</label>
 
-              <input type="radio" name="termin" id="ift8" value="T8" data-theme="e"/>
-              <label for="ift8">8</label>
+                <input type="radio" name="termin" id="ift8" value="T8" data-theme="e"/>
+                <label for="ift8">8</label>
 
-              <input type="radio" name="termin" id="ift9" value="T9" data-theme="e"/>
-              <label for="ift9">9</label>
-
-              <input type="radio" name="termin" id="ift10" value="T10"
-              data-theme="e"/>
-              <label for="ift10">10</label>
+                <input type="radio" name="termin" id="ift9" value="T9" data-theme="e"/>
+                <label for="ift9">9</label>
               </fieldset>
-            </center>
           </div>
-          <div style="position:relative;bottom:-5px">
-            CAS-id:<br/>
-            <input type="text" name="casid" maxlength="8" data-theme="e" id="svarkcasid"/>
+          <br/>
+          <div>
+            <textarea name="casid" maxlength="8" id="svarkcasid" placeholder="CAS-id"></textarea>
           </div>
-          <br>
-
-          <div style="position:relative;top:-22px;">
-            <input type="submit" data-theme="e" value="Beställ!" name="submit"
-            id="submitsvark" style="margin-bottom:0px;">
+          <div>
+            <input type="submit" data-theme="e" value="Beställ!" name="submit" id="submitsvark">
           </div>
         </form>
     </div>
     <div id=vfjbtn
-    style=width:50%;height:80px;background-color:#000;position:fixed;bottom:0;left:0;z-index:10;opacity:0;></div>
+    style=width:50%;height:80px;background-color:#000;position:fixed;bottom:0;left:0;z-index:10;opacity:0;>
+    </div>
     <div id=vftbtn
-    style=width:50%;height:80px;background-color:#000;position:fixed;bottom:0;right:0;z-index:10;opacity:0;></div>
+    style=width:50%;height:80px;background-color:#000;position:fixed;bottom:0;right:0;z-index:10;opacity:0;>
+    </div>
 
-    <div style=width:100%;height:80px;background-color:#000;position:fixed;bottom:0;right:0;z-index:9;opacity:0;></div>
+    <div style=width:100%;height:80px;background-color:#000;position:fixed;bottom:0;right:0;z-index:9;opacity:0;>
+    </div>
   </div>
-  <div data-role="footer" data-position="fixed"
-  style=position:fixed;bottom:0; data-theme="c">
+  <div data-role="footer" data-position="fixed" data-theme="c">
     <div data-role="navbar" class="animated fadeIn">
       <ul>
-        <li id="tabD1"><a href="#vadfyllttermin" id="tabD"
-          class="ui-btn-active ui-btn ui-btn-icon-top ui-icon-tabD">Jag</a>
+        <li id="tabD1">
+          <a href="#vadfyllttermin" id="tabD" class="ui-btn-active ui-btn ui-btn-icon-top ui-icon-tabD">
+            Jag
+          </a>
         </li>
-        <li><a href="#vadfyllttermin" id="tabE" class="ui-btn ui-btn-icon-top ui-icon-tabE">Min
-          termin</a>
+        <li>
+          <a href="#vadfyllttermin" id="tabE" class="ui-btn ui-btn-icon-top ui-icon-tabE">
+            Min termin
+          </a>
         </li>
       </ul>
     </div>
