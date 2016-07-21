@@ -586,6 +586,80 @@ $(document).delegate("#vadfylltjag", "pageinit", function(event, ui) {
         return false;
     }
 
+    function tabFHandler() {
+      $("li > .ui-btn-active").removeClass('ui-btn-active');
+      $("#tabF").addClass('ui-btn-active');
+      $("#omkkdiv").hide();
+      $("#omappdiv").hide();
+      $.mobile.silentScroll(0)
+      $("#ommsrdiv").show();
+      $("#omkkt").hide();
+      $("#omappt").hide();
+      $("#ommsrt").show();
+    }
+
+    function tabGHandler() {
+      $("li > .ui-btn-active").removeClass('ui-btn-active');
+      $("#tabG").addClass('ui-btn-active');
+      $("#omappdiv").hide();
+      $("#ommsrdiv").hide();
+      $.mobile.silentScroll(0)
+      $("#omkkdiv").show();
+      $("#omappt").hide();
+      $("#ommsrt").hide();
+      $("#omkkt").show();
+    }
+
+    function tabHHandler() {
+      $("li > .ui-btn-active").removeClass('ui-btn-active');
+      $("#tabH").addClass('ui-btn-active');
+      $("#omkkdiv").hide();
+      $("#ommsrdiv").hide();
+      $.mobile.silentScroll(0)
+      $("#omappdiv").show();
+      $("#omkkt").hide();
+      $("#ommsrt").hide();
+      $("#omappt").show();
+    }
+
+    function extLink(link) {
+      navigator.notification.confirm(link + ' kommer att öppnas i din webbläsare, är du säker på att du vill fortsätta?', // message
+      openLink, // callback to invoke with index of button pressed
+      'Lämna appen?', // title
+      'Ja,Nej' // buttonLabels
+    );
+    function openLink(button) {
+      if (button === 1) {
+        window.open(link, '_system');
+      }
+    }
+
+    }
+
+
+    $("#tabF").on('tap', tabFHandler);
+    $("#tabG").on('tap', tabGHandler);
+    $("#tabH").on('tap', tabHHandler);
+    $("#kksdr").on('tap', function() {
+      extLink('http://www.studieradet.se');
+    });
+    $("#msrsdr").on('tap', function() {
+      extLink('http://www.studieradet.se');
+    });
+    $("#kkkk").on('tap', function() {
+      extLink('http://www.klinikkurt.se');
+    });
+    $("#apptw").on('tap', function() {
+      extLink('http://appanaget.launchrock.com');
+    });
+    $("#appanaget").on('tap', function() {
+      $("#appanaget").addClass('bounce').delay(1600).queue(function() {
+        extLink('http://appanaget.launchrock.com');
+      });
+    });
+    $("#msrordf").on('tap', function() {
+      extLink('mailto:ordf@msr.studorg.uu.se');
+    });
 
 
 
