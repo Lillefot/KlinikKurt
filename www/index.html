@@ -11,7 +11,6 @@
   <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
   <!-- jQuery -->
   <script src="js/jquery-2.1.4.min.js"></script>
-  <script type="text/javascript"></script>
   <link rel="stylesheet" type="text/css" href="css/flat_ui/jquery.mobile.flatui.min.css"/>
   <link rel="stylesheet" href="css/stil.css" type="text/css" media="Screen"/>
   <link href="css/animate.css" rel="stylesheet" type="text/css">
@@ -23,10 +22,11 @@
 
 <!-- Beginning of Home -->
 <div id="hem" data-role="page" data-theme="f" ontouchmove="touchMove(event);">
-  <div id="splash"
+  <!-- Is shown behind #hemcont on startup-->
+  <!--<div id="splash"
   style="height: 100% !important;width:100%;position: absolute;bottom: 0;left: 0;-webkit-background-size: 100% auto;z-index:20;background-position: left bottom;background-image: url('img/splash5.png');">
   &nbsp;
-  </div>
+  </div>-->
   <div data-role="content" id="hemcont">
     <div id="newcont" class="animated">
       <div id="toKlinikkurt" class="animated">
@@ -92,11 +92,11 @@
 <!--    <a style="opacity:0;height:0px;" class="" data-role="button" data-theme="d">Av oklar anledning förskjuts
       den första knappen. Således gömmer jag den första knappen.</a> -->
 
-      <div data-role="button" id="terminfo" class="animated ui-disabled">
+      <div data-role="button" id="terminfo">
         Välj termin först!
       </div>
-      <fieldset data-role="controlgroup" data-theme="a">
-        <div id="kkt5" class="animated bounceInUp" data-role="controlgroup">
+      <fieldset data-role="controlgroup">
+        <div id="kkt5" data-role="controlgroup">
           <input type="radio" name="q1" id="kkq1v1" value="1" data-theme="f"/>
           <label for="kkq1v1">Akutsjukvård I</label>
           <input type="radio" name="q1" id="kkq1v2" value="2" data-theme="f"/>
@@ -107,7 +107,7 @@
           <label for="kkq1v4">Lungmedicin</label>
         </div>
 
-        <div id="kkt6" class="animated bounceInUp" data-role="controlgroup">
+        <div id="kkt6" data-role="controlgroup">
           <input type="radio" name="q1" id="kkq1v5" value="5" data-theme="f"/>
           <label for="kkq1v5">Anestesi</label>
           <input type="radio" name="q1" id="kkq1v6" value="6" data-theme="f"/>
@@ -130,7 +130,7 @@
           <label for="kkq1v14">Thoraxkirurgi</label>
         </div>
 
-        <div id="kkt7" class="animated bounceInUp" data-role="controlgroup">
+        <div id="kkt7" data-role="controlgroup">
           <input type="radio" name="q1" id="kkq1v15" value="15" data-theme="f"/>
           <label for="kkq1v15">Hematologi</label>
           <input type="radio" name="q1" id="kkq1v16" value="16" data-theme="f"/>
@@ -148,7 +148,7 @@
 
         </div>
 
-        <div id="kkt8" class="animated bounceInUp" data-role="controlgroup">
+        <div id="kkt8" data-role="controlgroup">
           <input type="radio" name="q1" id="kkq1v22" value="22" data-theme="f"/>
           <label for="kkq1v22">Psykiatri</label>
           <input type="radio" name="q1" id="kkq1v23" value="23" data-theme="f"/>
@@ -159,7 +159,7 @@
           <label for="kkq1v25">Neurologi</label>
         </div>
 
-        <div id="kkt9" class="animated bounceInUp" data-role="controlgroup">
+        <div id="kkt9" data-role="controlgroup">
 
           <input type="radio" name="q1" id="kkq1v26" value="26" data-theme="f"/>
           <label for="kkq1v26">Infektion</label>
@@ -175,7 +175,7 @@
   <br/>
 </div>
 
-  <div class="questioncontainer animated bounceInUp" id="ortcont">
+  <div class="questioncontainer" id="ortcont">
     Ort
     <div data-role="fieldcontain">
       <select name="q2" id="kkq2" data-theme="f">
@@ -207,9 +207,9 @@
     </div>
       <br/>
     </div>
-      <div id="restofkk" class="animated bounceInUp">
-        <div class="questioncontainer animated bounceInUp" id="kkfr3">
-          <div class="moreq">1</div>
+      <div id="restofkk">
+        <div id="kkfr3" class="questioncontainer">
+          <div id="kkfr3number" class="moreq">1</div>
           Eftersom placering avser T8 Psykatri i Uppsala; vänligen ange här också
           verksamhetsområde<br>
           (ett verksamhetsområde = en utvärdering = en lott >> fyll i för
@@ -224,14 +224,14 @@
             <option id="kkq3v6" value="6">Äldrepsykiatri</option>
           </select><br/></div>
 
-          <div class="questioncontainer animated bounceInUp" id="kkfr4">
+          <div id="kkfr4" class="questioncontainer">
             <div class="moreq">1</div>
             Eftersom placering avser T9 Gynekologi, Obstetrik eller Pediatrik i Uppsala; väligen
             ange här också verksamhetsområde<br>
             (ett verksamhetsområde = en utvärdering = en lott >> fyll i för
             varje verksamhetsområde du är placerad på)
             <select name="q4" id="kkq4" data-theme="f">
-              <ion value="null"> -- Välj alternativ --</option>
+              <option value="null"> -- Välj alternativ --</option>
               <option id="kkq4v1" value="1">Pediatrik Avd 95A, 95B, 95E</option>
               <option id="kkq4v2" value="2">Pediatrik Öppenvård</option>
               <option id="kkq4v3" value="3">Pediatrik Specialistmottagning</option>
@@ -682,7 +682,7 @@
               <div class="fewq">13</div>
               <div class="moreq">14</div>
               Kommentarer
-              <textarea name="q17" id="kkq17" cols="60" rows="3" data-theme="f"></textarea>
+              <textarea name="q17" id="kkq17" cols="60" rows="3" data-theme="f" placeholder="Kom ihåg att vara konstruktiv!"></textarea>
             </div>
 
             <div class="questioncontainer" id="kksex">
@@ -717,7 +717,7 @@
               <textarea name="q19" id="kkq19" cols="60" rows="1" data-theme="f"></textarea>
             </div>
 
-            <input type="hidden" name="q20" id="kkq20" value="app" />
+            <input type="hidden" name="q20" id="kkq20" value="App" />
 
             <input type="hidden" name="klinik-kurt-username" id="klinik-kurt-username" value="Username" />
             <div class="questioncontainer" id="kkreqmsg"><br><br>Oj då! Du kan tyvärr inte skicka in
@@ -726,8 +726,9 @@
             <!--<a style="opacity:0;" data-role="button" data-rel="dialog" data-transition="slideup" data-theme="d">Av
               oklar anledning förskjuts den första knappen. Således gömmer jag den första
               knappen.</a>-->
-              <a href="#" id="KKopendialog" data-role="button" data-theme="f">Skicka
-                in</a>
+              <a href="#" id="KKopendialog" data-role="button" data-theme="f">
+                Skicka in
+              </a>
               </div>
             </form>
             <!--<a id="tackkklink" href="#tackkkbody" style="opacity:0;width:1px;" data-prefetch></a>-->
@@ -846,7 +847,8 @@
       </div>
       <br/>
     </div>
-
+    <div id="restOfVC">
+      
         <h2>Skattning av vårdcentralsplacering</h2>
         <br/>
 
@@ -1261,7 +1263,7 @@
         <div class="questioncontainer">
           <div class="vckq">11</div>
           Kommentarer
-          <textarea name="q12" id="vcq14" cols="60" rows="3"></textarea>
+          <textarea name="q12" id="vcq14" cols="60" rows="3" placeholder="Kom ihåg att vara konstruktiv!"></textarea>
         </div>
         <br>
 
@@ -1294,7 +1296,7 @@
         </div>
 
         <!-- TODO: Is q15 still needed?-->
-        <input type="hidden" name="q15" id="vcq17" value="iOS (2.5.1)">
+        <input type="hidden" name="q15" id="vcq17" value="App">
 
         <!-- TODO: Does not send the correct username -->
         <input type="hidden" name="vc-kurt-username" id="vc-kurt-username" value="Username" />
@@ -1313,7 +1315,7 @@
         <a href="#" id="VCopendialog" data-role="button" data-theme="d">
           Skicka in
         </a>
-
+      </div>
       </form>
   </div>
   <script>
@@ -1395,7 +1397,7 @@
     </div>
   </div>
   <div data-role="footer" data-position="fixed" data-theme="c">
-    <div data-role="navbar" class="animated fadeIn">
+    <div data-role="navbar">
       <ul>
         <li>
           <a id="tabD" class="ui-btn-active ui-btn ui-btn-icon-top ui-icon-tabD">
@@ -1427,7 +1429,8 @@
   <div data-role="content" data-theme="f" id="omallcont">
     <div id="omallframe">
       <br>
-      <div id="ommsrdiv" class="animatedFast fadeIn questioncontainer" style="display:none">
+      <!--TODO: Add KlinikKurt responsible's email-->
+      <div id="ommsrdiv" class="animated fadeIn questioncontainer" style="display:none">
         Medicinska Studierådet (MSR) ansvarar för den studiebevakande
         verksamheten på läkarprogrammet.<br><br>MSR representerar läkarstudenter
         i bland annat Programkommittén, Medicinska sektionen, Grundutbildningskommittén samt
@@ -1436,12 +1439,12 @@
         kursvärderingar, inklusive KlinikKurt samt VårdcentralKurt.<br/><br/>Har
         du synpunkter på, eller frågor om, din utbildning är du varmt välkommen
         att höra av dig till din kursrepresentant.<br/><br/>För mer information om
-        MSR, besök <a href="#" id=msrsdr>studierådet.se</a>. Du kan även
-        kontakta oss via mail: <a href="mailto:ordf@msr.studorg.uu.se" id=msrordf>ordf@msr.studorg.uu.se</a>
-        eller <a href="mailto:vordf@msr.studorg.uu.se" target="_blank">vordf@msr.studorg.uu.se</a>
+        MSR, besök <a href="#" class="msrWeb">studierådet.se</a>. Du kan även
+        kontakta oss via mail: <a href="#" id="msrordf">Ordförande</a>
+        eller <a href="#" id="msrVordf">Vice ordförande</a>
       </div>
       <!-- TODO: Ändra till rätt datum och temrin -->
-      <div id="omkkdiv" class="animatedFast fadeIn questioncontainer">
+      <div id="omkkdiv" class="animated fadeIn questioncontainer">
         KlinikKurt och VårdcentralKurt är kursvärderingar för de
         kliniska placeringarna på läkarprogrammet i Uppsala.<br/><br/>Genom att
         utvärdera dina placeringar bidrar du till att förbättra den kliniska
@@ -1450,21 +1453,21 @@
         vinsten är en tur med intensivvårdshelikoptern. <br/><br/>KlinikKurt samt
         VårdcentralKurt stänger den 5:e juni för VT16. <br/><br/>För
         mer information, besök <a href="#" id=kkkk target="_blank" rel="external">klinikkurt.se</a>
-        eller <a href="#" id=kksdr>studierådet.se</a>
+        eller <a href="#" class="msrWeb">studierådet.se</a>
       </div>
-      <div id="omappdiv" class="animatedFast fadeIn questioncontainer" style="display:none;">
+      <div id="omappdiv" class="animated fadeIn questioncontainer" style="display:none;">
         Den här appen är utvecklad av <a href="#" id=apptw>Appanaget</a> för
         läkarprogrammet i Uppsala. Den fortlöpande utvecklingen sköts av läkarprogrammets
         IT-bevakare<br><br>Stort tack till Ahsan Shahzad på MedFarm DoIT som bistått
         med hjälp och anpassningar för att underlätta utvecklandet och
         kompatibiliteten med Kurt-systemet.<br><br>Om du har upptäckt en bugg, har en
         idé som kan förbättra appen eller bara småprata, hör av dig
-        till <a href="mailto:it-bevakare@msr.studorg.uu.se" target="_blank">it-bevakare@msr.studorg.uu.se</a>
+        till <a href="#" id="itbevMail">it-bevakare@msr.studorg.uu.se</a>
       </div>
     </div>
   </div>
   <div data-role="footer" data-position="fixed" data-theme="c">
-    <div data-role="navbar" class="animated fadeIn">
+    <div data-role="navbar">
       <ul>
         <li>
           <a id="tabF" class="ui-btn ui-btn-icon-top ui-icon-tabF">

@@ -1,4 +1,4 @@
-/*TODO: Clean up*/
+/*TODO: Change green and yellow select colours*/
 
 #newcont {
     width: 100%;
@@ -29,7 +29,6 @@
 }
 
 
-/*TODO: Clean out*/
 .ui-page {
     background-color: #ffffff !important;
     /*//	font-family: 'JosefinSlabRegular', Arial, sans-serif;
@@ -171,23 +170,43 @@ fieldset {
     overflow-y: scroll !important;
     overflow-x: hidden;
     position: relative;
-    //-webkit-animation: restofkkanim .5s 1;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    display: none;
 }
 
-.hideit,
-#kkfr3,
-#kkfr4,
+/*.hideit,
 .fewq,
 .moreq,
+#restofkk {
+    display: none;
+}*/
+
 #kkt5,
 #kkt6,
 #kkt7,
 #kkt8,
 #kkt9,
-#kkt10,
 #ortcont,
-#restofkk {
-    display: none;
+#kkfr3,
+#kkfr4 {
+  display: none;
+  -webkit-animation-duration: 0.2s;
+  animation-duration: 0.2s;
+}
+
+#terminfo {
+  -webkit-animation-duration: 0.2s;
+  animation-duration: 0.2s;
+  opacity: 0.3
+
+}
+
+#restOfVC,
+#vcOrt {
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  display: none;
 }
 
 /*Placement button labels*/
@@ -198,18 +217,18 @@ label.ui-btn.ui-corner-all.ui-btn-f.ui-btn-icon-left {
 }
 
 /*T8 Psykiatri Uppsala*/
-#kkfr3 {
+/*#kkfr3 {
     -webkit-transition: margin-bottom 1s ease-in-out;
     -webkit-transition-delay: 2s;
     overflow: hidden;
-}
+}*/
 
 /* T9 Obstetrik, Gynekologi, Pediatrik Uppsala*/
-#kkfr4 {
+/*#kkfr4 {
     -webkit-transition: margin-bottom 1s ease-in-out;
     -webkit-transition-delay: 2s;
     overflow: hidden;
-}
+}*/
 
 /* Message of required fields*/
 #kkreqmsg,
@@ -311,6 +330,7 @@ label.ui-btn.ui-corner-all.ui-btn-f.ui-btn-icon-left {
 .vckq {
   font-weight: 600;
   font-size: 1.2em;
+  display: none;
     /*clear: none;
     margin: none;
     padding: none;
@@ -1483,18 +1503,33 @@ a[data-rel='backbtn'] .ui-btn-inner {
     background-color: #F1BC4D !important;
 }
 */
+ /*==== Animations ====*/
 
-/*
+ /*#kkt5,
+ #kkt6,
+ #kkt7,
+ #kkt8,
+ #kkt9 {
+   -webkit-animation-duration: 0.3s;
+   animation-duration: 0.3s;
+ }*/
+
+.animated {
+  -webkit-animation-duration: 0.7s;
+  -moz-animation-duration: 0.7s;
+  -o-animation-duration: 0.7s;
+  animation-duration: 0.7s;
+}
+
 .animatedFast {
-    -webkit-animation-duration: 0.5s;
-    -moz-animation-duration: 0.5s;
-    -o-animation-duration: 0.5s;
-    animation-duration: 0.5s;
-    -webkit-animation-fill-mode: both;
+
+    /*-webkit-animation-fill-mode: both;
     -moz-animation-fill-mode: both;
     -o-animation-fill-mode: both;
-    animation-fill-mode: both
+    animation-fill-mode: both*/
 }
+
+/*
 .animatedSlow {
     -webkit-animation-duration: 2s;
     -moz-animation-duration: 2s;
