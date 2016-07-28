@@ -7,7 +7,7 @@ $(document).bind("mobileinit", function() {
     $.mobile.allowCrossDomainPages = true;
     $.mobile.orientationChangeEnabled = false;
     //TODO:Is this still wroking?
-    $.mobile.zoom = "disable";
+    /*$.mobile.zoom = "disable";*/
     $.mobile.loadingMessageTheme = "d";
     // 0 can cause selection of buttons when scrolling
     $.mobile.hoverDelay = 200;
@@ -24,6 +24,9 @@ $.fn.extend({
         });
     }
 });
+
+var oneMoreKK = 0;
+var oneMoreVCK = 0;
 
 //Resets the VCK-form
 function clearVC() {
@@ -103,8 +106,6 @@ function onBodyLoad() {
     //Executes when cordova.js is fully loaded
     document.addEventListener("deviceready", onDeviceReady, false);
     //document.addEventListener("deviceready", initPushwoosh, false);
-    //TODO: Set to true to create smoother animations?
-    $.mobile.page.prototype.options.domCache = true;
 
     /*//Moves headers dues to sta
     if (ver[0] >= 7) {
@@ -193,7 +194,7 @@ function onDeviceReady() {
     /*$("#splash").show();*/
 
     //TODO: Needed?
-    window.deviceOS = device.platform;
+    /*window.deviceOS = device.platform;*/
 
 /*
     ranNum = Math.floor((Math.random() * 10) + 1);
@@ -299,6 +300,8 @@ function onDeviceReady() {
     					visibleOnPageShow : true
     				});*/
 
+
+
     function onConfirmLogin(buttonIndex) {
       console.log('You selected button ' + buttonIndex);
       if(buttonIndex == 1 || buttonIndex == 0){
@@ -328,6 +331,8 @@ function onDeviceReady() {
         //console.log("var user =" + user);
         console.log("klinik-kurt-username =" + $("#klinik-kurt-username").val());
         console.log("vc-kurt-username =" + $("#vc-kurt-username").val());
+
+
       }
     }
 
@@ -365,9 +370,25 @@ function onDeviceReady() {
       window.localStorage.setItem("user", data);
       var user = window.localStorage.getItem("user");
       //navigator.notification.alert("Du är inloggad som " + user, alertDismissed, "Inloggad", "OK");
+      if (oneMoreKK === 1) {
+        console.log("To kkPage from login");
+        $.mobile.changePage("#kkpage", {
+        });
+        oneMoreKK = 0;
+      }
+      else if (oneMoreVCK === 1) {
+        console.log("To VCpage from login");
+        $.mobile.changePage("#vcpage", {
+          transition: "slide"
+        });
+        oneMoreVCK = 0;
+      }
+      else {
+        console.log("To hem from login");
       $.mobile.changePage("#hem", {
 
       });
+    }
 
     showConfirm() ;
 
@@ -963,36 +984,13 @@ $(document).delegate("#kkpage", "pageinit", function(event) {
         return false;
     }*/
 
-    //Revisit the KKpage, used when user wants to fill in another form
-    function toKlinikkurtTapHandler(event) {
-        console.log("toKlinikkurtTapHandler");
-        $.mobile.changePage("#kkpage", {
-          transition: "slide"
-        });
-        event.stopImmediatePropagation();
-        return false;
-    }
 
-    //Checks for valid CAS-id
-    jQuery(function() {
-        var cas_regex = /[a-zA-Z]+[a-zA-Z]+[a-zA-Z]+[a-zA-Z]+[0-9]+[0-9]+[0-9]+[0-9]/g;
-        $("#klinikkurt").submit(function(e) {
-            e.preventDefault();
-            /*BlurIt2();*/
-            //if (cas_regex.test($("#kkq19").val()))
-             if (1) {
-                console.log('giltigt cas');
-                showConfirmKK();
-                //   e.preventDefault();
-            } else {
-                navigator.notification.alert("Du har inte fyllt i ett giltigt CAS-id, skriv in ett giltig CAS-id och försök igen. Om du vet att du fyllt i ett giltigt CAS-id, försök skicka in igen, vi arbetar på att lösa problemet!", null, "Ogiltigt CAS-id", "OK");
-            }
-        });
 
-    });
 
-    //Submits the form and asks if the user wants to fill in a second form
+
+    /*//Submits the form and asks if the user wants to fill in a second form
     function kksubmitter() {
+        console.log("kksubmitter");
         //$("#kkq19").val(deviceOS);
         console.log($("#klinik-kurt-username").val());
         $.mobile.loading('show');
@@ -1044,7 +1042,7 @@ $(document).delegate("#kkpage", "pageinit", function(event) {
                         }
                         else {
                         //Return to the form for a second one
-                        toKlinikkurtTapHandler();
+                        backToKlinikKurt();
                         }
                         }
 
@@ -1094,7 +1092,7 @@ $(document).delegate("#kkpage", "pageinit", function(event) {
                 $('#KKopendialog').removeClass('ui-disabled');
             }
         });
-    }
+    }*/
 
     var KKTermInfo = $("#terminfo");
     var RestOfKK = $("#restofkk");
@@ -1518,21 +1516,47 @@ $(document).delegate("#kkpage", "pageinit", function(event) {
         $("#kkq19").blur();
     }*/
 
+
+
+    /*$('#KKopendialog').addClass('ui-disabled');
+    console.log("('#KKopendialog').addClass('ui-disabled');");*/
+    /*$("#KKopendialog").click(BlurIt2);*/
+
     //Used for submitting the form
-    function SubKK(button) {
-        if (button === 1) {
-            kksubmitter();
-            //$("#klinikkurt").submit();
-        } else if (button === 2) {
-            $('#KKopendialog').removeClass('ui-disabled');
-        }
-    }
+    $("#kkpage").delegate("#KKopendialog", 'tap', function(event) {
+        //showConfirmKK();
+        console.log("KKopendialog tap");
+        $("#klinikkurt").submit();
+        return false;
+
+    });
+
+    //Checks for valid CAS-id
+    jQuery(function() {
+        console.log("Check CAS-id");
+        var cas_regex = /[a-zA-Z]+[a-zA-Z]+[a-zA-Z]+[a-zA-Z]+[0-9]+[0-9]+[0-9]+[0-9]/g;
+        $("#klinikkurt").submit(function(e) {
+            e.preventDefault();
+            /*BlurIt2();*/
+            //if (cas_regex.test($("#kkq19").val()))
+             if (1) {
+                console.log('giltigt cas');
+                showConfirmKK();
+                //   e.preventDefault();
+            } else {
+                navigator.notification.alert("Du har inte fyllt i ett giltigt CAS-id, skriv in ett giltig CAS-id och försök igen. Om du vet att du fyllt i ett giltigt CAS-id, försök skicka in igen, vi arbetar på att lösa problemet!", null, "Ogiltigt CAS-id", "OK");
+            }
+        });
+
+    });
 
     //Checks which questions are answered and alerts the user which aren't
     function showConfirmKK(cdata) {
-        console.log('showconfirmkk');
+        console.log('showConfirmKK');
         if ($("input:radio[name='q5']:checked").val() && $("input:radio[name='q6']:checked").val() && $("input:radio[name='q7']:checked").val() && $("input:radio[name='q8']:checked").val() && $("input:radio[name='q9']:checked").val() && $("input:radio[name='q10']:checked").val() && $("input:radio[name='q11']:checked").val() && $("input:radio[name='q12']:checked").val() && $("input:radio[name='q13']:checked").val() && $("input:radio[name='q14']:checked").val() && ($("#kkq15").val().length !== 0) && ($("#kkq16").val().length !== 0) && $("input:radio[name='q18']:checked").val() && ($("#kkq19").val().length !== 0)) {
+            console.log("1");
             if ($("#kkq17").val().length === 0) {
+                console.log("2");
                 $('#KKopendialog').addClass('ui-disabled');
                 navigator.notification.confirm('Du har inte lämnat någon kommentar. Är du säker på att du vill skicka in din Kurtning?', // message
                     SubKK, // callback to invoke with index of button pressed
@@ -1540,6 +1564,7 @@ $(document).delegate("#kkpage", "pageinit", function(event) {
                     ["Ja","Nej"] // buttonLabels
                 );
             } else {
+                console.log("3");
                 $('#KKopendialog').addClass('ui-disabled');
                 navigator.notification.confirm('Är du säker på att du vill skicka in din Kurtning?', // message
                     SubKK, // callback to invoke with index of button pressed
@@ -1548,7 +1573,9 @@ $(document).delegate("#kkpage", "pageinit", function(event) {
                 );
             }
         } else {
+            console.log("4");
             if ($("#kkq17").val().length === 0) {
+                console.log("5");
                 $('#KKopendialog').addClass('ui-disabled');
                 navigator.notification.confirm('Du har inte svarat på alla frågor och inte lämnat någon kommentar.  Är du säker på att du vill skicka in din Kurtning?', // message
                     SubKK, // callback to invoke with index of button pressed
@@ -1556,6 +1583,7 @@ $(document).delegate("#kkpage", "pageinit", function(event) {
                     ["Ja","Nej"] // buttonLabels
                 );
             } else {
+                console.log("6");
                 $('#KKopendialog').addClass('ui-disabled');
                 navigator.notification.confirm('Du har inte svarat på alla frågor.  Är du säker på att du vill skicka in din Kurtning?', // message
                     SubKK, // callback to invoke with index of button pressed
@@ -1566,18 +1594,129 @@ $(document).delegate("#kkpage", "pageinit", function(event) {
         }
     }
 
+    //Used to call the function which sends in the form
+    function SubKK(button) {
+        console.log("SubKK");
+        if (button === 1) {
+            kksubmitter();
+            //$("#klinikkurt").submit();
+        } else if (button === 2) {
+            $('#KKopendialog').removeClass('ui-disabled');
+        }
+    }
 
-    /*$('#KKopendialog').addClass('ui-disabled');
-    console.log("('#KKopendialog').addClass('ui-disabled');");*/
-    /*$("#KKopendialog").click(BlurIt2);*/
-
-    //Used for submitting the form
-    $("#kkpage").delegate("#KKopendialog", 'tap', function(event) {
-        //showConfirmKK();
-        $("#klinikkurt").submit();
+    //Revisit the KKpage, used when user wants to fill in another form
+    function backToKlinikKurt() {
+        console.log("backToKlinikKurt");
+        $.mobile.changePage("#kkpage", {
+          transition: "slide"
+        });
         return false;
+    }
 
-    });
+    //Submits the form and asks if the user wants to fill in a second form
+    function kksubmitter() {
+        console.log("kksubmitter");
+        //$("#kkq19").val(deviceOS);
+        console.log($("#klinik-kurt-username").val());
+        $.mobile.loading('show');
+        //Serialize the form
+        var dataString = $("#klinikkurt").serialize();
+        console.log("datastring =" + " " + dataString)
+        console.log($("#klinik-kurt-username").val());
+
+        function tackPrompt() {
+            console.log('tackprompt1');
+            //Return to homepage
+            $.mobile.changePage("#hem", {
+                transition: "slide",
+                direction: "reverse"
+            });
+            console.log('tackprompt2');
+
+            function oneMore(buttonIndex) {
+                //If user wants to fill in a second form
+                if (buttonIndex === 1) {
+                    console.log("Fill in one more");
+                    function changeUser(buttonIndex) {
+                        //If user wants to change user
+                        if (buttonIndex === 1){
+                        console.log("Change user");
+                        function logOut(buttonIndex) {
+                            oneMoreKK = 1;
+                            if(buttonIndex == 1){
+                                var iframe = $('#loginout');
+                                var url="https://cas.weblogin.uu.se/Shibboleth.sso/Logout"
+                                var url2="http://www.sitedev.beachtime.se/cas/cas2.php"
+
+                                if ( iframe.length ) {
+                                    iframe.attr('src',url);
+                                    window.localStorage.removeItem("user");
+                                    console.log("Logout");
+                                    setTimeout(function() {
+                                        iframe.attr('src',url2);
+                                        $.mobile.changePage("#login", {
+
+                                            		});
+                                  }, 1000);
+                               }
+                        }
+                            }
+                        logOut(1);
+                        }
+                        else {
+                        //Return to the form for a second one
+                        backToKlinikKurt();
+                        }
+                        }
+
+                    navigator.notification.confirm("Vill du byta användare?",
+                    changeUser,
+                    "Byta användare?",
+                    ["Ja","Nej"]
+                    );
+                    }
+            }
+            console.log('tackprompt3');
+            navigator.notification.confirm('Tack för din utvärdering! Vill du kurta en placering till?', // message
+                oneMore, // callback to invoke with index of button pressed
+                'Tack!', // title
+                ["Ja","Nej"] // buttonLabels
+            );
+            console.log('tackprompt4');
+        }
+
+
+        $.ajax({
+            type: "POST",
+            url: "http://doit.medfarm.uu.se/script/kurt2/receive.php",
+            data: dataString,
+            timeout: 20000,
+            datatype: "html",
+            contentType: "application/x-www-form-urlencoded;charset=utf-8",
+            success: function(data) {
+                //The POST will always succeed in loading the page. Hence the "if" which shows on the page when the answers are received
+                if (data.indexOf("Du saknar behörighet för denna sida") > -1){
+                console.log("Success och Mottagen");
+                clearKK();
+                tackPrompt();
+                }
+                else {
+                console.log("Success och EJ mottagen");
+                $.mobile.loading('hide');
+                navigator.notification.alert("Attans! Din KURTning kunde inte skickas. Kontrollera att du har internetåtkomst och försök igen!", null, "Kunde inte skicka KURTning", "OK");
+                $('#KKopendialog').removeClass('ui-disabled');
+                }
+                console.log(data);
+            },
+            error: function(x, e) {
+                console.log("Error och EJ mottagen");
+                $.mobile.loading('hide');
+                navigator.notification.alert("Attans! Din KURTning kunde inte skickas. Kontrollera att du har internetåtkomst och försök igen!", null, "Kunde inte skicka KURTning", "OK");
+                $('#KKopendialog').removeClass('ui-disabled');
+            }
+        });
+    }
   console.log("kkPage loaded");
 });
 
@@ -1773,6 +1912,7 @@ $(document).delegate("#vcpage", "pageinit", function() {
         }
     }
 
+    //Used to call the function which sends in the form
     function SubVCK(button) {
         console.log("SubVCK");
         if (button === 1) {
@@ -1783,6 +1923,16 @@ $(document).delegate("#vcpage", "pageinit", function() {
         }
     }
 
+    //Revisit the VCKpage, used when user wants to fill in another form
+    function backToVCKurt() {
+        console.log("backToVCKurt");
+        $.mobile.changePage("#vcpage", {
+          transition: "slide"
+        });
+        return false;
+    }
+
+    //Submits the form and asks if the user wants to fill in a second form
     function vcksubmitter() {
         //$("#kkq19").val(deviceOS);
         console.log("vcksubmitter");
@@ -1802,8 +1952,6 @@ $(document).delegate("#vcpage", "pageinit", function() {
             });
             console.log('tackprompt2');
 
-            //TODO: Does not let you send in a second one, Submit button greys out
-
             function oneMore(buttonIndex) {
                 //If user wants to fill in a second form
                 if (buttonIndex === 1) {
@@ -1813,6 +1961,7 @@ $(document).delegate("#vcpage", "pageinit", function() {
                         if (buttonIndex === 1){
                         console.log("Change user");
                         function logOut(buttonIndex) {
+                            oneMoreVCK = 1;
                             if(buttonIndex == 1){
                                 var iframe = $('#loginout');
                                 var url="https://cas.weblogin.uu.se/Shibboleth.sso/Logout"
@@ -1832,11 +1981,10 @@ $(document).delegate("#vcpage", "pageinit", function() {
                         }
                             }
                         logOut(1);
-                        //TODO: Make it so that you return to VCKurt form from loginpage
                         }
                         else {
                         //Return to the form for a second one
-                        toVcKurtTapHandler();
+                        backToVCKurt();
                         }
                         }
 
