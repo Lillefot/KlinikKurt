@@ -21,12 +21,12 @@
     <feature name="NetworkStatus">
         <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
     </feature>
-    <feature name="SplashScreen">
-        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
-        <param name="onload" value="true" />
-    </feature>
     <feature name="StatusBar">
         <param name="android-package" value="org.apache.cordova.statusbar.StatusBar" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
         <param name="onload" value="true" />
     </feature>
     <name>KlinikKurt</name>
@@ -82,16 +82,7 @@
     <gap:splash gap:platform="android" gap:qualifier="port-mdpi" src="www/res/screen/android/screen-mdpi-portrait.png" />
     <gap:splash gap:platform="android" gap:qualifier="port-hdpi" src="www/res/screen/android/screen-hdpi-portrait.png" />
     <gap:splash gap:platform="android" gap:qualifier="port-xhdpi" src="www/res/screen/android/screen-xhdpi-portrait.png" />
-    <gap:splash gap:platform="ios" height="480" src="res/screen/ios/Default.png" width="320" />
-    <gap:splash gap:platform="ios" height="960" src="res/screen/ios/Default@2x.png" width="640" />
-    <gap:splash gap:platform="ios" height="1136" src="res/screen/ios/Default-568h@2x.png" width="640" />
-    <gap:splash gap:platform="ios" height="1334" src="res/screen/ios/Default-667h.png" width="750" />
-    <gap:splash gap:platform="ios" height="2208" src="res/screen/ios/Default-736h.png" width="1242" />
-    <gap:splash gap:platform="ios" height="1024" src="res/screen/ios/Default-Portrait.png" width="768" />
-    <gap:splash gap:platform="ios" height="768" src="res/screen/ios/Default-Landscape.png" width="1024" />
-    <gap:splash gap:platform="ios" height="2048" src="res/screen/ios/Default-Portrait@2x.png" width="1536" />
-    <gap:splash gap:platform="ios" height="1536" src="res/screen/ios/Default-Landscape@2x.png" width="2048" />
-    <gap:splash gap:platform="ios" height="2732" src="res/screen/ios/2048x2732.png" width="2048" />
+    <splash src="splash.png" />
     <access origin="*" />
     <icon density="ldpi" src="www/res/icon/android/icon-36-ldpi.png" />
     <icon density="mdpi" src="www/res/icon/android/icon-48-mdpi.png" />
@@ -102,18 +93,19 @@
     <preference name="orientation" value="portrait" />
     <preference name="target-device" value="handset" />
     <preference name="fullscreen" value="true" />
-    <preference name="webviewbounce" value="true" />
+    <preference name="DisallowOverscroll" value="true" />
     <preference name="prerendered-icon" value="true" />
     <preference name="stay-in-webview" value="false" />
     <preference name="ios-statusbarstyle" value="black-opaque" />
     <preference name="StatusBarOverlaysWebView" value="true" />
     <preference name="detect-data-types" value="true" />
     <preference name="exit-on-suspend" value="false" />
-    <preference name="show-splash-screen-spinner" value="true" />
-    <preference name="SplashScreen" value="screen" />
-    <preference name="SplashScreenDelay" value="12000" />
-    <preference name="auto-hide-splash-screen" value="false" />
     <preference name="disable-cursor" value="false" />
     <preference name="android-minSdkVersion" value="18" />
     <preference name="android-installLocation" value="auto" />
+    <preference name="ShowSplashScreenSpinner" value="false" />
+    <preference name="FadeSplashScreen" value="true" />
+    <preference name="FadeSplashScreenDuration" value="3000" />
+    <preference name="AutoHideSplashScreen" value="true" />
+    <preference name="SplashScreenDelay" value="10000" />
 </widget>
