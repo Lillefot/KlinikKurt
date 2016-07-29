@@ -9,10 +9,6 @@
                 "parents": {
                     "/*": [
                         {
-                            "xml": "<feature name=\"PushNotification\"><param name=\"ios-package\" value=\"PushNotification\" /></feature>",
-                            "count": 1
-                        },
-                        {
                             "xml": "<feature name=\"Console\"><param name=\"ios-package\" value=\"CDVLogger\" /></feature>",
                             "count": 1
                         },
@@ -41,10 +37,6 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"WebViewColor\"><param name=\"ios-package\" value=\"WebViewColor\" /></feature>",
-                            "count": 1
-                        },
-                        {
                             "xml": "<feature name=\"StatusBar\"><param name=\"ios-package\" value=\"CDVStatusBar\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
                         },
@@ -65,20 +57,12 @@
             },
             "undefined": {
                 "parents": {
-                    "undefined": [
-                        {
-                            "xml": "<access origin=\"*.pushwoosh.com\" />",
-                            "count": 1
-                        }
-                    ]
+                    "undefined": []
                 }
             }
         }
     },
     "installed_plugins": {
-        "com.pushwoosh.plugins.pushwoosh": {
-            "PACKAGE_NAME": "com.MSR.KlinikKurtApp"
-        },
         "org.apache.cordova.console": {
             "PACKAGE_NAME": "com.MSR.KlinikKurtApp"
         },
@@ -100,9 +84,6 @@
         "org.apache.cordova.network-information": {
             "PACKAGE_NAME": "com.MSR.KlinikKurtApp"
         },
-        "nl.x-services.plugins.ioswebviewcolor": {
-            "PACKAGE_NAME": "com.MSR.KlinikKurtApp"
-        },
         "cordova-plugin-statusbar": {
             "PACKAGE_NAME": "com.klinikkurtapp.msr"
         },
@@ -112,14 +93,6 @@
     },
     "dependent_plugins": {},
     "modules": [
-        {
-            "file": "plugins/com.pushwoosh.plugins.pushwoosh/www/PushNotification.js",
-            "id": "com.pushwoosh.plugins.pushwoosh.PushNotification",
-            "pluginId": "com.pushwoosh.plugins.pushwoosh",
-            "clobbers": [
-                "plugins.pushNotification"
-            ]
-        },
         {
             "file": "plugins/org.apache.cordova.console/www/console-via-logger.js",
             "id": "org.apache.cordova.console.console",
@@ -218,14 +191,6 @@
             ]
         },
         {
-            "file": "plugins/nl.x-services.plugins.ioswebviewcolor/www/WebViewColor.js",
-            "id": "nl.x-services.plugins.ioswebviewcolor.WebViewColor",
-            "pluginId": "nl.x-services.plugins.ioswebviewcolor",
-            "clobbers": [
-                "window.plugins.webviewcolor"
-            ]
-        },
-        {
             "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
             "id": "cordova-plugin-statusbar.statusbar",
             "pluginId": "cordova-plugin-statusbar",
@@ -243,7 +208,6 @@
         }
     ],
     "plugin_metadata": {
-        "nl.x-services.plugins.ioswebviewcolor": "1.0.1",
         "cordova-plugin-statusbar": "2.1.3",
         "cordova-plugin-splashscreen": "3.2.2"
     }

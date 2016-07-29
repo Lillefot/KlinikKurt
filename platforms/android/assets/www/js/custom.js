@@ -7,7 +7,7 @@ $(document).bind("mobileinit", function() {
     $.mobile.allowCrossDomainPages = true;
     $.mobile.orientationChangeEnabled = false;
     //TODO:Is this still wroking?
-    /*$.mobile.zoom = "disable";*/
+    $.mobile.zoom = "disable";
     $.mobile.loadingMessageTheme = "d";
     // 0 can cause selection of buttons when scrolling
     $.mobile.hoverDelay = 200;
@@ -163,6 +163,8 @@ function onDeviceReady() {
     }
 
     preFetch();
+
+
     /*navigator.splashscreen.show();*/
     /*var devicePlatform = device.platform;
     if (devicePlatform === "Android") {
@@ -393,6 +395,7 @@ function onDeviceReady() {
     showConfirm() ;
 
     }, false);
+
         /*navigator.splashscreen.hide();*/
 }
 

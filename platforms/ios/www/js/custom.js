@@ -475,7 +475,7 @@ function tillHemTapHandler(event) {
     setTimeout(function() {
         $.mobile.changePage("#hem", {
             transition: "slide",
-            reverse: true
+            direction: "reverse"
         });
     }, 5);
     /*event.stopImmediatePropagation();*/
@@ -656,6 +656,7 @@ $(document).delegate("#hem", "pageshow", function(event) {
 
 
 $(document).delegate("#vadfylltjag", "pageinit", function(event, ui) {
+
     $(".ui-icon-tabE").on('tap', vadfylltterminTapHandler);
 
     function vadfylltjagTapHandler(e) {
@@ -748,6 +749,13 @@ $(document).delegate("#vadfylltjag", "pageinit", function(event, ui) {
 
 $(document).delegate("#vadfylltjag", "pageshow", function(event) {
     /*$.mobile.loading('hide');*/
+    $("#vadfylltjag").swiperight(function(){
+      console.log("Swipe Right");
+      $.mobile.changePage("#hem",{
+        transition: "slide",
+        reverse: "true"
+      });
+    });
 
     $("#tabD").addClass('ui-btn-active');
     $("#tabE").removeClass('ui-btn-active');
@@ -791,6 +799,7 @@ $(document).delegate("#vadfylltjag", "pageshow", function(event) {
  */
 
 $(document).delegate("#vadfyllttermin", "pageshow", function(event) {
+
     /*$.mobile.loading('hide');*/
     //alert("show vfj");
     /*jQuery(function(){
@@ -816,6 +825,7 @@ $(document).delegate("#vadfyllttermin", "pageshow", function(event) {
 });
 
 $(document).delegate("#omall", "pageinit", function() {
+
   function tabFHandler() {
     console.log("tabFHandler");
     $("li > .ui-btn-active").removeClass('ui-btn-active');
@@ -907,6 +917,16 @@ $(document).delegate("#omall", "pageinit", function() {
   console.log("Omall loaded");
 });
 
+$(document).delegate("#omall", "pageshow", function() {
+  $("#omall").swiperight(function(){
+    console.log("Swipe Right");
+    $.mobile.changePage("#hem",{
+      transition: "slide",
+      reverse: "true"
+    })
+  });
+});
+
 $(document).delegate("#omkk", "pageshow", function(event) {
     /*$.mobile.loading('hide');
     if ((screen.width = 320) && (screen.height >= 568)) {
@@ -925,6 +945,14 @@ $(document).delegate("#ommsr", "pageshow", function(event) {
 
 
 $(document).delegate("#kkpage", "pageshow", function(event) {
+
+  $("#kkpage").swiperight(function(){
+    console.log("Swipe Right");
+    $.mobile.changePage("#hem",{
+      transition: "slide",
+      reverse: "true"
+    })
+  });
     //window.plugins.googleAnalyticsPlugin.trackPageview("KKpage");
     /*if (ver[0] >= 7) {
         window.plugins.webviewcolor.change('#C6E0FF');
@@ -1734,6 +1762,14 @@ $(document).delegate("#kkpage", "pageinit", function(event) {
 
 
 $(document).delegate("#vcpage", "pageshow", function(event) {
+
+  $("#vcpage").swiperight(function(){
+    console.log("Swipe Right");
+    $.mobile.changePage("#hem",{
+      transition: "slide",
+      reverse: "true"
+    });
+  });
     /*if (device.platform === "iPhone" || device.platform === "iOS") {
         $('#vcq2').selectmenu({
             preventFocusZoom: true

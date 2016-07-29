@@ -1,14 +1,6 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
     {
-        "file": "plugins/com.pushwoosh.plugins.pushwoosh/www/PushNotification.js",
-        "id": "com.pushwoosh.plugins.pushwoosh.PushNotification",
-        "pluginId": "com.pushwoosh.plugins.pushwoosh",
-        "clobbers": [
-            "plugins.pushNotification"
-        ]
-    },
-    {
         "file": "plugins/org.apache.cordova.console/www/console-via-logger.js",
         "id": "org.apache.cordova.console.console",
         "pluginId": "org.apache.cordova.console",
@@ -106,14 +98,6 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/nl.x-services.plugins.ioswebviewcolor/www/WebViewColor.js",
-        "id": "nl.x-services.plugins.ioswebviewcolor.WebViewColor",
-        "pluginId": "nl.x-services.plugins.ioswebviewcolor",
-        "clobbers": [
-            "window.plugins.webviewcolor"
-        ]
-    },
-    {
         "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
         "id": "cordova-plugin-statusbar.statusbar",
         "pluginId": "cordova-plugin-statusbar",
@@ -133,7 +117,6 @@ module.exports = [
 module.exports.metadata = 
 // TOP OF METADATA
 {
-    "nl.x-services.plugins.ioswebviewcolor": "1.0.1",
     "cordova-plugin-statusbar": "2.1.3",
     "cordova-plugin-splashscreen": "3.2.2"
 }

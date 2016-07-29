@@ -1,22 +1,6 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
     {
-        "file": "plugins/nl.x-services.plugins.ioswebviewcolor/www/WebViewColor.js",
-        "id": "nl.x-services.plugins.ioswebviewcolor.WebViewColor",
-        "pluginId": "nl.x-services.plugins.ioswebviewcolor",
-        "clobbers": [
-            "window.plugins.webviewcolor"
-        ]
-    },
-    {
-        "file": "plugins/com.pushwoosh.plugins.pushwoosh/www/PushNotification.js",
-        "id": "com.pushwoosh.plugins.pushwoosh.PushNotification",
-        "pluginId": "com.pushwoosh.plugins.pushwoosh",
-        "clobbers": [
-            "plugins.pushNotification"
-        ]
-    },
-    {
         "file": "plugins/org.apache.cordova.device/www/device.js",
         "id": "org.apache.cordova.device.device",
         "pluginId": "org.apache.cordova.device",
@@ -125,8 +109,6 @@ module.exports = [
 module.exports.metadata = 
 // TOP OF METADATA
 {
-    "nl.x-services.plugins.ioswebviewcolor": "1.0.1",
-    "com.pushwoosh.plugins.pushwoosh": "3.5.0",
     "org.apache.cordova.console": "0.2.13",
     "org.apache.cordova.device": "0.3.0",
     "org.apache.cordova.device-motion": "0.2.11",

@@ -7,9 +7,6 @@
         "files": {}
     },
     "installed_plugins": {
-        "com.pushwoosh.plugins.pushwoosh": {
-            "PACKAGE_NAME": "com.MSR.KlinikKurtApp"
-        },
         "org.apache.cordova.console": {
             "PACKAGE_NAME": "com.MSR.KlinikKurtApp"
         },
@@ -29,9 +26,6 @@
             "PACKAGE_NAME": "com.MSR.KlinikKurtApp"
         },
         "org.apache.cordova.network-information": {
-            "PACKAGE_NAME": "com.MSR.KlinikKurtApp"
-        },
-        "nl.x-services.plugins.ioswebviewcolor": {
             "PACKAGE_NAME": "com.MSR.KlinikKurtApp"
         },
         "cordova-plugin-statusbar": {

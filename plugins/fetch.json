@@ -1,11 +1,4 @@
 {
-    "com.pushwoosh.plugins.pushwoosh": {
-        "source": {
-            "type": "git",
-            "url": "https://github.com/Pushwoosh/pushwoosh-phonegap-3.0-plugin.git",
-            "subdir": "."
-        }
-    },
     "org.apache.cordova.console": {
         "source": {
             "type": "registry",
@@ -100,15 +93,6 @@
         "source": {
             "type": "registry",
             "id": "cordova-plugin-network-information"
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
-    "nl.x-services.plugins.ioswebviewcolor": {
-        "source": {
-            "type": "git",
-            "url": "https://github.com/EddyVerbruggen/iOSWebViewColor-PhoneGap-Plugin.git",
-            "subdir": "."
         },
         "is_top_level": true,
         "variables": {}
