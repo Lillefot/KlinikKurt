@@ -7,22 +7,6 @@
 	},
 	"buffers":
 	[
-		{
-			"contents": "",
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "www/index.html",
-			"settings":
-			{
-				"buffer_size": 70856,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -56,11 +40,12 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/mans/Desktop/IT-bevakare/KlinikKurtApp/iOS KlinikKurt/KlinikKurt",
-		"/Users/mans/Desktop/IT-bevakare/KlinikKurtApp/iOS KlinikKurt/KlinikKurt/www"
+		"/Users/mans/Desktop/IT-bevakare/KlinikKurtApp/iOS KlinikKurt/KlinikKurt"
 	],
 	"file_history":
 	[
+		"/Users/mans/Desktop/IT-bevakare/KlinikKurtApp/iOS KlinikKurt/KlinikKurt/www/index.html",
+		"/Users/mans/Downloads/openDev.php",
 		"/Users/mans/Desktop/IT-bevakare/KlinikKurtApp/iOS fungerar lite phonegap 3.9.2/KlinikKurt-iOS fungerar lite/www/js/custom.js",
 		"/Users/mans/Desktop/IT-bevakare/KlinikKurtApp/iOS fungerar lite phonegap 3.9.2/KlinikKurt-iOS fungerar lite/www/index.html"
 	],
@@ -98,67 +83,8 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"default_dir": "/Users/mans/Library/Application Support/Sublime Text 3/Packages/User",
-							"syntax": "Packages/Python/Python.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "www/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 70856,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5964,
-								5964
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1965.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
