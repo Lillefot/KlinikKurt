@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		07A0178FCED64EE6A44BE3BE /* CDVSplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = E47EB330F6444D52B5BE7894 /* CDVSplashScreen.m */; };
 		0D0BC95C7DA44A42811618FF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B2B9F354F3149C4AE063F75 /* AudioToolbox.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -516,7 +515,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.klinikkurtapp.msr;
 				PRODUCT_NAME = KlinikKurt;
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1";
 			};
 			name = Debug;
 		};
@@ -552,7 +551,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.klinikkurtapp.msr;
 				PRODUCT_NAME = KlinikKurt;
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1";
 			};
 			name = Release;
 		};

@@ -22,11 +22,7 @@
 
 <!-- Beginning of Home -->
 <div id="hem" data-role="page" data-theme="f" ontouchmove="touchMove(event);">
-  <!-- Is shown behind #hemcont on startup-->
-  <!--<div id="splash"
-  style="height: 100% !important;width:100%;position: absolute;bottom: 0;left: 0;-webkit-background-size: 100% auto;z-index:20;background-position: left bottom;background-image: url('img/splash5.png');">
-  &nbsp;
-  </div>-->
+
   <div data-role="content" id="hemcont">
     <div id="newcont" class="animated">
       <div id="toKlinikkurt" class="animated">
@@ -89,8 +85,6 @@
 
   <div class="questioncontainer">
     <p id="placercont">Placering</p>
-<!--    <a style="opacity:0;height:0px;" class="" data-role="button" data-theme="d">Av oklar anledning förskjuts
-      den första knappen. Således gömmer jag den första knappen.</a> -->
 
       <div data-role="button" id="terminfo">
         Välj termin först!
@@ -100,11 +94,11 @@
           <input type="radio" name="q1" id="kkq1v1" value="1" data-theme="f"/>
           <label for="kkq1v1">Akutsjukvård I</label>
           <input type="radio" name="q1" id="kkq1v2" value="2" data-theme="f"/>
-          <label for="kkq1v2">Geriatrik</label>
+          <label for="kkq1v2">Avdelningsplacering geriatrik</label>
           <input type="radio" name="q1" id="kkq1v3" value="3" data-theme="f"/>
-          <label for="kkq1v3">Hjärta-kärl I</label>
+          <label for="kkq1v3">Avdelningsplacering hjärta-kärl I</label>
           <input type="radio" name="q1" id="kkq1v4" value="4" data-theme="f"/>
-          <label for="kkq1v4">Lungmedicin</label>
+          <label for="kkq1v4">Avdelningsplacering lungmedicin</label>
         </div>
 
         <div id="kkt6" data-role="controlgroup">
@@ -188,19 +182,20 @@
         <option id="kkq2v6" value="6">Gävle</option>
         <option id="kkq2v7" value="7">Hudiksvall</option>
         <option id="kkq2v8" value="8">Karlstad</option>
-        <option id="kkq2v9" value="9">Köping</option>
-        <option id="kkq2v10" value="10">Ludvika</option>
-        <option id="kkq2v11" value="11">Mariehamn</option>
-        <option id="kkq2v12" value="12">Mora</option>
-        <option id="kkq2v13" value="13">Nyköping</option>
-        <option id="kkq2v14" value="14">Södertälje</option>
-        <option id="kkq2v15" value="15">Tierp</option>
-        <option id="kkq2v16" value="16">Uppsala</option>
-        <option id="kkq2v17" value="17">Utlandsplacering</option>
-        <option id="kkq2v18" value="18">Visby</option>
-        <option id="kkq2v19" value="19">Västerås</option>
-        <option id="kkq2v20" value="20">Östhammar</option>
-        <option id="kkq2v21" value="21">Övriga orter</option>
+        <option id="kkq2v8" value="9">Katrineholm</option>
+        <option id="kkq2v9" value="10">Köping</option>
+        <option id="kkq2v10" value="11">Ludvika</option>
+        <option id="kkq2v11" value="12">Mariehamn</option>
+        <option id="kkq2v12" value="13">Mora</option>
+        <option id="kkq2v13" value="14">Nyköping</option>
+        <option id="kkq2v14" value="15">Södertälje</option>
+        <option id="kkq2v15" value="16">Tierp</option>
+        <option id="kkq2v16" value="17">Uppsala</option>
+        <option id="kkq2v17" value="18">Utlandsplacering</option>
+        <option id="kkq2v18" value="19">Visby</option>
+        <option id="kkq2v19" value="20">Västerås</option>
+        <option id="kkq2v20" value="21">Östhammar</option>
+        <option id="kkq2v21" value="22">Övriga orter</option>
 
 
       </select>
@@ -668,7 +663,7 @@
               <div class="fewq">11</div>
               <div class="moreq">12</div>
               Nämn en (och enbart en!) läkare/handledare (inklusive Regionen) som varit särskilt bra under din placering (OBS! Enbart namn! Skriv sedan gärna en motivering i nästa fält.)
-              <textarea name="q15" id="kkq15" cols="60" rows="1" data-theme="f"></textarea>
+              <textarea name="q15" id="kkq15" cols="60" rows="1" data-theme="f" placeholder="Endast ett namn!"></textarea>
             </div>
 
             <div class="questioncontainer">
@@ -688,17 +683,17 @@
             <div class="questioncontainer" id="kksex">
               <div class="fewq">14</div>
               <div class="moreq">15</div>
-              Jag är: (ej obligatorisk)
+              Jag ser mig som:
 
-              <div data-role="fieldcontain">
-                <fieldset data-role="controlgroup" data-type="horizontal" class="kvinman">
-                  <input type="radio" name="q18" id="kkq18v1" value="1" data-theme="f"/>
-                  <label for="kkq18v1">Kvinna</label>
+              <select name="q18" id="kkq18" data-theme="f">
+                <option value="null"> -- Välj alternativ --</option>
+                <option id="kkq18v1" value="1">Kvinna</option>
+                <option id="kkq18v2" value="2">Man</option>
+                <option id="kkq18v3" value="3">Annan könsidentitet</option>
+                <option id="kkq18v4" value="4">Kan eller vill ej uppge</option>
+              </select>
+              <br>
 
-                  <input type="radio" name="q18" id="kkq18v2" value="2" data-theme="f"/>
-                  <label for="kkq18v2">&nbsp;Man&nbsp;</label>
-                </fieldset>
-              </div>
             </div>
 
 
@@ -713,25 +708,21 @@
               samma placering skickats in. Om du är osäker på om du har fyllt i en
               kursvärdering kan du via <a href='http://www.klinikkurt.se' target='_blank'>www.klinikkurt.se</a>
               beställa ett utdrag på vilka du har fyllt i.
-              <!--<input type=text name="q19" id="kkq19" cols="8" rows="1" width="80%" data-theme="f"/>-->
               <textarea name="q19" id="kkq19" cols="60" rows="1" data-theme="f"></textarea>
             </div>
 
             <input type="hidden" name="q20" id="kkq20" value="App" />
 
             <input type="hidden" name="klinik-kurt-username" id="klinik-kurt-username" value="Username" />
+
             <div class="questioncontainer" id="kkreqmsg"><br><br>Oj då! Du kan tyvärr inte skicka in
               en kurtning utan att ange termin och placering!
             </div>
-            <!--<a style="opacity:0;" data-role="button" data-rel="dialog" data-transition="slideup" data-theme="d">Av
-              oklar anledning förskjuts den första knappen. Således gömmer jag den första
-              knappen.</a>-->
               <a href="#" id="KKopendialog" data-role="button" data-theme="f">
                 Skicka in
               </a>
               </div>
             </form>
-            <!--<a id="tackkklink" href="#tackkkbody" style="opacity:0;width:1px;" data-prefetch></a>-->
           </div>
   <script>
     if ( typeof jQuery == 'undefined') {
@@ -801,48 +792,50 @@
             <option id="vcq2v2" value="2">Aleris vårdcentral Nyby</option>
             <option id="vcq2v3" value="3">Alunda vårdcentral</option>
             <option id="vcq2v4" value="4">Aros läkarmottagning</option>
-            <option id="vcq2v5" value="5">Bålsta Doktorn</option>
-            <option id="vcq2v6" value="6">Bålstadoktorn</option>
-            <option id="vcq2v7" value="7">Capio vårdcentral Enköping</option>
-            <option id="vcq2v8" value="8">Capio vårdcentral Liljeforstorg</option>
-            <option id="vcq2v9" value="9">Capio vårdcentral Sävja</option>
-            <option id="vcq2v10" value="10">Dr Wahlunds läkarmottagning</option>
-            <option id="vcq2v11" value="11">Ekeby hälsocenter</option>
-            <option id="vcq2v12" value="12">Ekeby hälsocentral</option>
-            <option id="vcq2v13" value="13">Enköpings husläkarcentrum</option>
-            <option id="vcq2v14" value="14">Enköpings husläkarcentrum</option>
-            <option id="vcq2v15" value="15">Enköpingshälsan</option>
-            <option id="vcq2v16" value="16">Eriksbergs vårdcentral</option>
-            <option id="vcq2v17" value="17">Familjedoktorn</option>
-            <option id="vcq2v18" value="18">Familjeläkarna Bålsta</option>
-            <option id="vcq2v19" value="19">Fjärdhundra vårdcentral</option>
-            <option id="vcq2v20" value="20">Flogsta vårdcentral</option>
-            <option id="vcq2v21" value="21">Fålhagens vårdcentral</option>
-            <option id="vcq2v22" value="22">Gimo vårdcentral</option>
-            <option id="vcq2v23" value="23">Gottsunda vårdcentral</option>
-            <option id="vcq2v24" value="24">Heby vårdcentral</option>
-            <option id="vcq2v25" value="25">Husläkargruppen Luthagsgården</option>
-            <option id="vcq2v26" value="26">Hälsohuset i Enköping</option>
-            <option id="vcq2v27" value="27">Knivsta läkargrupp</option>
-            <option id="vcq2v28" value="28">Knivsta vårdcentral</option>
-            <option id="vcq2v29" value="29">Kungsgärdets vårdcentral</option>
-            <option id="vcq2v30" value="30">Kåbohälsan</option>
-            <option id="vcq2v31" value="31">Rasbo vårdcentral</option>
-            <option id="vcq2v32" value="32">Samariterhemmets vårdcentral</option>
-            <option id="vcq2v33" value="33">Skutskärs vårdcentral</option>
-            <option id="vcq2v34" value="34">Storvreta vårdcentral</option>
-            <option id="vcq2v35" value="35">Svartbäckens vårdcentral</option>
-            <option id="vcq2v36" value="36">Södertulls hälsocentral, Gävle</option>
-            <option id="vcq2v37" value="37">Tierps vårdcentral</option>
-            <option id="vcq2v38" value="38">Ture Ålanders läkarpraktik</option>
-            <option id="vcq2v39" value="39">Vårdcentralen Centrum</option>
-            <option id="vcq2v40" value="40">Årsta vårdcentral</option>
-            <option id="vcq2v41" value="41">Öregrunds vårdcentral</option>
-            <option id="vcq2v42" value="42">Örsundsbro vårdcentral</option>
-            <option id="vcq2v43" value="43">Österbybruks vårdcentral</option>
-            <option id="vcq2v44" value="44">Östervåla vårdcentral</option>
-            <option id="vcq2v45" value="45">Östhammars vårdcentral</option>
-            <option id="vcq2v46" value="46">Övriga vårdcentraler</option>
+            <option id="vcq2v5" value="5">BålstaDoktorn</option>
+            <option id="vcq2v7" value="6">Capio vårdcentral Enköping</option>
+            <option id="vcq2v8" value="7">Capio vårdcentral Liljeforstorg</option>
+            <option id="vcq2v9" value="8">Capio vårdcentral Sävja</option>
+            <option id="vcq2v10" value="9">Dr Wahlunds läkarmottagning</option>
+            <option id="vcq2v11" value="10">Ekeby hälsocenter</option>
+            <option id="vcq2v13" value="11">Enköpings husläkarcentrum</option>
+            <option id="vcq2v15" value="12">Enköpingshälsan</option>
+            <option id="vcq2v16" value="13">Eriksbergs vårdcentral</option>
+            <option id="vcq2v17" value="14">Familjedoktorn</option>
+            <option id="vcq2v18" value="15">Familjeläkarna Bålsta</option>
+            <option id="vcq2v19" value="16">Fjärdhundra vårdcentral</option>
+            <option id="vcq2v20" value="17">Flogsta vårdcentral</option>
+            <option id="vcq2v21" value="18">Fålhagens vårdcentral</option>
+            <option id="vcq2v22" value="19">Gimo vårdcentral</option>
+            <option id="vcq2v23" value="20">Gottsunda vårdcentral</option>
+            <option id="vcq2v24" value="21">Heby vårdcentral</option>
+            <option id="vcq2v25" value="22">Husläkargruppen Luthagsgården</option>
+            <option id="vcq2v26" value="23">Hälsohuset i Enköping</option>
+            <option id="vcq2v27" value="24">Knivsta läkargrupp</option>
+            <option id="vcq2v28" value="25">Knivsta vårdcentral</option>
+            <option id="vcq2v29" value="26">Kungsgärdets vårdcentral</option>
+            <option id="vcq2v30" value="27">Kåbohälsan</option>
+            <option id="vcq2v31" value="28">Rasbo vårdcentral</option>
+            <option id="vcq2v32" value="29">Samariterhemmets vårdcentral</option>
+            <option id="vcq2v33" value="30">Skutskärs vårdcentral</option>
+            <option id="vcq2v34" value="31">Storvreta vårdcentral</option>
+            <option id="vcq2v35" value="32">Svartbäckens vårdcentral</option>
+            <option id="vcq2v36" value="33">Södertulls hälsocentral, Gävle</option>
+            <option id="vcq2v37" value="34">Tierps vårdcentral</option>
+            <option id="vcq2v38" value="35">Ture Ålanders läkarpraktik</option>
+            <option id="vcq2v39" value="36">Visby Norr</option>
+            <option id="vcq2v39" value="37">Wisby Söder</option>
+            <option id="vcq2v39" value="38">Vårdcentralen Centrum</option>
+            <option id="vcq2v39" value="39">Vårdcentralen Mariefred</option>
+            <option id="vcq2v39" value="40">Vårdcentralen Strängnäs</option>
+            <option id="vcq2v39" value="41">Vårdcentralen Visborg, Visby</option>
+            <option id="vcq2v40" value="42">Årsta vårdcentral</option>
+            <option id="vcq2v41" value="43">Öregrunds vårdcentral</option>
+            <option id="vcq2v42" value="44">Örsundsbro vårdcentral</option>
+            <option id="vcq2v43" value="45">Österbybruks vårdcentral</option>
+            <option id="vcq2v44" value="46">Östervåla vårdcentral</option>
+            <option id="vcq2v45" value="47">Östhammars vårdcentral</option>
+            <option id="vcq2v46" value="48">Övriga vårdcentraler</option>
           </select>
       </div>
       <br/>
@@ -854,7 +847,7 @@
 
         <div class="questioncontainer">
           <div class="vckq">1</div>
-          Hur var introduktionen och bemötandet på placeringen?
+          Hur var introduktionen och bemötandet på vårdcentralsplaceringen?
           <div data-role="fieldcontain">
             <fieldset data-role="controlgroup" data-type="horizontal" id="vcq3">
             <div class="popupcontainer">
@@ -1269,16 +1262,16 @@
 
         <div class="questioncontainer" id="vcsex">
           <div class="vckq">12</div>
-          Jag är: (ej obligatorisk)
-          <div data-role="fieldcontain">
-            <fieldset class="kvinman" data-role="controlgroup" data-type="horizontal">
-              <input type="radio" name="q13" id="vcq15v1" value="1" data-theme="d"/>
-              <label for="vcq15v1">Kvinna</label>
+          Jag ser mig som:
+          <select name="q13" id="vcq15" data-theme="d">
+            <option value="null"> -- Välj alternativ --</option>
+            <option id="vcq15v1" value="1">Kvinna</option>
+            <option id="vcq15v2" value="2">Man</option>
+            <option id="vcq15v3" value="3">Annan könsidentitet</option>
+            <option id="vcq15v4" value="4">Kan eller vill ej uppge</option>
+          </select>
 
-              <input type="radio" name="q13" id="vcq15v2" value="2" data-theme="d"/>
-              <label for="vcq15v2">&nbsp;Man&nbsp;</label>
-            </fieldset>
-          </div>
+          <br>
         </div>
 
         <h2>Lotteri</h2>
@@ -1295,19 +1288,9 @@
           <textarea name="q14" id="vcq16" cols="60" rows="1" data-theme="d"></textarea>
         </div>
 
-        <!-- TODO: Is q15 still needed?-->
         <input type="hidden" name="q15" id="vcq17" value="App">
 
-        <!-- TODO: Does not send the correct username -->
-        <input type="hidden" name="vc-kurt-username" id="vc-kurt-username" value="Username" />
-
-        <!-- <a style="opacity:0"
-        data-role="button"
-        data-rel="dialog"
-        data-transition="slideup"
-        data-theme="d">Av oklar anledning
-        förskjuts den första knappen i formuläret. Således gömmer jag den första
-        knappen.</a> -->
+        <input type="hidden" name="klinik-kurt-username" id="vc-kurt-username" value="Username" />
 
         <div class="questioncontainer ui-disabled" id="vcreqmsg">
           Oj då! Du kan tyvärr inte skicka in en kurtning utan att ange termin och vårdcentral.
@@ -1416,7 +1399,6 @@
 <!-- End of VadFyllt pages -->
 
 <!-- Beginning of AboutAll pages-->
-<!-- TODO: Correct e-mails and link adresses-->
 <div data-role="page" id="omall">
   <div data-role="header" data-theme="b" data-position="fixed" class="animated fadeIn" id="omalltitles">
     <a href="#" data-role="button" class="hemKnapp" data-theme="b" data-icon="arrow-l">Start</a>
@@ -1491,6 +1473,7 @@
 <!-- End of AboutAll pages -->
 
 <!-- Beginning of Login -->
+<!-- TODO: Move login script to our own server and change the link-->
 <div data-role="page" id="login">
 
   <div data-role="content" data-theme="f" id="logincont"

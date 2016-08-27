@@ -8,33 +8,36 @@
     },
     "installed_plugins": {
         "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "com.klinikkurtapp.msr"
+            "PACKAGE_NAME": "com.MSR.KlinikKurtApp"
         },
         "cordova-plugin-statusbar": {
-            "PACKAGE_NAME": "com.klinikkurtapp.msr"
+            "PACKAGE_NAME": "com.MSR.KlinikKurtApp"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.MSR.KlinikKurtApp"
         }
     },
     "dependent_plugins": {
         "org.apache.cordova.console": {
-            "PACKAGE_NAME": "com.klinikkurtapp.msr"
+            "PACKAGE_NAME": "com.MSR.KlinikKurtApp"
         },
         "org.apache.cordova.device": {
-            "PACKAGE_NAME": "com.klinikkurtapp.msr"
+            "PACKAGE_NAME": "com.MSR.KlinikKurtApp"
         },
         "org.apache.cordova.device-motion": {
-            "PACKAGE_NAME": "com.klinikkurtapp.msr"
+            "PACKAGE_NAME": "com.MSR.KlinikKurtApp"
         },
         "org.apache.cordova.device-orientation": {
-            "PACKAGE_NAME": "com.klinikkurtapp.msr"
+            "PACKAGE_NAME": "com.MSR.KlinikKurtApp"
         },
         "org.apache.cordova.dialogs": {
-            "PACKAGE_NAME": "com.klinikkurtapp.msr"
+            "PACKAGE_NAME": "com.MSR.KlinikKurtApp"
         },
         "org.apache.cordova.inappbrowser": {
-            "PACKAGE_NAME": "com.klinikkurtapp.msr"
+            "PACKAGE_NAME": "com.MSR.KlinikKurtApp"
         },
         "org.apache.cordova.network-information": {
-            "PACKAGE_NAME": "com.klinikkurtapp.msr"
+            "PACKAGE_NAME": "com.MSR.KlinikKurtApp"
         }
     }
 }
