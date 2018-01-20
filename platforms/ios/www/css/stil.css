@@ -107,6 +107,7 @@ fieldset {
 
 /* === KlinikKurt Page === */
 #kkpage{
+  margin-bottom: 0;
 
 }
 
@@ -351,6 +352,11 @@ textarea.ui-input-text{
 }
 
 /*==== VC-kurt ====*/
+
+#vcpage {
+  padding-bottom: 0px;
+}
+
 #vcOrt .ui-field-contain {
   margin-top: 0;
 }

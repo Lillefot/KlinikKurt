@@ -42,7 +42,8 @@
 <div data-role="page" id="kkpage">
   <div data-role="header" data-theme="f" data-position="fixed" data-tap-toggle="false">
     <a href="#" data-role="button" class="hemKnapp" data-theme="f" data-icon="arrow-l">Start</a>
-    <h4>KlinikKurt VT16</h4>
+    <!-- TODO: Change semester -->
+    <h4>KlinikKurt HT17</h4>
   </div>
   <div data-role="content" id="kkcont">
     <br/>
@@ -80,7 +81,7 @@
   <!-- TODO: Ändra till rätt KlinikKurt -->
   <form id="klinikkurt" method="POST" target="result"
   acn="https://doit.medfarm.uu.se/script/kurt2/receive.php" accept-charset="ISO-8859-1">
-  <input type="hidden" name="id" value="9017"/>
+  <input type="hidden" name="id" value="10725"/>
   <input type="hidden" name="noframe" value=""/>
 
   <div class="questioncontainer">
@@ -132,9 +133,9 @@
           <input type="radio" name="q1" id="kkq1v17" value="17" data-theme="f"/>
           <label for="kkq1v17">Njurmedicin</label>
           <input type="radio" name="q1" id="kkq1v18" value="18" data-theme="f"/>
-          <label for="kkq1v18">Ortopedi</label>
+          <label for="kkq1v18">Onkologi</label>
           <input type="radio" name="q1" id="kkq1v19" value="19" data-theme="f"/>
-          <label for="kkq1v19">Onkologi</label>
+          <label for="kkq1v19">Ortopedi</label>
           <input type="radio" name="q1" id="kkq1v20" value="20" data-theme="f"/>
           <label for="kkq1v20">Reumatologi</label>
           <input type="radio" name="q1" id="kkq1v21" value="21" data-theme="f"/>
@@ -144,13 +145,13 @@
 
         <div id="kkt8" data-role="controlgroup">
           <input type="radio" name="q1" id="kkq1v22" value="22" data-theme="f"/>
-          <label for="kkq1v22">Psykiatri</label>
+          <label for="kkq1v22">Neurologi</label>
           <input type="radio" name="q1" id="kkq1v23" value="23" data-theme="f"/>
-          <label for="kkq1v23">Ögon</label>
+          <label for="kkq1v23">Psykiatri</label>
           <input type="radio" name="q1" id="kkq1v24" value="24" data-theme="f"/>
-          <label for="kkq1v24">Öron-näsa-hals</label>
+          <label for="kkq1v24">Ögon</label>
           <input type="radio" name="q1" id="kkq1v25" value="25" data-theme="f"/>
-          <label for="kkq1v25">Neurologi</label>
+          <label for="kkq1v25">Öron-näsa-hals</label>
         </div>
 
         <div id="kkt9" data-role="controlgroup">
@@ -176,26 +177,28 @@
         <option value="null"> -- Välj alternativ --</option>
         <option id="kkq2v1" value="1">Avesta</option>
         <option id="kkq2v2" value="2">Bollnäs</option>
-        <option id="kkq2v3" value="3">Enköping</option>
-        <option id="kkq2v4" value="4">Eskilstuna</option>
-        <option id="kkq2v5" value="5">Falun</option>
-        <option id="kkq2v6" value="6">Gävle</option>
-        <option id="kkq2v7" value="7">Hudiksvall</option>
-        <option id="kkq2v8" value="8">Karlstad</option>
-        <option id="kkq2v8" value="9">Katrineholm</option>
-        <option id="kkq2v9" value="10">Köping</option>
-        <option id="kkq2v10" value="11">Ludvika</option>
-        <option id="kkq2v11" value="12">Mariehamn</option>
-        <option id="kkq2v12" value="13">Mora</option>
-        <option id="kkq2v13" value="14">Nyköping</option>
-        <option id="kkq2v14" value="15">Södertälje</option>
-        <option id="kkq2v15" value="16">Tierp</option>
-        <option id="kkq2v16" value="17">Uppsala</option>
-        <option id="kkq2v17" value="18">Utlandsplacering</option>
-        <option id="kkq2v18" value="19">Visby</option>
-        <option id="kkq2v19" value="20">Västerås</option>
-        <option id="kkq2v20" value="21">Östhammar</option>
-        <option id="kkq2v21" value="22">Övriga orter</option>
+        <option id="kkq2v3" value="3">Elisabethsjukhuset, Uppsala</option>
+        <option id="kkq2v4" value="4">Enköping</option>
+        <option id="kkq2v5" value="5">Eskilstuna</option>
+        <option id="kkq2v6" value="6">Falun</option>
+        <option id="kkq2v7" value="7">Gävle</option>
+        <option id="kkq2v8" value="8">Hudiksvall</option>
+        <option id="kkq2v9" value="9">Karlstad</option>
+        <option id="kkq2v10" value="10">Katrineholm</option>
+        <option id="kkq2v11" value="11">Köping</option>
+        <option id="kkq2v12" value="12">Ludvika</option>
+        <option id="kkq2v13" value="13">Mariehamn</option>
+        <option id="kkq2v14" value="14">Mora</option>
+        <option id="kkq2v15" value="15">Nyköping</option>
+        <option id="kkq2v16" value="16">Södertälje</option>
+        <option id="kkq2v17" value="17">Tierp</option>
+        <option id="kkq2v18" value="18">Uppsala</option>
+        <option id="kkq2v19" value="19">Utlandsplacering</option>
+        <option id="kkq2v20" value="20">Visby</option>
+        <option id="kkq2v21" value="21">Västerås</option>
+        <option id="kkq2v22" value="22">Östhammar</option>
+        <option id="kkq2v23" value="23">Örebro</option>
+        <option id="kkq2v24" value="24">Övriga orter</option>
 
 
       </select>
@@ -211,12 +214,11 @@
           varje verksamhetsområde du är placerad på)
           <select name="q3" id="kkq3" data-theme="f">
             <option value="null"> -- Välj alternativ --</option>
-            <option id="kkq3v1" value="1">Akutpsykiatri</option>
-            <option id="kkq3v2" value="2">Allmänpsykiatri</option>
+            <option id="kkq3v1" value="1">Affektiva</option>
+            <option id="kkq3v2" value="2">Akutpsykiatri</option>
             <option id="kkq3v3" value="3">Barn- och ungdomspsykiatri</option>
             <option id="kkq3v4" value="4">Beroendepsykiatri</option>
             <option id="kkq3v5" value="5">Psykos och rättspsykiatri</option>
-            <option id="kkq3v6" value="6">Äldrepsykiatri</option>
           </select><br/></div>
 
           <div id="kkfr4" class="questioncontainer">
@@ -662,14 +664,14 @@
             <div class="questioncontainer">
               <div class="fewq">11</div>
               <div class="moreq">12</div>
-              Nämn en (och enbart en!) läkare/handledare (inklusive Regionen) som varit särskilt bra under din placering (OBS! Enbart namn! Skriv sedan gärna en motivering i nästa fält.)
+              Nämn en (och enbart en!) person (inklusive Regionen) som varit särskilt bra under din placering (OBS! Enbart namn! Skriv sedan gärna en motivering i nästa fält.) OBS! Om instruktioner inte följs kan datan inte sorteras.
               <textarea name="q15" id="kkq15" cols="60" rows="1" data-theme="f" placeholder="Endast ett namn!"></textarea>
             </div>
 
             <div class="questioncontainer">
               <div class="fewq">12</div>
               <div class="moreq">13</div>
-              Motivering till val av läkare/handledare
+              Motivering till val av läkare/handledare/administratör/etc.
               <textarea name="q16" id="kkq16" cols="60" rows="3" data-theme="f"></textarea>
             </div>
 
@@ -701,7 +703,7 @@
             <br/>
             <div class="questioncontainer">
               Fyll i ditt UpUnet-S användarnamn (t ex "abcd1234") i rutan nedan och deltag i lotteriet
-              med fina priser. Ditt användarnamn kommer ej att synas i någon sammanställning
+              med fina priser (märk: enbart kurser med minst 50% svarsfrekvens kommer delta i lotteriet). Ditt användarnamn kommer ej att synas i någon sammanställning
               och enbart användas vid utlottningen. För varje klinikvärdering som du fyller i
               erhåller du en lott. Samtliga vinnare kommer att kontrolleras med avseende på 1) att
               kandidaten faktiskt har gått placeringen och 2) att inte dubbla registreringar för
@@ -741,7 +743,8 @@
 <div data-role="page" id="vcpage">
   <div data-role="header" data-theme="d" data-position="fixed" data-tap-toggle="false">
     <a href="#" data-role="button" class="hemKnapp" data-theme="d" data-icon="arrow-l">Start</a>
-    <h4>VC-Kurt VT16</h4>
+    <!-- TODO: Change semester -->
+    <h4>VC-Kurt HT17</h4>
   </div>
   <div data-role="content" id="vccont">
   <br/>
@@ -779,7 +782,7 @@
     <!-- TODO: Ändra till rätt VC-Kurt -->
     <!-- TODO: Is name="vckurt" required?-->
     <form id="vckurt" name="vckurt" method="POST" target="result">
-      <input type="hidden" name="id" value="9018"/>
+      <input type="hidden" name="id" value="10726"/>
       <input type="hidden" name="noframe" value=""/>
 
       <div class="questioncontainer" id="vcOrt">
@@ -789,53 +792,63 @@
           <select name="q1" id="vcq2" data-theme="d">
             <option value="null"> -- Välj alternativ --</option>
             <option id="vcq2v1" value="1">Aleris Barncentrum och vårdcentral</option>
-            <option id="vcq2v2" value="2">Aleris vårdcentral Nyby</option>
-            <option id="vcq2v3" value="3">Alunda vårdcentral</option>
-            <option id="vcq2v4" value="4">Aros läkarmottagning</option>
-            <option id="vcq2v5" value="5">BålstaDoktorn</option>
-            <option id="vcq2v7" value="6">Capio vårdcentral Enköping</option>
-            <option id="vcq2v8" value="7">Capio vårdcentral Liljeforstorg</option>
-            <option id="vcq2v9" value="8">Capio vårdcentral Sävja</option>
-            <option id="vcq2v10" value="9">Dr Wahlunds läkarmottagning</option>
-            <option id="vcq2v11" value="10">Ekeby hälsocenter</option>
-            <option id="vcq2v13" value="11">Enköpings husläkarcentrum</option>
-            <option id="vcq2v15" value="12">Enköpingshälsan</option>
-            <option id="vcq2v16" value="13">Eriksbergs vårdcentral</option>
-            <option id="vcq2v17" value="14">Familjedoktorn</option>
-            <option id="vcq2v18" value="15">Familjeläkarna Bålsta</option>
-            <option id="vcq2v19" value="16">Fjärdhundra vårdcentral</option>
-            <option id="vcq2v20" value="17">Flogsta vårdcentral</option>
-            <option id="vcq2v21" value="18">Fålhagens vårdcentral</option>
-            <option id="vcq2v22" value="19">Gimo vårdcentral</option>
-            <option id="vcq2v23" value="20">Gottsunda vårdcentral</option>
-            <option id="vcq2v24" value="21">Heby vårdcentral</option>
-            <option id="vcq2v25" value="22">Husläkargruppen Luthagsgården</option>
-            <option id="vcq2v26" value="23">Hälsohuset i Enköping</option>
-            <option id="vcq2v27" value="24">Knivsta läkargrupp</option>
-            <option id="vcq2v28" value="25">Knivsta vårdcentral</option>
-            <option id="vcq2v29" value="26">Kungsgärdets vårdcentral</option>
-            <option id="vcq2v30" value="27">Kåbohälsan</option>
-            <option id="vcq2v31" value="28">Rasbo vårdcentral</option>
-            <option id="vcq2v32" value="29">Samariterhemmets vårdcentral</option>
-            <option id="vcq2v33" value="30">Skutskärs vårdcentral</option>
-            <option id="vcq2v34" value="31">Storvreta vårdcentral</option>
-            <option id="vcq2v35" value="32">Svartbäckens vårdcentral</option>
-            <option id="vcq2v36" value="33">Södertulls hälsocentral, Gävle</option>
-            <option id="vcq2v37" value="34">Tierps vårdcentral</option>
-            <option id="vcq2v38" value="35">Ture Ålanders läkarpraktik</option>
-            <option id="vcq2v39" value="36">Visby Norr</option>
-            <option id="vcq2v39" value="37">Wisby Söder</option>
-            <option id="vcq2v39" value="38">Vårdcentralen Centrum</option>
-            <option id="vcq2v39" value="39">Vårdcentralen Mariefred</option>
-            <option id="vcq2v39" value="40">Vårdcentralen Strängnäs</option>
-            <option id="vcq2v39" value="41">Vårdcentralen Visborg, Visby</option>
-            <option id="vcq2v40" value="42">Årsta vårdcentral</option>
-            <option id="vcq2v41" value="43">Öregrunds vårdcentral</option>
-            <option id="vcq2v42" value="44">Örsundsbro vårdcentral</option>
-            <option id="vcq2v43" value="45">Österbybruks vårdcentral</option>
-            <option id="vcq2v44" value="46">Östervåla vårdcentral</option>
-            <option id="vcq2v45" value="47">Östhammars vårdcentral</option>
-            <option id="vcq2v46" value="48">Övriga vårdcentraler</option>
+            <option id="vcq2v2" value="2">Aleris HC Bollnäs Gävleborg</option>
+            <option id="vcq2v3" value="3">Aleris vårdcentral Nyby</option>
+            <option id="vcq2v4" value="4">Alunda vårdcentral</option>
+            <option id="vcq2v5" value="5">Aros läkarmottagning</option>
+            <option id="vcq2v6" value="6">Bålsta Doktorn</option>
+            <option id="vcq2v7" value="7">Capio vårdcentral Enköping</option>
+            <option id="vcq2v8" value="8">Capio vårdcentral Liljeforstorg</option>
+            <option id="vcq2v9" value="9">Capio vårdcentral Sävja</option>
+            <option id="vcq2v10" value="10">Citypraktiken Västerås</option>
+            <option id="vcq2v11" value="11">Citypraktiken FLM Västerås</option>
+            <option id="vcq2v12" value="12">City Praktikertjänst Gävleborg</option>
+            <option id="vcq2v13" value="13">Dr Wahlunds läkarmottagning</option>
+            <option id="vcq2v14" value="14">Eira Praktikertjänst Gävleborg</option>
+            <option id="vcq2v15" value="15">Ekeby hälsocenter</option>
+            <option id="vcq2v16" value="16">Enköpings husläkarcentrum</option>
+            <option id="vcq2v17" value="17">Enköpingshälsan</option>
+            <option id="vcq2v18" value="18">Eriksbergs vårdcentral</option>
+            <option id="vcq2v19" value="19">Familjedoktorn</option>
+            <option id="vcq2v20" value="20">Familjeläkarna Bålsta</option>
+            <option id="vcq2v21" value="21">Familjeläkarna Luthagen</option>
+            <option id="vcq2v22" value="22">Fjärdhundra vårdcentral</option>
+            <option id="vcq2v23" value="23">Flogsta vårdcentral</option>
+            <option id="vcq2v24" value="24">Fålhagens vårdcentral</option>
+            <option id="vcq2v25" value="25">Gimo vårdcentral</option>
+            <option id="vcq2v26" value="26">Gottsunda vårdcentral</option>
+            <option id="vcq2v27" value="27">Hamrånge HC Gävleborg</option>
+            <option id="vcq2v28" value="28">Heby vårdcentral</option>
+            <option id="vcq2v29" value="29">Husläkargruppen Luthagsgården</option>
+            <option id="vcq2v30" value="30">Hälsohuset i Enköping</option>
+            <option id="vcq2v31" value="31">Knivsta läkargrupp</option>
+            <option id="vcq2v32" value="32">Knivsta vårdcentral</option>
+            <option id="vcq2v33" value="33">Kungsgärdets vårdcentral</option>
+            <option id="vcq2v34" value="34">Kåbohälsan</option>
+            <option id="vcq2v35" value="35">Läkargruppen FLM Västerås</option>
+            <option id="vcq2v36" value="36">Oxbackens FLM Västerås</option>
+            <option id="vcq2v37" value="37">Rasbo vårdcentral</option>
+            <option id="vcq2v38" value="38">Samariterhemmets vårdcentral</option>
+            <option id="vcq2v39" value="39">Skutskärs vårdcentral</option>
+            <option id="vcq2v40" value="40">Storvreta vårdcentral</option>
+            <option id="vcq2v41" value="41">Svartbäckens vårdcentral</option>
+            <option id="vcq2v42" value="42">Sätra Din hälsocentral Gävleborg</option>
+            <option id="vcq2v43" value="43">Tierps vårdcentral</option>
+            <option id="vcq2v44" value="44">Ture Ålanders läkarpraktik</option>
+            <option id="vcq2v45" value="45">Visby Norr</option>
+            <option id="vcq2v46" value="46">Wisby Söder</option>
+            <option id="vcq2v47" value="47">Viksängs FLM Västerås</option>
+            <option id="vcq2v48" value="48">Vårdcentralen Centrum</option>
+            <option id="vcq2v49" value="49">Vårdcentralen Mariefred</option>
+            <option id="vcq2v50" value="50">Vårdcentralen Strängnäs</option>
+            <option id="vcq2v51" value="51">Vårdcentralen Visborg Visby</option>
+            <option id="vcq2v52" value="52">Årsta vårdcentral</option>
+            <option id="vcq2v53" value="53">Öregrunds vårdcentral</option>
+            <option id="vcq2v54" value="54">Örsundsbro vårdcentral</option>
+            <option id="vcq2v55" value="55">Österbybruks vårdcentral</option>
+            <option id="vcq2v56" value="56">Östervåla vårdcentral</option>
+            <option id="vcq2v57" value="57">Östhammars vårdcentral</option>
+            <option id="vcq2v58" value="58">Övriga vårdcentraler</option>
           </select>
       </div>
       <br/>
@@ -1278,7 +1291,7 @@
         <br/>
         <div class="questioncontainer">
           Fyll i ditt UpUnet-S användarnamn (t ex "abcd1234") i rutan nedan och deltag i lotteriet
-          med fina priser. Ditt användarnamn kommer ej att synas i någon sammanställning
+          med fina priser (märk: enbart kurser med minst 50% svarsfrekvens kommer delta i lotteriet). Ditt användarnamn kommer ej att synas i någon sammanställning
           och enbart användas vid utlottningen. För varje klinikvärdering som du fyller i
           erhåller du en lott. Samtliga vinnare kommer att kontrolleras med avseende på 1) att
           kandidaten faktiskt har gått placeringen och 2) att inte dubbla registreringar för
@@ -1411,7 +1424,6 @@
   <div data-role="content" data-theme="f" id="omallcont">
     <div id="omallframe">
       <br>
-      <!--TODO: Add KlinikKurt responsible's email-->
       <div id="ommsrdiv" class="animated fadeIn questioncontainer" style="display:none">
         Medicinska Studierådet (MSR) ansvarar för den studiebevakande
         verksamheten på läkarprogrammet.<br><br>MSR representerar läkarstudenter
@@ -1422,8 +1434,7 @@
         du synpunkter på, eller frågor om, din utbildning är du varmt välkommen
         att höra av dig till din kursrepresentant.<br/><br/>För mer information om
         MSR, besök <a href="#" class="msrWeb">studierådet.se</a>. Du kan även
-        kontakta oss via mail: <a href="#" id="msrordf">Ordförande</a>
-        eller <a href="#" id="msrVordf">Vice ordförande</a>
+        kontakta oss via mail: <a href="#" id="msrordf">Ordförande</a>, <a href="#" id="msrVordf">Vice ordförande</a> eller <a href="#" id="klinikKurtAnsv">KlinikKurt-ansvarig.</a>
       </div>
       <!-- TODO: Ändra till rätt datum och temrin -->
       <div id="omkkdiv" class="animated fadeIn questioncontainer">
@@ -1433,7 +1444,7 @@
         undervisningen samt den kliniska handledningen. Dessutom har du möjlighet att
         delta i KlinikKurt/VårdcentralKurt-lotteriet där högsta
         vinsten är en tur med intensivvårdshelikoptern. <br/><br/>KlinikKurt samt
-        VårdcentralKurt stänger den 5:e juni för VT16. <br/><br/>För
+        VårdcentralKurt stänger den 21:a januari för HT17. <br/><br/>För
         mer information, besök <a href="#" id=kkkk target="_blank" rel="external">klinikkurt.se</a>
         eller <a href="#" class="msrWeb">studierådet.se</a>
       </div>
@@ -1473,12 +1484,11 @@
 <!-- End of AboutAll pages -->
 
 <!-- Beginning of Login -->
-<!-- TODO: Move login script to our own server and change the link-->
 <div data-role="page" id="login">
 
   <div data-role="content" data-theme="f" id="logincont"
   style="height: auto; width: auto; overflow: auto; -webkit-overflow-scrolling:touch;">
-    <iframe id="loginout" src="http://www.sitedev.beachtime.se/cas/cas2.php" width='320' height="460"
+    <iframe id="loginout" src="http://script.studieradet.se/cas/cas2.php" width='320' height="460"
     scrolling='yes' frameBorder='0' id='theiFrame'></iframe>
   </div>
 

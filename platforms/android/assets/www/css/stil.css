@@ -107,6 +107,7 @@ fieldset {
 
 /* === KlinikKurt Page === */
 #kkpage{
+  margin-bottom: 0;
 
 }
 
@@ -197,7 +198,9 @@ label.ui-btn.ui-corner-all.ui-btn-f.ui-btn-icon-left {
 #kkq2-button,
 #kkq3-button,
 #kkq4-button,
-#vcq2-button {
+#kkq18-button,
+#vcq2-button,
+#vcq15-button {
   padding-left: 0;
   padding-right: 0;
 }
@@ -297,21 +300,22 @@ label.ui-btn.ui-corner-all.ui-btn-f.ui-btn-icon-left {
 /*Sex question buttons*/
 #vcsex .ui-controlgroup-horizontal .ui-radio,
 #kksex .ui-controlgroup-horizontal .ui-radio {
-    width: 25%;
-    left: 25%;
+    /*width: 25%;*/
+    /*left: 25%;*/
+
 }
 
 #kksex .ui-field-contain,
 #vcsex .ui-field-contain {
-  margin-top: 0;
+  /*margin-top: 0;*/
 }
 
 /*Sex question button tex*/
 #kksex .ui-btn.ui-corner-all.ui-btn-f,
 #vcsex .ui-btn.ui-corner-all.ui-btn-d {
-  text-align: center;
+  /*text-align: center;*/
   /* Fixes problem of cliping on narrower screens as iPhone 5*/
-  text-overflow: clip;
+  /*text-overflow: clip;*/
 }
 
 #vcsex .ui-controlgroup-horizontal,
@@ -348,6 +352,11 @@ textarea.ui-input-text{
 }
 
 /*==== VC-kurt ====*/
+
+#vcpage {
+  padding-bottom: 0px;
+}
+
 #vcOrt .ui-field-contain {
   margin-top: 0;
 }

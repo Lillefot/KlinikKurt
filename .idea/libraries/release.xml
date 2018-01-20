@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="release">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/platforms/android/build/intermediates/pre-dexed/release/CordovaLib-unspecified-release_644b99ba92e1dd792b243ef4c9c43eb9d718366c.jar!/" />
+      <root url="jar://$PROJECT_DIR$/platforms/android/build/intermediates/pre-dexed/release/release_fe826acb62cc621966aecf5bad59144e99f407e5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

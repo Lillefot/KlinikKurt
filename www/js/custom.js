@@ -1,4 +1,3 @@
-/*TODO: Sort everything in some kind of useful order*/
 
 
 //When the jQuery Mobile starts to execute, it triggers a mobileinit event on the document object,
@@ -27,6 +26,10 @@ $.fn.extend({
 
 var oneMoreKK = 0;
 var oneMoreVCK = 0;
+
+//Check if android device
+var ua = navigator.userAgent.toLowerCase();
+var isAndroid = ua.indexOf("android") > -1;
 
 //Resets the VCK-form
 function clearVC() {
@@ -94,7 +97,7 @@ function onBodyLoad() {
 }
 
 
-//TODO: Sort out the splashscreen
+
 function onDeviceReady() {
     console.log("DeviceReady");
 
@@ -118,7 +121,7 @@ function onDeviceReady() {
       if(buttonIndex == 1 || buttonIndex == 0){
         var iframe = $('#loginout');
         var url="https://cas.weblogin.uu.se/Shibboleth.sso/Logout"
-        var url2="http://www.sitedev.beachtime.se/cas/cas2.php"
+        var url2="http://script.studieradet.se/cas/cas2.php"
         var user = window.localStorage.getItem("user");
 
         if ( iframe.length ) {
@@ -263,9 +266,6 @@ $(document).delegate("#hem", "pageinit", function() {
         $.mobile.changePage("#vcpage", {
           transition: "slide"
         });
-        var navBarHeight = screen.height - window.outerHeight;
-        $("#vcpage").css("marginBottom", navBarHeight);
-        console.log("navBarHeight=" + " " + navBarHeight);
         event.stopImmediatePropagation();
         return false;
     }
@@ -385,7 +385,7 @@ $(document).delegate("#vadfylltjag", "pageinit", function(event, ui) {
 
 
 $(document).delegate("#vadfylltjag", "pageshow", function(event) {
-  
+
     navigator.notification.alert("Denna funktion kräver att du är uppkopplad mot universitetets nätverk!", null, "Kräver UpUnet", "OK");
 
     $("#vadfylltjag").swiperight(function(){
@@ -488,6 +488,9 @@ $(document).delegate("#omall", "pageinit", function() {
   $("#msrVordf").on('tap', function() {
     extLink('mailto:vordf@msr.studorg.uu.se');
   });
+  $("#klinikKurtAnsv").on('tap', function() {
+    extLink('mailto:klinikkurt@gmail.com');
+  });
   $("#itbevMail").on('tap', function() {
     extLink('mailto:it-bevakare@msr.studorg.uu.se');
   });
@@ -516,6 +519,12 @@ $(document).delegate("#kkpage", "pageshow", function(event) {
       reverse: "true"
     })
   });
+
+if (isAndroid){
+  var navBarHeight = screen.height - window.outerHeight;
+  $("#kkpage").css("padding-bottom", navBarHeight);
+  console.log("navBarHeight=" + " " + navBarHeight);
+}
 
 });
 
@@ -689,7 +698,7 @@ $(document).delegate("#kkpage", "pageinit", function(event) {
     function extraQuestions() {
       console.log("extraQuestions");
       //Show T8PsykUppsala
-      if ($('input[name=q1]:checked').val() === '22' && $('#kkq2 :selected').val() === '16') {
+      if ($('input[name=q1]:checked').val() === '23' && $('#kkq2 :selected').val() === '17') {
           if (KKfr3.css("display") == "none") {
             KKfr3.show();
             KKfr3.animateCss("fadeInLeft");
@@ -711,7 +720,7 @@ $(document).delegate("#kkpage", "pageinit", function(event) {
         }
       }
       //Show T9GynObsPed
-      else if (($('input[name=q1]:checked').val() === '27' || $('input[name=q1]:checked').val() === '28' || $('input[name=q1]:checked').val() === '29') && $('#kkq2 :selected').val() === '16') {
+      else if (($('input[name=q1]:checked').val() === '27' || $('input[name=q1]:checked').val() === '28' || $('input[name=q1]:checked').val() === '29') && $('#kkq2 :selected').val() === '17') {
           if (KKfr4.css("display") == "none") {
             KKfr4.show();
             KKfr4.animateCss("fadeInLeft");
@@ -867,7 +876,7 @@ $(document).delegate("#kkpage", "pageinit", function(event) {
                             if(buttonIndex == 1){
                                 var iframe = $('#loginout');
                                 var url="https://cas.weblogin.uu.se/Shibboleth.sso/Logout"
-                                var url2="http://www.sitedev.beachtime.se/cas/cas2.php"
+                                var url2="http://script.studieradet.se/cas/cas2.php"
 
                                 if ( iframe.length ) {
                                     iframe.attr('src',url);
@@ -944,6 +953,8 @@ $(document).delegate("#kkpage", "pageinit", function(event) {
 
 
 $(document).delegate("#vcpage", "pageshow", function(event) {
+  //TODO: Change when VC-kurt is opened
+  //navigator.notification.alert("Ingen VC-Kurt för termin 11 har skapats.", null, "VC-Kurt ej öppen", "OK");
 
   $("#vcpage").swiperight(function(){
     console.log("Swipe Right");
@@ -953,6 +964,11 @@ $(document).delegate("#vcpage", "pageshow", function(event) {
     });
   });
 
+if (isAndroid){
+  var navBarHeight = screen.height - window.outerHeight;
+  $("#vcpage").css("padding-bottom", navBarHeight);
+  console.log("navBarHeight=" + " " + navBarHeight);
+}
 
 });
 $(document).delegate("#vcpage", "pageinit", function() {
@@ -991,12 +1007,12 @@ $(document).delegate("#vcpage", "pageinit", function() {
         }
     });
 
-    //TODO: Change to correct adress every semester
+    //TODO: Change to correct VC-kurt depending on checked semester
     function VCTermin(yesno) {
         console.log("VCTermin");
         $('#vcpage :radio[name="qT"]').attr('checked', false).checkboxradio("refresh");
         if (yesno === 1) {
-            window.open("http://doit.medfarm.uu.se/kurt7292", '_system');
+            window.open("https://doit.medfarm.uu.se/kurt/?action=mypage", '_system');
         } else {
             tillHemTapHandler();
         }
@@ -1006,6 +1022,7 @@ $(document).delegate("#vcpage", "pageinit", function() {
       if ($("#restOfVC").css("display") == "none") {
         $("#restOfVC").show();
         $("#restOfVC").animateCss("fadeInUp");
+        $(".vckq").show();
       }
       verifyReq2();
     });
@@ -1035,7 +1052,7 @@ $(document).delegate("#vcpage", "pageinit", function() {
     //Checks which questions are answered and alerts the user which aren't
     function showConfirmVCK(cdata) {
         console.log('showconfirmVCk');
-        if ($("input:radio[name='q2']:checked").val() && $("input:radio[name='q3']:checked").val() && $("input:radio[name='q4']:checked").val() && $("input:radio[name='q5']:checked").val() && $("input:radio[name='q6']:checked").val() && $("input:radio[name='q7']:checked").val() && $("input:radio[name='q8']:checked").val() && $("input:radio[name='q9']:checked").val() && $("input:radio[name='q10']:checked").val() && $("input:radio[name='q11']:checked").val() && $("input:radio[name='q13']:checked").val()) {
+        if ($("input:radio[name='q2']:checked").val() && $("input:radio[name='q3']:checked").val() && $("input:radio[name='q4']:checked").val() && $("input:radio[name='q5']:checked").val() && $("input:radio[name='q6']:checked").val() && $("input:radio[name='q7']:checked").val() && $("input:radio[name='q8']:checked").val() && $("input:radio[name='q9']:checked").val() && $("input:radio[name='q10']:checked").val() && $("input:radio[name='q11']:checked").val()) {
             if ($("#vcq14").val().length === 0) {
                 $('#VCopendialog').addClass('ui-disabled');
                 navigator.notification.confirm('Du har inte lämnat någon kommentar. Är du säker på att du vill skicka in din Kurtning?', // message
@@ -1121,7 +1138,7 @@ $(document).delegate("#vcpage", "pageinit", function() {
                             if(buttonIndex == 1){
                                 var iframe = $('#loginout');
                                 var url="https://cas.weblogin.uu.se/Shibboleth.sso/Logout"
-                                var url2="http://www.sitedev.beachtime.se/cas/cas2.php"
+                                var url2="http://script.studieradet.se/cas/cas2.php"
 
                                 if ( iframe.length ) {
                                     iframe.attr('src',url);
