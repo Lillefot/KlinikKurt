@@ -37,14 +37,22 @@ function clearVC() {
     $('#vcq2').val('null').selectmenu('refresh');
     $('#vcpage input[type=radio]').attr('checked', false).next("label").removeClass("ui-btn-active");
     $('#vcpage :radio').attr('checked', false).checkboxradio("refresh");
-    //Comments
-    $("#vcq14").val("");
-    //Sex
+    //Discrimination
+    $('#vcq14').val('null').selectmenu('refresh');
     $('#vcq15').val('null').selectmenu('refresh');
-    //Lottery
+    $('#vcq15_comment').val("");
+    //Name a tutor
     $("#vcq16").val("");
-    //Operating System
+    //Explain your choice
     $("#vcq17").val("");
+    //Comments
+    $("#vcq18").val("");
+    //Sex
+    $('#vcq19').val('null').selectmenu('refresh');
+    //Lottery
+    $("#vcq20").val("");
+    //Operating System
+    $("#vcq21").val("");
     //Hide form
     $("#vcOrt").hide();
     $("#restOfVC").hide();
@@ -60,16 +68,20 @@ function clearKK() {
     $('#kkq4').val('null').selectmenu('refresh');
     $('input[type=radio]').attr('checked', false).next("label").removeClass("ui-btn-active");
     $('#kkpage :radio').attr('checked', false).checkboxradio("refresh");
+    //Discrimination
+    $('#kkq15').val('null').selectmenu('refresh');
+    $('#kkq16').val('null').selectmenu('refresh');
+    $('#kkq16_comment').val("");
     //Name a tutor
-    $("#kkq15").val("");
-    //Explain your choice
-    $("#kkq16").val("");
-    //Comments
     $("#kkq17").val("");
-    //Sex
-    $('#kkq18').val('null').selectmenu('refresh');
-    //Lottery
+    //Explain your choice
+    $("#kkq18").val("");
+    //Comments
     $("#kkq19").val("");
+    //Sex
+    $('#kkq20').val('null').selectmenu('refresh');
+    //Lottery
+    $("#kkq21").val("");
     //Submit button
     $('#KKopendialog').addClass('ui-disabled');
     $("#kkfr3").hide();
@@ -87,6 +99,22 @@ function clearKK() {
     $("#ortcont").hide();
     $("#restofkk").hide();
     console.log('Klinik-Kurt cleared');
+}
+
+//For opening external links
+function extLink(link) {
+  navigator.notification.confirm(link + ' kommer att öppnas i din webbläsare, är du säker på att du vill fortsätta?', // message
+  openLink, // callback to invoke with index of button pressed
+  'Lämna appen?', // title
+  'Ja,Nej' // buttonLabels
+);
+function openLink(button) {
+  if (button === 1) {
+    //InAppBrowser-plugin needed for this to work
+    window.open(link, '_system');
+  }
+}
+
 }
 
 //Executes when all content is loaded
@@ -203,6 +231,11 @@ function onDeviceReady() {
     showConfirm() ;
 
     }, false);
+
+
+    $(".discriminationLink").on('tap', function() {
+      extLink('https://www.uu.se/student/rattigheter/arbetsmiljo-och-lika-villkor/');
+    });
 
 }
 
@@ -454,21 +487,6 @@ $(document).delegate("#omall", "pageinit", function() {
     $("#omappt").show();
   }
 
-  function extLink(link) {
-    navigator.notification.confirm(link + ' kommer att öppnas i din webbläsare, är du säker på att du vill fortsätta?', // message
-    openLink, // callback to invoke with index of button pressed
-    'Lämna appen?', // title
-    'Ja,Nej' // buttonLabels
-  );
-  function openLink(button) {
-    if (button === 1) {
-      //InAppBrowser-plugin needed for this to work
-      window.open(link, '_system');
-    }
-  }
-
-  }
-
   $("#tabF").on('tap', tabFHandler);
   $("#tabG").on('tap', tabGHandler);
   $("#tabH").on('tap', tabHHandler);
@@ -698,7 +716,7 @@ $(document).delegate("#kkpage", "pageinit", function(event) {
     function extraQuestions() {
       console.log("extraQuestions");
       //Show T8PsykUppsala
-      if ($('input[name=q1]:checked').val() === '23' && $('#kkq2 :selected').val() === '17') {
+      if ($('input[name=q1]:checked').val() === '24' && $('#kkq2 :selected').val() === '19') {
           if (KKfr3.css("display") == "none") {
             KKfr3.show();
             KKfr3.animateCss("fadeInLeft");
@@ -720,7 +738,7 @@ $(document).delegate("#kkpage", "pageinit", function(event) {
         }
       }
       //Show T9GynObsPed
-      else if (($('input[name=q1]:checked').val() === '27' || $('input[name=q1]:checked').val() === '28' || $('input[name=q1]:checked').val() === '29') && $('#kkq2 :selected').val() === '17') {
+      else if (($('input[name=q1]:checked').val() === '28' || $('input[name=q1]:checked').val() === '29' || $('input[name=q1]:checked').val() === '30') && $('#kkq2 :selected').val() === '19') {
           if (KKfr4.css("display") == "none") {
             KKfr4.show();
             KKfr4.animateCss("fadeInLeft");
@@ -784,9 +802,9 @@ $(document).delegate("#kkpage", "pageinit", function(event) {
     //Checks which questions are answered and alerts the user which aren't
     function showConfirmKK(cdata) {
         console.log('showConfirmKK');
-        if ($("input:radio[name='q5']:checked").val() && $("input:radio[name='q6']:checked").val() && $("input:radio[name='q7']:checked").val() && $("input:radio[name='q8']:checked").val() && $("input:radio[name='q9']:checked").val() && $("input:radio[name='q10']:checked").val() && $("input:radio[name='q11']:checked").val() && $("input:radio[name='q12']:checked").val() && $("input:radio[name='q13']:checked").val() && $("input:radio[name='q14']:checked").val() && ($("#kkq15").val().length !== 0) && ($("#kkq16").val().length !== 0) && $("input:radio[name='q18']:checked").val() && ($("#kkq19").val().length !== 0)) {
+        if ($("input:radio[name='q5']:checked").val() && $("input:radio[name='q6']:checked").val() && $("input:radio[name='q7']:checked").val() && $("input:radio[name='q8']:checked").val() && $("input:radio[name='q9']:checked").val() && $("input:radio[name='q10']:checked").val() && $("input:radio[name='q11']:checked").val() && $("input:radio[name='q12']:checked").val() && $("input:radio[name='q13']:checked").val() && $("input:radio[name='q14']:checked").val() && ($("#kkq15").val() !== 'null') && ($("#kkq16").val() !== 'null') && ($("#kkq16_comment").val().length !== 0) && ($("#kkq17").val().length !== 0) && ($("#kkq18").val().length !== 0) && ($("#kkq19").val().length !== 0) && ($("#kkq20").val() !== 'null') && ($("#kkq21").val().length !== 0)) {
             console.log("1");
-            if ($("#kkq17").val().length === 0) {
+            if ($("#kkq19").val().length === 0) {
                 console.log("2");
                 $('#KKopendialog').addClass('ui-disabled');
                 navigator.notification.confirm('Du har inte lämnat någon kommentar. Är du säker på att du vill skicka in din Kurtning?', // message
@@ -805,7 +823,7 @@ $(document).delegate("#kkpage", "pageinit", function(event) {
             }
         } else {
             console.log("4");
-            if ($("#kkq17").val().length === 0) {
+            if ($("#kkq19").val().length === 0) {
                 console.log("5");
                 $('#KKopendialog').addClass('ui-disabled');
                 navigator.notification.confirm('Du har inte svarat på alla frågor och inte lämnat någon kommentar.  Är du säker på att du vill skicka in din Kurtning?', // message
@@ -989,7 +1007,7 @@ $(document).delegate("#vcpage", "pageinit", function() {
 
     var vcSemester = 0;
 
-    $('#vcpage :radio[name="qT"]').click(function() {
+    $('#vcpage :radio[name="q1"]').click(function() {
 
         console.log($(this).attr("id"));
         if ($(this).attr("id") != 'vcq1v5') {
@@ -1010,7 +1028,7 @@ $(document).delegate("#vcpage", "pageinit", function() {
     //TODO: Change to correct VC-kurt depending on checked semester
     function VCTermin(yesno) {
         console.log("VCTermin");
-        $('#vcpage :radio[name="qT"]').attr('checked', false).checkboxradio("refresh");
+        $('#vcpage :radio[name="q1"]').attr('checked', false).checkboxradio("refresh");
         if (yesno === 1) {
             window.open("https://doit.medfarm.uu.se/kurt/?action=mypage", '_system');
         } else {
@@ -1052,8 +1070,8 @@ $(document).delegate("#vcpage", "pageinit", function() {
     //Checks which questions are answered and alerts the user which aren't
     function showConfirmVCK(cdata) {
         console.log('showconfirmVCk');
-        if ($("input:radio[name='q2']:checked").val() && $("input:radio[name='q3']:checked").val() && $("input:radio[name='q4']:checked").val() && $("input:radio[name='q5']:checked").val() && $("input:radio[name='q6']:checked").val() && $("input:radio[name='q7']:checked").val() && $("input:radio[name='q8']:checked").val() && $("input:radio[name='q9']:checked").val() && $("input:radio[name='q10']:checked").val() && $("input:radio[name='q11']:checked").val()) {
-            if ($("#vcq14").val().length === 0) {
+        if ($("input:radio[name='q2']:checked").val() && $("input:radio[name='q3']:checked").val() && $("input:radio[name='q4']:checked").val() && $("input:radio[name='q5']:checked").val() && $("input:radio[name='q6']:checked").val() && $("input:radio[name='q7']:checked").val() && $("input:radio[name='q8']:checked").val() && $("input:radio[name='q9']:checked").val() && $("input:radio[name='q10']:checked").val() && $("input:radio[name='q11']:checked").val() && $("input:radio[name='q12']:checked").val() && ($("#vcq13").val() !== 'null') && ($("#vcq14").val() !== 'null') && ($("#vcq14_comment").val().length !== 0) && ($("#vcq15").val().length !== 0) && ($("#vcq16").val().length !== 0) && ($("#vcq17").val().length !== 0) && ($("#vcq18").val() !== 'null') && ($("#vcq19").val().length !== 0)) {
+            if ($("#vcq18").val().length === 0) {
                 $('#VCopendialog').addClass('ui-disabled');
                 navigator.notification.confirm('Du har inte lämnat någon kommentar. Är du säker på att du vill skicka in din Kurtning?', // message
                     SubVCK, // callback to invoke with index of button pressed
@@ -1069,7 +1087,7 @@ $(document).delegate("#vcpage", "pageinit", function() {
                 );
             }
         } else {
-            if ($("#vcq14").val().length === 0) {
+            if ($("#vcq18").val().length === 0) {
                 $('#VCopendialog').addClass('ui-disabled');
                 navigator.notification.confirm('Du har inte svarat på alla frågor och inte lämnat någon kommentar.  Är du säker på att du vill skicka in din Kurtning?', // message
                     SubVCK, // callback to invoke with index of button pressed

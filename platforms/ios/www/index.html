@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Klinikkurt</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
   <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
   <link rel="apple-touch-icon" href="icon.png"/>
   <!-- Energize.js som tar bort tap-lagg -->
@@ -43,7 +43,7 @@
   <div data-role="header" data-theme="f" data-position="fixed" data-tap-toggle="false">
     <a href="#" data-role="button" class="hemKnapp" data-theme="f" data-icon="arrow-l">Start</a>
     <!-- TODO: Change semester -->
-    <h4>KlinikKurt HT17</h4>
+    <h4>KlinikKurt VT18</h4>
   </div>
   <div data-role="content" id="kkcont">
     <br/>
@@ -81,7 +81,7 @@
   <!-- TODO: Ändra till rätt KlinikKurt -->
   <form id="klinikkurt" method="POST" target="result"
   acn="https://doit.medfarm.uu.se/script/kurt2/receive.php" accept-charset="ISO-8859-1">
-  <input type="hidden" name="id" value="10725"/>
+  <input type="hidden" name="id" value="11471"/>
   <input type="hidden" name="noframe" value=""/>
 
   <div class="questioncontainer">
@@ -102,6 +102,7 @@
           <label for="kkq1v4">Avdelningsplacering lungmedicin</label>
         </div>
 
+        <!-- TODO: Lagt till Gastokirurgi Regionen-->
         <div id="kkt6" data-role="controlgroup">
           <input type="radio" name="q1" id="kkq1v5" value="5" data-theme="f"/>
           <label for="kkq1v5">Anestesi</label>
@@ -110,60 +111,62 @@
           <input type="radio" name="q1" id="kkq1v7" value="7" data-theme="f"/>
           <label for="kkq1v7">Endokrin medicin</label>
           <input type="radio" name="q1" id="kkq1v8" value="8" data-theme="f"/>
-          <label for="kkq1v8">Gastrokirurgi KAVA</label>
+          <label for="kkq1v8">Gastrokirurgi Region</label>
           <input type="radio" name="q1" id="kkq1v9" value="9" data-theme="f"/>
-          <label for="kkq1v9">Gastrokirurgi nedre</label>
+          <label for="kkq1v9">Gastrokirurgi KAVA</label>
           <input type="radio" name="q1" id="kkq1v10" value="10" data-theme="f"/>
-          <label for="kkq1v10">Gastrokirurgi övre</label>
+          <label for="kkq1v10">Gastrokirurgi nedre</label>
           <input type="radio" name="q1" id="kkq1v11" value="11" data-theme="f"/>
-          <label for="kkq1v11">Gastromedicin</label>
+          <label for="kkq1v11">Gastrokirurgi övre</label>
           <input type="radio" name="q1" id="kkq1v12" value="12" data-theme="f"/>
-          <label for="kkq1v12">Kardiologi</label>
+          <label for="kkq1v12">Gastromedicin</label>
           <input type="radio" name="q1" id="kkq1v13" value="13" data-theme="f"/>
-          <label for="kkq1v13">Kärlkirurgi</label>
+          <label for="kkq1v13">Kardiologi</label>
           <input type="radio" name="q1" id="kkq1v14" value="14" data-theme="f"/>
-          <label for="kkq1v14">Thoraxkirurgi</label>
+          <label for="kkq1v14">Kärlkirurgi</label>
+          <input type="radio" name="q1" id="kkq1v15" value="15" data-theme="f"/>
+          <label for="kkq1v15">Thoraxkirurgi</label>
         </div>
 
         <div id="kkt7" data-role="controlgroup">
-          <input type="radio" name="q1" id="kkq1v15" value="15" data-theme="f"/>
-          <label for="kkq1v15">Hematologi</label>
           <input type="radio" name="q1" id="kkq1v16" value="16" data-theme="f"/>
-          <label for="kkq1v16">Hud</label>
+          <label for="kkq1v16">Hematologi</label>
           <input type="radio" name="q1" id="kkq1v17" value="17" data-theme="f"/>
-          <label for="kkq1v17">Njurmedicin</label>
+          <label for="kkq1v17">Hud</label>
           <input type="radio" name="q1" id="kkq1v18" value="18" data-theme="f"/>
-          <label for="kkq1v18">Onkologi</label>
+          <label for="kkq1v18">Njurmedicin</label>
           <input type="radio" name="q1" id="kkq1v19" value="19" data-theme="f"/>
-          <label for="kkq1v19">Ortopedi</label>
+          <label for="kkq1v19">Onkologi</label>
           <input type="radio" name="q1" id="kkq1v20" value="20" data-theme="f"/>
-          <label for="kkq1v20">Reumatologi</label>
+          <label for="kkq1v20">Ortopedi</label>
           <input type="radio" name="q1" id="kkq1v21" value="21" data-theme="f"/>
-          <label for="kkq1v21">Urologi</label>
+          <label for="kkq1v21">Reumatologi</label>
+          <input type="radio" name="q1" id="kkq1v22" value="22" data-theme="f"/>
+          <label for="kkq1v22">Urologi</label>
 
         </div>
 
         <div id="kkt8" data-role="controlgroup">
-          <input type="radio" name="q1" id="kkq1v22" value="22" data-theme="f"/>
-          <label for="kkq1v22">Neurologi</label>
           <input type="radio" name="q1" id="kkq1v23" value="23" data-theme="f"/>
-          <label for="kkq1v23">Psykiatri</label>
+          <label for="kkq1v23">Neurologi</label>
           <input type="radio" name="q1" id="kkq1v24" value="24" data-theme="f"/>
-          <label for="kkq1v24">Ögon</label>
+          <label for="kkq1v24">Psykiatri</label>
           <input type="radio" name="q1" id="kkq1v25" value="25" data-theme="f"/>
-          <label for="kkq1v25">Öron-näsa-hals</label>
+          <label for="kkq1v25">Ögon</label>
+          <input type="radio" name="q1" id="kkq1v26" value="26" data-theme="f"/>
+          <label for="kkq1v26">Öron-näsa-hals</label>
         </div>
 
         <div id="kkt9" data-role="controlgroup">
 
-          <input type="radio" name="q1" id="kkq1v26" value="26" data-theme="f"/>
-          <label for="kkq1v26">Infektion</label>
           <input type="radio" name="q1" id="kkq1v27" value="27" data-theme="f"/>
-          <label for="kkq1v27">Gynekologi</label>
+          <label for="kkq1v27">Infektion</label>
           <input type="radio" name="q1" id="kkq1v28" value="28" data-theme="f"/>
-          <label for="kkq1v28">Obstetrik</label>
+          <label for="kkq1v28">Gynekologi</label>
           <input type="radio" name="q1" id="kkq1v29" value="29" data-theme="f"/>
-          <label for="kkq1v29">Pediatrik</label>
+          <label for="kkq1v29">Obstetrik</label>
+          <input type="radio" name="q1" id="kkq1v30" value="30" data-theme="f"/>
+          <label for="kkq1v30">Pediatrik</label>
 
         </div>
   </fieldset>
@@ -192,8 +195,8 @@
         <option id="kkq2v15" value="15">Nyköping</option>
         <option id="kkq2v16" value="16">Södertälje</option>
         <option id="kkq2v17" value="17">Tierp</option>
-        <option id="kkq2v18" value="18">Uppsala</option>
-        <option id="kkq2v19" value="19">Utlandsplacering</option>
+        <option id="kkq2v18" value="18">Samariterhemmet Uppsala</option>
+        <option id="kkq2v19" value="19">Uppsala</option>
         <option id="kkq2v20" value="20">Visby</option>
         <option id="kkq2v21" value="21">Västerås</option>
         <option id="kkq2v22" value="22">Östhammar</option>
@@ -425,7 +428,7 @@
                     </div>
                   </div>
                   <legend>&nbsp;</legend>
-                  <input type="radio" name="q9" id="kkq9v1" value="1" data-theme="f"/>
+                  <input type="radio" name="q10" id="kkq9v1" value="1" data-theme="f"/>
                   <label for="kkq9v1"> &nbsp;</label>
 
                   <input type="radio" name="q9" id="kkq9v2" value="2" data-theme="f"/>
@@ -661,38 +664,84 @@
               </div>
             </div>
 
+            <!-- TODO: Rätt fråga/id och fixa i JS-->
             <div class="questioncontainer">
               <div class="fewq">11</div>
               <div class="moreq">12</div>
-              Nämn en (och enbart en!) person (inklusive Regionen) som varit särskilt bra under din placering (OBS! Enbart namn! Skriv sedan gärna en motivering i nästa fält.) OBS! Om instruktioner inte följs kan datan inte sorteras.
-              <textarea name="q15" id="kkq15" cols="60" rows="1" data-theme="f" placeholder="Endast ett namn!"></textarea>
+              Anser Du att Du på något sätt har blivit särbehandlad på placeringen?
+              <select name="q15" id="kkq15" data-theme="f">
+                <option value="null"> -- Välj alternativ --</option>
+                <option id="kkq15v1" value="1">Ja</option>
+                <option id="kkq15v2" value="2">Nej</option>
+              </select>
+
+              <br>
             </div>
 
+            <!-- TODO: Rätt fråga/id och fixa i JS funkar kommentar?-->
             <div class="questioncontainer">
               <div class="fewq">12</div>
               <div class="moreq">13</div>
-              Motivering till val av läkare/handledare/administratör/etc.
-              <textarea name="q16" id="kkq16" cols="60" rows="3" data-theme="f"></textarea>
+              Om ja, var god specificera av vilken orsak/vilka orsaker (enligt diskrimineringslagen).
+              Notera att ditt svar inte kommer att användas till grund för utredning av diskriminering.
+              För att starta en utredning kring det som skett behöver du anmäla händelsen till en prefekt
+               på institutionen för det inträffade. På denna länk kan du läsa mer:
+                <a class="discriminationLink" href="#">
+                  https://www.uu.se/student/rattigheter/arbetsmiljo-och-lika-villkor/</a>
+                <fieldset data-role="controlgroup">
+                <div name="q16" id="kkq16" data-role="controlgroup">
+                  <input type="checkbox" name="q16" id="kkq16v1" value="1" data-theme="f"/>
+                  <label for="kkq16v1">Kön</label>
+                  <input type="checkbox" name="q16" id="kkq16v2" value="2" data-theme="f"/>
+                  <label for="kkq16v2">Könsöverskridande identitet eller uttryck</label>
+                  <input type="checkbox" name="q16" id="kkq16v3" value="3" data-theme="f"/>
+                  <label for="kkq16v3">Etnisk tillhörighet</label>
+                  <input type="checkbox" name="q16" id="kkq16v4" value="4" data-theme="f"/>
+                  <label for="kkq16v4">Religion eller annan trosuppfattning</label>
+                  <input type="checkbox" name="q16" id="kkq16v5" value="5" data-theme="f"/>
+                  <label for="kkq16v5">Funktionsnedsättning</label>
+                  <input type="checkbox" name="q16" id="kkq16v6" value="6" data-theme="f"/>
+                  <label for="kkq16v6">Sexuell läggning</label>
+                </div>
+                </fieldset>
+
+              <br>
+              Kommentar
+              <textarea name="q16_comment" id="kkq16_comment" cols="60" rows="3" placeholder="Kommentar"></textarea>
             </div>
 
             <div class="questioncontainer">
               <div class="fewq">13</div>
               <div class="moreq">14</div>
+              Nämn en (och enbart en!) person (inklusive Regionen) som varit särskilt bra under din placering (OBS! Enbart namn! Skriv sedan gärna en motivering i nästa fält.) OBS! Om instruktioner inte följs kan datan inte sorteras.
+              <textarea name="q17" id="kkq17" cols="60" rows="1" data-theme="f" placeholder="Endast ett namn!"></textarea>
+            </div>
+
+            <div class="questioncontainer">
+              <div class="fewq">14</div>
+              <div class="moreq">15</div>
+              Motivering till val av läkare/handledare/administratör/etc.
+              <textarea name="q18" id="kkq18" cols="60" rows="3" data-theme="f"></textarea>
+            </div>
+
+            <div class="questioncontainer">
+              <div class="fewq">15</div>
+              <div class="moreq">16</div>
               Kommentarer
-              <textarea name="q17" id="kkq17" cols="60" rows="3" data-theme="f" placeholder="Kom ihåg att vara konstruktiv!"></textarea>
+              <textarea name="q19" id="kkq19" cols="60" rows="3" data-theme="f" placeholder="Kom ihåg att vara konstruktiv!"></textarea>
             </div>
 
             <div class="questioncontainer" id="kksex">
-              <div class="fewq">14</div>
-              <div class="moreq">15</div>
+              <div class="fewq">15</div>
+              <div class="moreq">16</div>
               Jag ser mig som:
 
-              <select name="q18" id="kkq18" data-theme="f">
+              <select name="q20" id="kkq20" data-theme="f">
                 <option value="null"> -- Välj alternativ --</option>
-                <option id="kkq18v1" value="1">Kvinna</option>
-                <option id="kkq18v2" value="2">Man</option>
-                <option id="kkq18v3" value="3">Annan könsidentitet</option>
-                <option id="kkq18v4" value="4">Kan eller vill ej uppge</option>
+                <option id="kkq20v1" value="1">Kvinna</option>
+                <option id="kkq20v2" value="2">Man</option>
+                <option id="kkq20v3" value="3">Annan könsidentitet</option>
+                <option id="kkq20v4" value="4">Kan eller vill ej uppge</option>
               </select>
               <br>
 
@@ -703,17 +752,18 @@
             <br/>
             <div class="questioncontainer">
               Fyll i ditt UpUnet-S användarnamn (t ex "abcd1234") i rutan nedan och deltag i lotteriet
-              med fina priser (märk: enbart kurser med minst 50% svarsfrekvens kommer delta i lotteriet). Ditt användarnamn kommer ej att synas i någon sammanställning
-              och enbart användas vid utlottningen. För varje klinikvärdering som du fyller i
-              erhåller du en lott. Samtliga vinnare kommer att kontrolleras med avseende på 1) att
-              kandidaten faktiskt har gått placeringen och 2) att inte dubbla registreringar för
-              samma placering skickats in. Om du är osäker på om du har fyllt i en
+              med fina priser. Notera att kurten måste uppnå en svarsfrekvens på minst 50% för att
+              kvalificera till lotteriet, så peppa dina kursare att kurta och förbättra kursen! Ditt
+              användarnamn kommer ej att synas i någon sammanställning och enbart användas vid utlottningen.
+              För varje klinikvärdering som du fyller i erhåller du en lott. Samtliga vinnare kommer att
+              kontrolleras med avseende på 1) att kandidaten faktiskt har gått placeringen och 2) att inte
+              dubbla registreringar för samma placering skickats in. Om du är osäker på om du har fyllt i en
               kursvärdering kan du via <a href='http://www.klinikkurt.se' target='_blank'>www.klinikkurt.se</a>
               beställa ett utdrag på vilka du har fyllt i.
-              <textarea name="q19" id="kkq19" cols="60" rows="1" data-theme="f"></textarea>
+              <textarea name="q21" id="kkq21" cols="60" rows="1" data-theme="f"></textarea>
             </div>
 
-            <input type="hidden" name="q20" id="kkq20" value="App" />
+            <input type="hidden" name="q22" id="kkq22" value="App" />
 
             <input type="hidden" name="klinik-kurt-username" id="klinik-kurt-username" value="Username" />
 
@@ -744,7 +794,7 @@
   <div data-role="header" data-theme="d" data-position="fixed" data-tap-toggle="false">
     <a href="#" data-role="button" class="hemKnapp" data-theme="d" data-icon="arrow-l">Start</a>
     <!-- TODO: Change semester -->
-    <h4>VC-Kurt HT17</h4>
+    <h4>VC-Kurt VT18</h4>
   </div>
   <div data-role="content" id="vccont">
   <br/>
@@ -760,19 +810,19 @@
     <div data-role="fieldcontain" data-theme="d">
       <fieldset data-role="controlgroup" data-type="horizontal"
       data-theme="d">
-        <input type="radio" name="qT" id="vcq1v1" value="1" data-theme="d"/>
+        <input type="radio" name="q1" id="vcq1v1" value="1" data-theme="d"/>
         <label for="vcq1v1">1</label>
 
-        <input type="radio" name="qT" id="vcq1v2" value="2" data-theme="d"/>
+        <input type="radio" name="q1" id="vcq1v2" value="2" data-theme="d"/>
         <label for="vcq1v2">2</label>
 
-        <input type="radio" name="qT" id="vcq1v3" value="3" data-theme="d"/>
+        <input type="radio" name="q1" id="vcq1v3" value="3" data-theme="d"/>
         <label for="vcq1v3">3</label>
 
-        <input type="radio" name="qT" id="vcq1v4" value="4" data-theme="d"/>
+        <input type="radio" name="q1" id="vcq1v4" value="4" data-theme="d"/>
         <label for="vcq1v4">4</label>
 
-        <input type="radio" name="qT" id="vcq1v5" value="5" data-theme="d"/>
+        <input type="radio" name="q1" id="vcq1v5" value="5" data-theme="d"/>
         <label for="vcq1v5">11</label>
       </fieldset>
     </div>
@@ -782,14 +832,14 @@
     <!-- TODO: Ändra till rätt VC-Kurt -->
     <!-- TODO: Is name="vckurt" required?-->
     <form id="vckurt" name="vckurt" method="POST" target="result">
-      <input type="hidden" name="id" value="10726"/>
+      <input type="hidden" name="id" value="11472"/>
       <input type="hidden" name="noframe" value=""/>
 
       <div class="questioncontainer" id="vcOrt">
         Vårdcentral
         <br/>
         <div data-role="fieldcontain">
-          <select name="q1" id="vcq2" data-theme="d">
+          <select name="q2" id="vcq2" data-theme="d">
             <option value="null"> -- Välj alternativ --</option>
             <option id="vcq2v1" value="1">Aleris Barncentrum och vårdcentral</option>
             <option id="vcq2v2" value="2">Aleris HC Bollnäs Gävleborg</option>
@@ -835,9 +885,9 @@
             <option id="vcq2v42" value="42">Sätra Din hälsocentral Gävleborg</option>
             <option id="vcq2v43" value="43">Tierps vårdcentral</option>
             <option id="vcq2v44" value="44">Ture Ålanders läkarpraktik</option>
-            <option id="vcq2v45" value="45">Visby Norr</option>
-            <option id="vcq2v46" value="46">Wisby Söder</option>
-            <option id="vcq2v47" value="47">Viksängs FLM Västerås</option>
+            <option id="vcq2v45" value="45">Viksängs FLM Västerås</option>
+            <option id="vcq2v45" value="46">Visby Norr</option>
+            <option id="vcq2v46" value="47">Wisby Söder</option>
             <option id="vcq2v48" value="48">Vårdcentralen Centrum</option>
             <option id="vcq2v49" value="49">Vårdcentralen Mariefred</option>
             <option id="vcq2v50" value="50">Vårdcentralen Strängnäs</option>
@@ -876,22 +926,22 @@
               </div>
             </div>
             <legend>&nbsp;</legend>
-            <input type="radio" name="q2" id="vcq3v1" value="1" data-theme="d"/>
+            <input type="radio" name="q3" id="vcq3v1" value="1" data-theme="d"/>
             <label for="vcq3v1"> &nbsp;</label>
 
-            <input type="radio" name="q2" id="vcq3v2" value="2" data-theme="d"/>
+            <input type="radio" name="q3" id="vcq3v2" value="2" data-theme="d"/>
             <label for="vcq3v2">&nbsp;</label>
 
-            <input type="radio" name="q2" id="vcq3v3" value="3" data-theme="d"/>
+            <input type="radio" name="q3" id="vcq3v3" value="3" data-theme="d"/>
             <label for="vcq3v3">&nbsp;</label>
 
-            <input type="radio" name="q2" id="vcq3v4" value="4" data-theme="d"/>
+            <input type="radio" name="q3" id="vcq3v4" value="4" data-theme="d"/>
             <label for="vcq3v4">&nbsp;</label>
 
-            <input type="radio" name="q2" id="vcq3v5" value="5" data-theme="d"/>
+            <input type="radio" name="q3" id="vcq3v5" value="5" data-theme="d"/>
             <label for="vcq3v5">&nbsp;</label>
 
-            <input type="radio" name="q2" id="vcq3v6" value="6" data-theme="d"/>
+            <input type="radio" name="q3" id="vcq3v6" value="6" data-theme="d"/>
             <label for="vcq3v6">&nbsp;</label>
           </fieldset>
         </div>
@@ -916,22 +966,22 @@
               </div>
             </div>
             <legend>&nbsp;</legend>
-            <input type="radio" name="q3" id="vcq4v1" value="1" data-theme="d"/>
+            <input type="radio" name="q4" id="vcq4v1" value="1" data-theme="d"/>
             <label for="vcq4v1"> &nbsp;</label>
 
-            <input type="radio" name="q3" id="vcq4v2" value="2" data-theme="d"/>
+            <input type="radio" name="q4" id="vcq4v2" value="2" data-theme="d"/>
             <label for="vcq4v2">&nbsp;</label>
 
-            <input type="radio" name="q3" id="vcq4v3" value="3" data-theme="d"/>
+            <input type="radio" name="q4" id="vcq4v3" value="3" data-theme="d"/>
             <label for="vcq4v3">&nbsp;</label>
 
-            <input type="radio" name="q3" id="vcq4v4" value="4" data-theme="d"/>
+            <input type="radio" name="q4" id="vcq4v4" value="4" data-theme="d"/>
             <label for="vcq4v4">&nbsp;</label>
 
-            <input type="radio" name="q3" id="vcq4v5" value="5" data-theme="d"/>
+            <input type="radio" name="q4" id="vcq4v5" value="5" data-theme="d"/>
             <label for="vcq4v5">&nbsp;</label>
 
-            <input type="radio" name="q3" id="vcq4v6" value="6" data-theme="d"/>
+            <input type="radio" name="q4" id="vcq4v6" value="6" data-theme="d"/>
             <label for="vcq4v6">&nbsp;</label>
           </fieldset>
         </div>
@@ -956,22 +1006,22 @@
               </div>
             </div>
             <legend>&nbsp;</legend>
-            <input type="radio" name="q4" id="vcq5v1" value="1" data-theme="d"/>
+            <input type="radio" name="q5" id="vcq5v1" value="1" data-theme="d"/>
             <label for="vcq5v1"> &nbsp;</label>
 
-            <input type="radio" name="q4" id="vcq5v2" value="2" data-theme="d"/>
+            <input type="radio" name="q5" id="vcq5v2" value="2" data-theme="d"/>
             <label for="vcq5v2">&nbsp;</label>
 
-            <input type="radio" name="q4" id="vcq5v3" value="3" data-theme="d"/>
+            <input type="radio" name="q5" id="vcq5v3" value="3" data-theme="d"/>
             <label for="vcq5v3">&nbsp;</label>
 
-            <input type="radio" name="q4" id="vcq5v4" value="4" data-theme="d"/>
+            <input type="radio" name="q5" id="vcq5v4" value="4" data-theme="d"/>
             <label for="vcq5v4">&nbsp;</label>
 
-            <input type="radio" name="q4" id="vcq5v5" value="5" data-theme="d"/>
+            <input type="radio" name="q5" id="vcq5v5" value="5" data-theme="d"/>
             <label for="vcq5v5">&nbsp;</label>
 
-            <input type="radio" name="q4" id="vcq5v6" value="6" data-theme="d"/>
+            <input type="radio" name="q5" id="vcq5v6" value="6" data-theme="d"/>
             <label for="vcq5v6">&nbsp;</label>
           </fieldset>
         </div>
@@ -997,22 +1047,22 @@
               </div>
             </div>
             <legend>&nbsp;</legend>
-            <input type="radio" name="q5" id="vcq6v1" value="1" data-theme="d"/>
+            <input type="radio" name="q6" id="vcq6v1" value="1" data-theme="d"/>
             <label for="vcq6v1"> &nbsp;</label>
 
-            <input type="radio" name="q5" id="vcq6v2" value="2" data-theme="d"/>
+            <input type="radio" name="q6" id="vcq6v2" value="2" data-theme="d"/>
             <label for="vcq6v2">&nbsp;</label>
 
-            <input type="radio" name="q5" id="vcq6v3" value="3" data-theme="d"/>
+            <input type="radio" name="q6" id="vcq6v3" value="3" data-theme="d"/>
             <label for="vcq6v3">&nbsp;</label>
 
-            <input type="radio" name="q5" id="vcq6v4" value="4" data-theme="d"/>
+            <input type="radio" name="q6" id="vcq6v4" value="4" data-theme="d"/>
             <label for="vcq6v4">&nbsp;</label>
 
-            <input type="radio" name="q5" id="vcq6v5" value="5" data-theme="d"/>
+            <input type="radio" name="q6" id="vcq6v5" value="5" data-theme="d"/>
             <label for="vcq6v5">&nbsp;</label>
 
-            <input type="radio" name="q5" id="vcq6v6" value="6" data-theme="d"/>
+            <input type="radio" name="q6" id="vcq6v6" value="6" data-theme="d"/>
             <label for="vcq6v6">&nbsp;</label>
           </fieldset>
         </div>
@@ -1036,22 +1086,22 @@
               </div>
             </div>
             <legend>&nbsp;</legend>
-            <input type="radio" name="q6" id="vcq7v1" value="1" data-theme="d"/>
+            <input type="radio" name="q7" id="vcq7v1" value="1" data-theme="d"/>
             <label for="vcq7v1"> &nbsp;</label>
 
-            <input type="radio" name="q6" id="vcq7v2" value="2" data-theme="d"/>
+            <input type="radio" name="q7" id="vcq7v2" value="2" data-theme="d"/>
             <label for="vcq7v2">&nbsp;</label>
 
-            <input type="radio" name="q6" id="vcq7v3" value="3" data-theme="d"/>
+            <input type="radio" name="q7" id="vcq7v3" value="3" data-theme="d"/>
             <label for="vcq7v3">&nbsp;</label>
 
-            <input type="radio" name="q6" id="vcq7v4" value="4" data-theme="d"/>
+            <input type="radio" name="q7" id="vcq7v4" value="4" data-theme="d"/>
             <label for="vcq7v4">&nbsp;</label>
 
-            <input type="radio" name="q6" id="vcq7v5" value="5" data-theme="d"/>
+            <input type="radio" name="q7" id="vcq7v5" value="5" data-theme="d"/>
             <label for="vcq7v5">&nbsp;</label>
 
-            <input type="radio" name="q6" id="vcq7v6" value="6" data-theme="d"/>
+            <input type="radio" name="q7" id="vcq7v6" value="6" data-theme="d"/>
             <label for="vcq7v6">&nbsp;</label>
           </fieldset>
         </div>
@@ -1076,22 +1126,22 @@
               </div>
             </div>
             <legend>&nbsp;</legend>
-            <input type="radio" name="q7" id="vcq8v1" value="1" data-theme="d"/>
+            <input type="radio" name="q8" id="vcq8v1" value="1" data-theme="d"/>
             <label for="vcq8v1"> &nbsp;</label>
 
-            <input type="radio" name="q7" id="vcq8v2" value="2" data-theme="d"/>
+            <input type="radio" name="q8" id="vcq8v2" value="2" data-theme="d"/>
             <label for="vcq8v2">&nbsp;</label>
 
-            <input type="radio" name="q7" id="vcq8v3" value="3" data-theme="d"/>
+            <input type="radio" name="q8" id="vcq8v3" value="3" data-theme="d"/>
             <label for="vcq8v3">&nbsp;</label>
 
-            <input type="radio" name="q7" id="vcq8v4" value="4" data-theme="d"/>
+            <input type="radio" name="q8" id="vcq8v4" value="4" data-theme="d"/>
             <label for="vcq8v4">&nbsp;</label>
 
-            <input type="radio" name="q7" id="vcq8v5" value="5" data-theme="d"/>
+            <input type="radio" name="q8" id="vcq8v5" value="5" data-theme="d"/>
             <label for="vcq8v5">&nbsp;</label>
 
-            <input type="radio" name="q7" id="vcq8v6" value="6" data-theme="d"/>
+            <input type="radio" name="q8" id="vcq8v6" value="6" data-theme="d"/>
             <label for="vcq8v6">&nbsp;</label>
           </fieldset>
         </div>
@@ -1117,23 +1167,23 @@
                   </div>
                 </div>
                 <legend>&nbsp;</legend>
-                <input type="radio" name="q8" id="vcq10v1" value="1" data-theme="d"/>
-                <label for="vcq10v1"> &nbsp;</label>
+                <input type="radio" name="q9" id="vcq9v1" value="1" data-theme="d"/>
+                <label for="vcq9v1"> &nbsp;</label>
 
-                <input type="radio" name="q8" id="vcq10v2" value="2" data-theme="d"/>
-                <label for="vcq10v2">&nbsp;</label>
+                <input type="radio" name="q9" id="vcq9v2" value="2" data-theme="d"/>
+                <label for="vcq9v2">&nbsp;</label>
 
-                <input type="radio" name="q8" id="vcq10v3" value="3" data-theme="d"/>
-                <label for="vcq10v3">&nbsp;</label>
+                <input type="radio" name="q9" id="vcq9v3" value="3" data-theme="d"/>
+                <label for="vcq9v3">&nbsp;</label>
 
-                <input type="radio" name="q8" id="vcq10v4" value="4" data-theme="d"/>
-                <label for="vcq10v4">&nbsp;</label>
+                <input type="radio" name="q9" id="vcq9v4" value="4" data-theme="d"/>
+                <label for="vcq9v4">&nbsp;</label>
 
-                <input type="radio" name="q8" id="vcq10v5" value="5" data-theme="d"/>
-                <label for="vcq10v5">&nbsp;</label>
+                <input type="radio" name="q9" id="vcq9v5" value="5" data-theme="d"/>
+                <label for="vcq9v5">&nbsp;</label>
 
-                <input type="radio" name="q8" id="vcq10v6" value="6" data-theme="d"/>
-                <label for="vcq10v6">&nbsp;</label>
+                <input type="radio" name="q9" id="vcq9v6" value="6" data-theme="d"/>
+                <label for="vcq9v6">&nbsp;</label>
               </fieldset>
             </div>
           </div>
@@ -1160,23 +1210,23 @@
                   </div>
                 </div>
                 <legend>&nbsp;</legend>
-                <input type="radio" name="q9" id="vcq11v1" value="1" data-theme="d"/>
-                <label for="vcq11v1"> &nbsp;</label>
+                <input type="radio" name="q10" id="vcq10v1" value="1" data-theme="d"/>
+                <label for="vcq10v1"> &nbsp;</label>
 
-                <input type="radio" name="q9" id="vcq11v2" value="2" data-theme="d"/>
-                <label for="vcq11v2">&nbsp;</label>
+                <input type="radio" name="q10" id="vcq10v2" value="2" data-theme="d"/>
+                <label for="vcq10v2">&nbsp;</label>
 
-                <input type="radio" name="q9" id="vcq11v3" value="3" data-theme="d"/>
-                <label for="vcq11v3">&nbsp;</label>
+                <input type="radio" name="q10" id="vcq10v3" value="3" data-theme="d"/>
+                <label for="vcq10v3">&nbsp;</label>
 
-                <input type="radio" name="q9" id="vcq11v4" value="4" data-theme="d"/>
-                <label for="vcq11v4">&nbsp;</label>
+                <input type="radio" name="q10" id="vcq10v4" value="4" data-theme="d"/>
+                <label for="vcq10v4">&nbsp;</label>
 
-                <input type="radio" name="q9" id="vcq11v5" value="5" data-theme="d"/>
-                <label for="vcq11v5">&nbsp;</label>
+                <input type="radio" name="q10" id="vcq10v5" value="5" data-theme="d"/>
+                <label for="vcq10v5">&nbsp;</label>
 
-                <input type="radio" name="q9" id="vcq11v6" value="6" data-theme="d"/>
-                <label for="vcq11v6">&nbsp;</label>
+                <input type="radio" name="q10" id="vcq10v6" value="6" data-theme="d"/>
+                <label for="vcq10v6">&nbsp;</label>
               </fieldset>
             </div>
           </div>
@@ -1202,23 +1252,23 @@
                   </div>
                 </div>
                 <legend>&nbsp;</legend>
-                <input type="radio" name="q10" id="vcq12v1" value="1" data-theme="d"/>
-                <label for="vcq12v1"> &nbsp;</label>
+                <input type="radio" name="q11" id="vcq11v1" value="1" data-theme="d"/>
+                <label for="vcq11v1"> &nbsp;</label>
 
-                <input type="radio" name="q10" id="vcq12v2" value="2" data-theme="d"/>
-                <label for="vcq12v2">&nbsp;</label>
+                <input type="radio" name="q11" id="vcq11v2" value="2" data-theme="d"/>
+                <label for="vcq11v2">&nbsp;</label>
 
-                <input type="radio" name="q10" id="vcq12v3" value="3" data-theme="d"/>
-                <label for="vcq12v3">&nbsp;</label>
+                <input type="radio" name="q11" id="vcq11v3" value="3" data-theme="d"/>
+                <label for="vcq11v3">&nbsp;</label>
 
-                <input type="radio" name="q10" id="vcq12v4" value="4" data-theme="d"/>
-                <label for="vcq12v4">&nbsp;</label>
+                <input type="radio" name="q11" id="vcq11v4" value="4" data-theme="d"/>
+                <label for="vcq11v4">&nbsp;</label>
 
-                <input type="radio" name="q10" id="vcq12v5" value="5" data-theme="d"/>
-                <label for="vcq12v5">&nbsp;</label>
+                <input type="radio" name="q11" id="vcq11v5" value="5" data-theme="d"/>
+                <label for="vcq11v5">&nbsp;</label>
 
-                <input type="radio" name="q10" id="vcq12v6" value="6" data-theme="d"/>
-                <label for="vcq12v6">&nbsp;</label>
+                <input type="radio" name="q11" id="vcq11v6" value="6" data-theme="d"/>
+                <label for="vcq11v6">&nbsp;</label>
               </fieldset>
             </div>
           </div>
@@ -1244,44 +1294,102 @@
                   </div>
                 </div>
                 <legend>&nbsp;</legend>
-                <input type="radio" name="q11" id="vcq13v1" value="1" data-theme="d"/>
-                <label for="vcq13v1"> &nbsp;</label>
+                <input type="radio" name="q12" id="vcq12v1" value="1" data-theme="d"/>
+                <label for="vcq12v1"> &nbsp;</label>
 
-                <input type="radio" name="q11" id="vcq13v2" value="2" data-theme="d"/>
-                <label for="vcq13v2">&nbsp;</label>
+                <input type="radio" name="q12" id="vcq12v2" value="2" data-theme="d"/>
+                <label for="vcq12v2">&nbsp;</label>
 
-                <input type="radio" name="q11" id="vcq13v3" value="3" data-theme="d"/>
-                <label for="vcq13v3">&nbsp;</label>
+                <input type="radio" name="q12" id="vcq12v3" value="3" data-theme="d"/>
+                <label for="vcq12v3">&nbsp;</label>
 
-                <input type="radio" name="q11" id="vcq13v4" value="4" data-theme="d"/>
-                <label for="vcq13v4">&nbsp;</label>
+                <input type="radio" name="q12" id="vcq12v4" value="4" data-theme="d"/>
+                <label for="vcq12v4">&nbsp;</label>
 
-                <input type="radio" name="q11" id="vcq13v5" value="5" data-theme="d"/>
-                <label for="vcq13v5">&nbsp;</label>
+                <input type="radio" name="q12" id="vcq12v5" value="5" data-theme="d"/>
+                <label for="vcq12v5">&nbsp;</label>
 
-                <input type="radio" name="q11" id="vcq13v6" value="6" data-theme="d"/>
-                <label for="vcq13v6">&nbsp;</label>
+                <input type="radio" name="q12" id="vcq12v6" value="6" data-theme="d"/>
+                <label for="vcq12v6">&nbsp;</label>
               </fieldset>
             </div>
           </div>
         </div>
 
+        <!-- TODO: Rätt fråga/id och fixa i JS-->
         <div class="questioncontainer">
           <div class="vckq">11</div>
+          Anser Du att Du på något sätt har blivit särbehandlad på placeringen?
+          <select name="q13" id="vcq13" data-theme="d">
+            <option value="null"> -- Välj alternativ --</option>
+            <option id="vcq13v1" value="1">Ja</option>
+            <option id="vcq13v2" value="2">Nej</option>
+          </select>
+
+          <br>
+        </div>
+
+        <!-- TODO: Rätt fråga/id och fixa i JS funkar kommentar?-->
+        <div class="questioncontainer">
+          <div class="vckq">12</div>
+          Om ja, var god specificera av vilken orsak/vilka orsaker (enligt diskrimineringslagen).
+          Notera att ditt svar inte kommer att användas till grund för utredning av diskriminering.
+          För att starta en utredning kring det som skett behöver du anmäla händelsen till en prefekt
+           på institutionen för det inträffade. På denna länk kan du läsa mer:
+            <a class="discriminationLink" href="#">
+              https://www.uu.se/student/rattigheter/arbetsmiljo-och-lika-villkor/</a>
+              <fieldset data-role="controlgroup">
+                <div name="q14" id="vcq14" data-role="controlgroup">
+                  <input type="checkbox" name="q14" id="vcq14v1" value="1" data-theme="d"/>
+                  <label for="vcq14v1">Kön</label>
+                  <input type="checkbox" name="q14" id="vcq14v2" value="2" data-theme="d"/>
+                  <label for="vcq14v2">Könsöverskridande identitet eller uttryck</label>
+                  <input type="checkbox" name="q14" id="vcq14v3" value="3" data-theme="d"/>
+                  <label for="vcq14v3">Etnisk tillhörighet</label>
+                  <input type="checkbox" name="q14" id="vcq14v4" value="4" data-theme="d"/>
+                  <label for="vcq14v4">Religion eller annan trosuppfattning</label>
+                  <input type="checkbox" name="q14" id="vcq14v5" value="5" data-theme="d"/>
+                  <label for="vcq14v5">Funktionsnedsättning</label>
+                  <input type="checkbox" name="q14" id="vcq14v6" value="6" data-theme="d"/>
+                  <label for="vcq14v6">Sexuell läggning</label>
+                </div>
+              </fieldset>
+
+          <br>
+          Kommentar
+          <textarea name="q14_comment" id="vcq14_comment" cols="60" rows="3" placeholder="Kommentar"></textarea>
+        </div>
+
+        <!-- TODO: Rätt fråga/id och fixa i JS funkar kommentar?-->
+        <div class="questioncontainer">
+          <div class="vckq">13</div>
+          Nämn en (och enbart en!) person (inklusive Regionen) som varit särskilt bra under din placering (OBS! Enbart namn! Skriv sedan gärna en motivering i nästa fält.) OBS! Om instruktioner inte följs kan datan inte sorteras.
+          <textarea name="q15" id="vcq15" cols="60" rows="1" data-theme="d" placeholder="Endast ett namn!"></textarea>
+        </div>
+
+        <!-- TODO: Rätt fråga/id och fixa i JS funkar kommentar?-->
+        <div class="questioncontainer">
+          <div class="vckq">14</div>
+          Motivering till val av läkare/handledare/administratör/etc.
+          <textarea name="q16" id="vcq16" cols="60" rows="3" data-theme="d"></textarea>
+        </div>
+
+        <div class="questioncontainer">
+          <div class="vckq">15</div>
           Kommentarer
-          <textarea name="q12" id="vcq14" cols="60" rows="3" placeholder="Kom ihåg att vara konstruktiv!"></textarea>
+          <textarea name="q17" id="vcq17" cols="60" rows="3" placeholder="Kom ihåg att vara konstruktiv!"></textarea>
         </div>
         <br>
 
         <div class="questioncontainer" id="vcsex">
-          <div class="vckq">12</div>
+          <div class="vckq">16</div>
           Jag ser mig som:
-          <select name="q13" id="vcq15" data-theme="d">
+          <select name="q18" id="vcq18" data-theme="d">
             <option value="null"> -- Välj alternativ --</option>
-            <option id="vcq15v1" value="1">Kvinna</option>
-            <option id="vcq15v2" value="2">Man</option>
-            <option id="vcq15v3" value="3">Annan könsidentitet</option>
-            <option id="vcq15v4" value="4">Kan eller vill ej uppge</option>
+            <option id="vcq18v1" value="1">Kvinna</option>
+            <option id="vcq18v2" value="2">Man</option>
+            <option id="vcq18v3" value="3">Annan könsidentitet</option>
+            <option id="vcq18v4" value="4">Kan eller vill ej uppge</option>
           </select>
 
           <br>
@@ -1291,17 +1399,18 @@
         <br/>
         <div class="questioncontainer">
           Fyll i ditt UpUnet-S användarnamn (t ex "abcd1234") i rutan nedan och deltag i lotteriet
-          med fina priser (märk: enbart kurser med minst 50% svarsfrekvens kommer delta i lotteriet). Ditt användarnamn kommer ej att synas i någon sammanställning
-          och enbart användas vid utlottningen. För varje klinikvärdering som du fyller i
-          erhåller du en lott. Samtliga vinnare kommer att kontrolleras med avseende på 1) att
-          kandidaten faktiskt har gått placeringen och 2) att inte dubbla registreringar för
-          samma placering skickats in. Om du är osäker på om du har fyllt i en
+          med fina priser. Notera att kurten måste uppnå en svarsfrekvens på minst 50% för att
+          kvalificera till lotteriet, så peppa dina kursare att kurta och förbättra kursen! Ditt
+          användarnamn kommer ej att synas i någon sammanställning och enbart användas vid utlottningen.
+          För varje klinikvärdering som du fyller i erhåller du en lott. Samtliga vinnare kommer att
+          kontrolleras med avseende på 1) att kandidaten faktiskt har gått placeringen och 2) att inte
+          dubbla registreringar för samma placering skickats in. Om du är osäker på om du har fyllt i en
           kursvärdering kan du via <a href='http://www.klinikkurt.se' target='_blank'>www.klinikkurt.se</a>
           beställa ett utdrag på vilka du har fyllt i.
-          <textarea name="q14" id="vcq16" cols="60" rows="1" data-theme="d"></textarea>
+          <textarea name="q19" id="vcq19" cols="60" rows="1" data-theme="d"></textarea>
         </div>
 
-        <input type="hidden" name="q15" id="vcq17" value="App">
+        <input type="hidden" name="q20" id="vcq20" value="App">
 
         <input type="hidden" name="klinik-kurt-username" id="vc-kurt-username" value="Username" />
 

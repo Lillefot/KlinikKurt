@@ -154,12 +154,18 @@ fieldset {
 }
 
 /*Placement button labels*/
-label.ui-btn.ui-corner-all.ui-btn-f.ui-btn-icon-left {
+:not(.ui-checkbox) > label.ui-btn.ui-corner-all.ui-btn-f.ui-btn-icon-left,
+:not(.ui-checkbox) > label.ui-btn.ui-corner-all.ui-btn-d.ui-btn-icon-left {
   text-align: center;
   padding-left: 0;
   padding-right: 0;
 }
 
+/*Harassed button labels*/
+.ui-checkbox > label.ui-btn.ui-corner-all.ui-btn-f.ui-btn-icon-left,
+.ui-checkbox > label.ui-btn.ui-corner-all.ui-btn-d.ui-btn-icon-left{
+  text-align: center;
+}
 
 
 /* Message of required fields*/
@@ -198,9 +204,9 @@ label.ui-btn.ui-corner-all.ui-btn-f.ui-btn-icon-left {
 #kkq2-button,
 #kkq3-button,
 #kkq4-button,
-#kkq18-button,
+#kkq20-button,
 #vcq2-button,
-#vcq15-button {
+#vcq18-button {
   padding-left: 0;
   padding-right: 0;
 }
