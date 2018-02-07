@@ -97,6 +97,7 @@ function clearKK() {
     $("#terminfo").removeClass("slideOutDown");
     $("#terminfo").show();
     $("#ortcont").hide();
+    $("#ortProppen").hide();
     $("#restofkk").hide();
     console.log('Klinik-Kurt cleared');
 }
@@ -553,6 +554,7 @@ $(document).delegate("#kkpage", "pageinit", function(event) {
     var KKTermInfo = $("#terminfo");
     var RestOfKK = $("#restofkk");
     var OrtCont = $("#ortcont");
+    var OrtProppen = $("#ortProppen");
     var FewQ = $(".fewq");
     var MoreQ = $(".moreq");
     var KKfr3 = $("#kkfr3");
@@ -667,7 +669,7 @@ $(document).delegate("#kkpage", "pageinit", function(event) {
         //Clean placement and county choices if present
         $("input[name=q1]").prop('checked', false).checkboxradio('refresh', true);
         $("#kkq2").val(["null"]).selectmenu("refresh", true);
-
+        $("#kkqP").val(["null"]).selectmenu("refresh", true);
 
 
 
@@ -682,13 +684,22 @@ $(document).delegate("#kkpage", "pageinit", function(event) {
         OrtCont.animateCss("fadeInUp");
       }
 
-
       //Check if extra question should be shown
       extraQuestions();
 
       //Show or hide the required firelds message
       verifyReq1();
 
+    });
+    //Propedutik: Show county list when placement is selected
+    jQuery("input[name=q0]").click(function() {
+      $("#kkqP").val(["null"]).selectmenu("refresh", true);
+      if (OrtProppen.css("display") == "none") {
+        OrtProppen.show();
+        OrtProppen.animateCss("fadeInUp");
+      }
+      //Show or hide the required firelds message
+      verifyReqProppen();
     });
 
     //Show rest of questions when county is selected
@@ -708,6 +719,22 @@ $(document).delegate("#kkpage", "pageinit", function(event) {
 
         //Show or hide the required firelds message
         verifyReq1();
+
+    });
+
+    //Propedutik: Show rest of questions when county is selected
+    jQuery("select[name=qP]").change(function() {
+        if (RestOfKK.css("display") == "none") {
+          //Clear previous selections if there are any
+
+          RestOfKK.show();
+          RestOfKK.animateCss("fadeInUp");
+          //Needed to make sure that the extraQuestions function doesn't hide the numbers
+          FewQ.show();
+        }
+
+        //Show or hide the required firelds message
+        verifyReqProppen();
 
     });
 
@@ -773,7 +800,15 @@ $(document).delegate("#kkpage", "pageinit", function(event) {
         }
     }
 
-
+    function verifyReqProppen() {
+        if ($('#kkq1 :selected').val() === 'null' || $('#kkqP :selected').val() === 'null') {
+            $('#KKopendialog').addClass('ui-disabled');
+            $("#kkreqmsg").show();
+        } else {
+            $('#KKopendialog').removeClass('ui-disabled');
+            $("#kkreqmsg").hide();
+        }
+    }
 
     //Used for submitting the form
     $("#kkpage").delegate("#KKopendialog", 'tap', function(event) {
@@ -869,6 +904,10 @@ $(document).delegate("#kkpage", "pageinit", function(event) {
         $.mobile.loading('show');
         //Serialize the form
         var dataString = $("#klinikkurt").serialize();
+        console.log("datastring =" + " " + dataString)
+        if ($('#kkqP :selected').val() !== 'null'){
+          dataString = $("#klinikkurt").find('input[name!=q0],input[name!=q1]').serialize();
+        }
         console.log("datastring =" + " " + dataString)
         console.log($("#klinik-kurt-username").val());
 
